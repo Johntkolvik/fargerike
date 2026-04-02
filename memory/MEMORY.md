@@ -1,0 +1,1 @@
+- [Figma MCP workflow](figma_mcp_workflow.md) — Referanse for ideell prosess, styrker/svakheter ved ulike retninger

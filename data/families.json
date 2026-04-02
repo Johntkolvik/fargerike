@@ -1,0 +1,187 @@
+[
+  {
+    "familyCode": "606",
+    "name": "Lady Wonderwall",
+    "shortName": "Vaskbar, tåler juling",
+    "finishName": "Matt (05)",
+    "applicationArea": "Interior",
+    "section": "stue-gang-kjokken",
+    "description": "Den mest populære veggmalingen. Tåler vask, flekker og hverdagsslitasje.",
+    "badge": "Mest populær",
+    "specs": {
+      "washClass": "Klasse 2",
+      "voc": "≤ 1 g/L",
+      "coverage": "8–10 m²/L",
+      "dryTime": "2 timer mellom strøk"
+    },
+    "products": [
+      { "productCode": "26RMAAARJ", "fillLevel": "0.68", "priceNOK": 249 },
+      { "productCode": "26RMAACSA", "fillLevel": "2.70", "priceNOK": 549 },
+      { "productCode": "26RMAAKVA", "fillLevel": "9.00", "priceNOK": 1499 }
+    ]
+  },
+  {
+    "familyCode": "686",
+    "name": "Lady Balance",
+    "shortName": "Premium helmatt",
+    "finishName": "Helmatt (05)",
+    "applicationArea": "Interior",
+    "section": "stue-gang-kjokken",
+    "description": "Ekstra matt uttrykk med lav lukt. Eurofins Indoor Air Comfort Gold.",
+    "badge": null,
+    "specs": {
+      "washClass": "Klasse 3",
+      "voc": "≤ 1 g/L",
+      "coverage": "8–10 m²/L",
+      "dryTime": "2 timer mellom strøk"
+    },
+    "products": [
+      { "productCode": "26RMAC0RJ", "fillLevel": "0.68", "priceNOK": 219 },
+      { "productCode": "26RMAC0SA", "fillLevel": "2.70", "priceNOK": 539 },
+      { "productCode": "26RMAC0VA", "fillLevel": "9.00", "priceNOK": 1479 }
+    ]
+  },
+  {
+    "familyCode": "429",
+    "name": "Sens",
+    "shortName": "Allergivennlig, null lukt",
+    "finishName": "Matt (07)",
+    "applicationArea": "Interior",
+    "section": "soverom-barnerom",
+    "description": "Anbefalt av Astma- og Allergiforbundet. Null lukt, null skadelige utslipp.",
+    "badge": "NAAF-anbefalt",
+    "specs": {
+      "washClass": "Klasse 3",
+      "voc": "≤ 0.3 g/L",
+      "coverage": "8–10 m²/L",
+      "dryTime": "2 timer mellom strøk"
+    },
+    "products": [
+      { "productCode": "26RMAB0RJ", "fillLevel": "0.68", "priceNOK": 219 },
+      { "productCode": "26RMAB0SA", "fillLevel": "2.70", "priceNOK": 569 },
+      { "productCode": "26RMAB0VA", "fillLevel": "9.00", "priceNOK": 1599 }
+    ]
+  },
+  {
+    "familyCode": "680",
+    "name": "Lady Pure Color",
+    "shortName": "Ultra-matt, ren farge",
+    "finishName": "Supermatt",
+    "applicationArea": "Interior",
+    "section": "soverom-barnerom",
+    "description": "Den matteste malingen. Fargen vises helt ren, uten lysrefleksjon.",
+    "badge": null,
+    "specs": {
+      "washClass": "Klasse 3",
+      "voc": "≤ 1 g/L",
+      "coverage": "8–10 m²/L",
+      "dryTime": "2 timer mellom strøk"
+    },
+    "products": [
+      { "productCode": "26RMAD0RJ", "fillLevel": "0.68", "priceNOK": 249 },
+      { "productCode": "26RMAD0SA", "fillLevel": "2.70", "priceNOK": 599 },
+      { "productCode": "26RMAD0VA", "fillLevel": "9.00", "priceNOK": 1799 }
+    ]
+  },
+  {
+    "familyCode": "610",
+    "name": "Lady Supreme Finish",
+    "shortName": "Velg din glans",
+    "finishName": "4 glansgrader",
+    "applicationArea": "Interior",
+    "section": "lister-panel-mobler",
+    "description": "For lister, panelvegger og møbler. Velg mellom Pure Matt, Silkematt, Halvblank og Superblank.",
+    "badge": null,
+    "specs": {
+      "washClass": "Klasse 1",
+      "voc": "≤ 1 g/L",
+      "coverage": "10–12 m²/L",
+      "dryTime": "2 timer mellom strøk"
+    },
+    "glossOptions": ["Pure Matt", "Silkematt", "Halvblank", "Superblank"],
+    "products": [
+      { "productCode": "26RMAJ0RJ", "fillLevel": "0.68", "priceNOK": 269 },
+      { "productCode": "26RMAJ0SA", "fillLevel": "2.70", "priceNOK": 649 }
+    ]
+  },
+  {
+    "familyCode": "677",
+    "name": "Lady Minerals",
+    "shortName": "Kalkmaling",
+    "finishName": "Kalkmatt",
+    "applicationArea": "Interior",
+    "section": "spesial",
+    "description": "Levende, kalkaktig overflate med unik karakter. 21 utvalgte kulører.",
+    "badge": "Unik overflate",
+    "specs": {
+      "washClass": "—",
+      "voc": "≤ 1 g/L",
+      "coverage": "9 m²/L",
+      "dryTime": "2 timer mellom strøk"
+    },
+    "products": [
+      { "productCode": "26RMAE0SA", "fillLevel": "2.70", "priceNOK": 799 }
+    ]
+  },
+  {
+    "familyCode": "300",
+    "name": "Drygolin Nordic Extreme",
+    "shortName": "Beste beskyttelse",
+    "finishName": "Supermatt",
+    "applicationArea": "Exterior",
+    "section": "treverk",
+    "description": "Selvrensende, regnbestandig etter 90 min. Lengst holdbarhet på markedet.",
+    "badge": "Beste beskyttelse",
+    "specs": {
+      "washClass": "—",
+      "voc": "—",
+      "coverage": "8–10 m²/L",
+      "dryTime": "2 timer mellom strøk"
+    },
+    "products": [
+      { "productCode": "26RMAF0RJ", "fillLevel": "0.68", "priceNOK": 299 },
+      { "productCode": "26RMAF0SA", "fillLevel": "2.70", "priceNOK": 899 },
+      { "productCode": "26RMAF0VA", "fillLevel": "9.00", "priceNOK": 2590 }
+    ]
+  },
+  {
+    "familyCode": "688",
+    "name": "Drygolin Ultimat",
+    "shortName": "Hybrid, UV-beskyttelse",
+    "finishName": "Halvblank",
+    "applicationArea": "Exterior",
+    "section": "treverk",
+    "description": "Olje/akryl-hybrid med soppbeskyttelse. For kledning, beslag og takrenner.",
+    "badge": null,
+    "specs": {
+      "washClass": "—",
+      "voc": "—",
+      "coverage": "8–12 m²/L",
+      "dryTime": "2 timer mellom strøk"
+    },
+    "products": [
+      { "productCode": "26RMAG0SA", "fillLevel": "2.70", "priceNOK": 629 },
+      { "productCode": "26RMAG0VA", "fillLevel": "9.00", "priceNOK": 1299 }
+    ]
+  },
+  {
+    "familyCode": "462",
+    "name": "Jotashield",
+    "shortName": "Mur og fasade",
+    "finishName": "Matt",
+    "applicationArea": "Exterior",
+    "section": "mur-fasade",
+    "description": "For betong, puss og murverk. UV-beskyttelse og anti-karbonatisering.",
+    "badge": null,
+    "specs": {
+      "washClass": "—",
+      "voc": "—",
+      "coverage": "5–9 m²/L",
+      "dryTime": "4 timer mellom strøk"
+    },
+    "products": [
+      { "productCode": "26RMAH0SA", "fillLevel": "2.70", "priceNOK": 699 },
+      { "productCode": "26RMAH0VA", "fillLevel": "9.00", "priceNOK": 1899 }
+    ]
+  }
+]

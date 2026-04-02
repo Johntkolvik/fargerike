@@ -1,0 +1,7120 @@
+[
+  {
+    "id": "2782",
+    "name": "DECO PINK",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S1510-Y70R",
+    "hex": "#DBC4B7",
+    "rgb": {
+      "r": 219,
+      "g": 196,
+      "b": 183
+    },
+    "luminance": 57.965,
+    "description": "En gyllen rosatone.",
+    "descriptionEN": "A golden pink.",
+    "application": "interior",
+    "matchingColors": [
+      "1376",
+      "2951"
+    ],
+    "imagesInterior": [
+      "2782_1.jpg",
+      "2782_2.jpg",
+      "2782_3.jpg",
+      "2782_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "20217",
+    "name": "MUTED CORAL",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3234-Y69R",
+    "hex": "#BB7D69",
+    "rgb": {
+      "r": 187,
+      "g": 125,
+      "b": 105
+    },
+    "luminance": 26.153,
+    "description": "En myk, korallrød tone.",
+    "descriptionEN": "A muted, golden coral red.",
+    "application": "interior",
+    "matchingColors": [
+      "12075",
+      "8469"
+    ],
+    "imagesInterior": [
+      "20217_1.jpg",
+      "20217_2.jpg",
+      "20217_3.jpg",
+      "20217_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "20208",
+    "name": "POETRY RED",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4335-Y79R",
+    "hex": "#9B6156",
+    "rgb": {
+      "r": 155,
+      "g": 97,
+      "b": 86
+    },
+    "luminance": 16.147,
+    "description": "En dempet rødtone.",
+    "descriptionEN": "A muted red.",
+    "application": "interior",
+    "matchingColors": [
+      "12076",
+      "20217"
+    ],
+    "imagesInterior": [
+      "20208_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "2951",
+    "name": "SOPHISTICATED RED",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S6020-Y80R",
+    "hex": "#7C5953",
+    "rgb": {
+      "r": 124,
+      "g": 89,
+      "b": 83
+    },
+    "luminance": 12.065,
+    "description": "En dyp, elegant rødtone.",
+    "descriptionEN": "A deep, elegant red.",
+    "application": "interior",
+    "matchingColors": [
+      "0552",
+      "20208"
+    ],
+    "imagesInterior": [
+      "2951_1.jpg",
+      "2951_2.jpg",
+      "2951_3.jpg",
+      "2951_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "20167",
+    "name": "WELCOMING RED",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4429-Y72R",
+    "hex": "#A06C5E",
+    "rgb": {
+      "r": 160,
+      "g": 108,
+      "b": 94
+    },
+    "luminance": 18.946,
+    "description": "En gyllen rødrosa tone.",
+    "descriptionEN": "A golden red.",
+    "application": "interior",
+    "matchingColors": [
+      "12077.0",
+      "0394"
+    ],
+    "imagesInterior": [
+      "20167_1.jpg",
+      "20167_2.jpg",
+      "20167_3.jpg",
+      "20167_4.jpg",
+      "20167_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "20046",
+    "name": "SAVANNA SUNSET",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3918-Y55R",
+    "hex": "#AF8A76",
+    "rgb": {
+      "r": 175,
+      "g": 138,
+      "b": 118
+    },
+    "luminance": 28.673,
+    "description": "En gyllen rosa, ferskenaktig tone.",
+    "descriptionEN": "A soft, peachy pink.",
+    "application": "interior",
+    "matchingColors": [
+      "12075",
+      "20047"
+    ],
+    "imagesInterior": [
+      "20046_1.jpg",
+      "20046_2.jpg",
+      "20046_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "20047",
+    "name": "BLUSHING PEACH",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2914-Y53R",
+    "hex": "#C4A591",
+    "rgb": {
+      "r": 196,
+      "g": 165,
+      "b": 145
+    },
+    "luminance": 40.484,
+    "description": "En gyllen rosa, ferskenaktig tone.",
+    "descriptionEN": "A soft, peachy pink.",
+    "application": "interior",
+    "matchingColors": [
+      "8302",
+      "1024"
+    ],
+    "imagesInterior": [
+      "20047_1.jpg",
+      "20047_2.jpg",
+      "20047_3.jpg",
+      "20047_4.jpg",
+      "20047_5.jpg",
+      "20047_6.jpg",
+      "20047_7.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "2024",
+    "name": "SENSES",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S3010-Y50R",
+    "hex": "#BFA795",
+    "rgb": {
+      "r": 191,
+      "g": 167,
+      "b": 149
+    },
+    "luminance": 40.801,
+    "description": "En dempet, pudderrosa tone.",
+    "descriptionEN": "A muted pink.",
+    "application": "interior",
+    "matchingColors": [
+      "1376.0",
+      "2951"
+    ],
+    "imagesInterior": [
+      "2024_1.jpg",
+      "2024_2.jpg",
+      "2024_3.jpg",
+      "2024_4.jpg",
+      "2024_5.jpg",
+      "2024_6.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1117",
+    "name": "PEACH SKY",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1212-Y31R",
+    "hex": "#EAD0B1",
+    "rgb": {
+      "r": 234,
+      "g": 208,
+      "b": 177
+    },
+    "luminance": 65.893,
+    "description": "En dempet, gyllen ferskentone.",
+    "descriptionEN": "A muted, golden peach.",
+    "application": "interior",
+    "matchingColors": [
+      "1453",
+      "1177"
+    ],
+    "imagesInterior": [
+      "1117_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "1177",
+    "name": "NOBILE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1420-Y31R",
+    "hex": "#E8C099",
+    "rgb": {
+      "r": 232,
+      "g": 192,
+      "b": 153
+    },
+    "luminance": 57.251,
+    "description": "En gyllen, ferskenaktig oransjetone.",
+    "descriptionEN": "A golden, peachy orange.",
+    "application": "interior",
+    "matchingColors": [
+      "2489",
+      "1117"
+    ],
+    "imagesInterior": [
+      "1177_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "2489",
+    "name": "BELLA",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S2040-Y50R",
+    "hex": "#D9916D",
+    "rgb": {
+      "r": 217,
+      "g": 145,
+      "b": 109
+    },
+    "luminance": 36.253,
+    "description": "En fargesterk oransjetone.",
+    "descriptionEN": "A vibrant orange.",
+    "application": "interior",
+    "matchingColors": [
+      "12075",
+      "1623"
+    ],
+    "imagesInterior": [
+      "2489_1.jpg",
+      "2489_2.jpg",
+      "2489_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1259",
+    "name": "RUSTY",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4335-Y37R",
+    "hex": "#A57252",
+    "rgb": {
+      "r": 165,
+      "g": 114,
+      "b": 82
+    },
+    "luminance": 20.646,
+    "description": "En brent, rødoransje tone.",
+    "descriptionEN": "A muted, burnt orange.",
+    "application": "interior",
+    "matchingColors": [
+      "1140.0",
+      "1223.0"
+    ],
+    "imagesInterior": [
+      "1259_1.jpg",
+      "1259_2.jpg",
+      "1259_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "12179",
+    "name": "EMBRACE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3721-Y39R",
+    "hex": "#B58C6F",
+    "rgb": {
+      "r": 181,
+      "g": 140,
+      "b": 111
+    },
+    "luminance": 29.836,
+    "description": "En lun, terrakottaaktig tone.",
+    "descriptionEN": "A muted, rustic orange.",
+    "application": "interior",
+    "matchingColors": [
+      "1376.0",
+      "12083.0"
+    ],
+    "imagesInterior": [
+      "12179_1.jpg",
+      "12179_2.jpg",
+      "12179_3.jpg",
+      "12179_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "11175",
+    "name": "ADVENTURE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4518-Y38R",
+    "hex": "#A48269",
+    "rgb": {
+      "r": 164,
+      "g": 130,
+      "b": 105
+    },
+    "luminance": 24.815,
+    "description": "En brent oransjetone.",
+    "descriptionEN": "A muted orange.",
+    "application": "interior",
+    "matchingColors": [
+      "1931.0",
+      "12083.0"
+    ],
+    "imagesInterior": [
+      "11175_1.jpg",
+      "11175_2.jpg",
+      "11175_3.jpg",
+      "11175_4.jpg",
+      "11175_5.jpg",
+      "11175_6.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "12120",
+    "name": "DESERT PINK",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3215-Y43R",
+    "hex": "#BF9F86",
+    "rgb": {
+      "r": 191,
+      "g": 159,
+      "b": 134
+    },
+    "luminance": 37.595,
+    "description": "En gyllenrosa ferskentone.",
+    "descriptionEN": "A muted peach.",
+    "application": "interior",
+    "matchingColors": [
+      "11173",
+      "0486"
+    ],
+    "imagesInterior": [
+      "12120_1.jpg",
+      "12120_2.jpg",
+      "12120_3.jpg",
+      "12120_4.jpg",
+      "12120_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "12083",
+    "name": "DEVINE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2108-Y37R",
+    "hex": "#D2BEA9",
+    "rgb": {
+      "r": 210,
+      "g": 190,
+      "b": 169
+    },
+    "luminance": 53.549,
+    "description": "En lys aprikosfarge.",
+    "descriptionEN": "A golden peach.",
+    "application": "interior",
+    "matchingColors": [
+      "11175",
+      "11130"
+    ],
+    "imagesInterior": [
+      "12083_1.jpg",
+      "12083_2.jpg",
+      "12083_3.jpg",
+      "12083_4.jpg",
+      "12083_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1349",
+    "name": "LIGHT",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "0712-Y01R",
+    "hex": "#F3E5C0",
+    "rgb": {
+      "r": 243,
+      "g": 229,
+      "b": 192
+    },
+    "luminance": 78.931,
+    "description": "En lys, frisk gultone.",
+    "descriptionEN": "A light, fresh yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "1624",
+      "8596"
+    ],
+    "imagesInterior": [
+      "1349_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "10235",
+    "name": "SOMMERSOL/SOMMARSOL",
+    "nameSE": "SOMMARSOL",
+    "nameDK": "",
+    "ncs": "S1030-Y",
+    "hex": "#E9CE8C",
+    "rgb": {
+      "r": 233,
+      "g": 206,
+      "b": 140
+    },
+    "luminance": 63.379,
+    "description": "En frisk gultone.",
+    "descriptionEN": "A fresh yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "1001.0",
+      "8252.0"
+    ],
+    "imagesInterior": [
+      "10235_1.jpg",
+      "10235_2.jpg",
+      "10235_3.jpg",
+      "10235_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "8054",
+    "name": "SUNNY SPOT",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1046-G99Y",
+    "hex": "#EFCC6A",
+    "rgb": {
+      "r": 239,
+      "g": 204,
+      "b": 106
+    },
+    "luminance": 62.359,
+    "description": "En fargesterk gultone.",
+    "descriptionEN": "A vibrant, greeninsh yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "1624",
+      "6084"
+    ],
+    "imagesInterior": [
+      "8054_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "12291",
+    "name": "SOFT BROWN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5613-Y16R",
+    "hex": "#89755F",
+    "rgb": {
+      "r": 137,
+      "g": 117,
+      "b": 95
+    },
+    "luminance": 18.945,
+    "description": "En dempet, gyllen bruntone.",
+    "descriptionEN": "A golden brown.",
+    "application": "interior",
+    "matchingColors": [
+      "8583.0",
+      "1632.0"
+    ],
+    "imagesInterior": [
+      "12291_1.jpg",
+      "12291_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "10001",
+    "name": "DIJON YELLOW",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S4030-Y20R",
+    "hex": "#A98259",
+    "rgb": {
+      "r": 169,
+      "g": 130,
+      "b": 89
+    },
+    "luminance": 25.186,
+    "description": "En fargesterk, okergul tone.",
+    "descriptionEN": "A strong, brownish ochre yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "12075",
+      "1434"
+    ],
+    "imagesInterior": [
+      "10001_1.jpg",
+      "10001_2.jpg",
+      "10001_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "10428",
+    "name": "MASALA",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2830-Y18R",
+    "hex": "#C89F6E",
+    "rgb": {
+      "r": 200,
+      "g": 159,
+      "b": 110
+    },
+    "luminance": 38.211,
+    "description": "En okergul tone.",
+    "descriptionEN": "A strong ochre yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "10678.0",
+      "11130.0"
+    ],
+    "imagesInterior": [
+      "10428_1.jpg",
+      "10428_2.jpg",
+      "10428_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1392",
+    "name": "GUL ANTIKK / GUL ANTIK",
+    "nameSE": "GUL ANTIK",
+    "nameDK": "",
+    "ncs": "S2020-Y20R",
+    "hex": "#D4B58B",
+    "rgb": {
+      "r": 212,
+      "g": 181,
+      "b": 139
+    },
+    "luminance": 48.74,
+    "description": "En varm gultone.",
+    "descriptionEN": "A warm, muted yellow.",
+    "application": "both",
+    "matchingColors": [
+      "1001",
+      "1017"
+    ],
+    "imagesInterior": [
+      "1392_1.jpg",
+      "1392_2.jpg"
+    ],
+    "imagesExterior": [
+      "1392_1.jpg"
+    ],
+    "tags": [
+      "varm"
+    ],
+    "staffColors": [
+      "1108",
+      "1284"
+    ],
+    "murColors": [
+      "11130",
+      "1973"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "staffNames": [
+      "Fyn",
+      "Svolvær"
+    ],
+    "murNames": [
+      "Shade",
+      "Antikkgrå"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ]
+  },
+  {
+    "id": "1017",
+    "name": "KEISERGUL",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S1020-Y20R",
+    "hex": "#EDCDA1",
+    "rgb": {
+      "r": 237,
+      "g": 205,
+      "b": 161
+    },
+    "luminance": 64.166,
+    "description": "En lun, dempet gultone.",
+    "descriptionEN": "A warm, muted yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "10428",
+      "12291"
+    ],
+    "imagesInterior": [
+      "1017_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "1775",
+    "name": "FRESH PASTA",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S1015-Y",
+    "hex": "#EADA8F",
+    "rgb": {
+      "r": 234,
+      "g": 218,
+      "b": 177
+    },
+    "luminance": 70.882,
+    "description": "En glad gultone.",
+    "descriptionEN": "A fresh yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "0486",
+      "7386"
+    ],
+    "imagesInterior": [
+      "1775_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "8583",
+    "name": "EARTHY YELLOW",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2217-G98Y",
+    "hex": "#CDBC94",
+    "rgb": {
+      "r": 205,
+      "g": 188,
+      "b": 148
+    },
+    "luminance": 51.178,
+    "description": "En dempet, grønnaktig gultone.",
+    "descriptionEN": "A muted, greenish yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "1376.0",
+      "12291.0"
+    ],
+    "imagesInterior": [
+      "8583_1.jpg",
+      "8583_2.jpg",
+      "8583_3.jpg",
+      "8583_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "0288",
+    "name": "MEXICO",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S3030-Y",
+    "hex": "#B99F6B",
+    "rgb": {
+      "r": 185,
+      "g": 159,
+      "b": 107
+    },
+    "luminance": 36.01,
+    "description": "En grønnaktig gultone.",
+    "descriptionEN": "A muted, greenish yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "1024.0",
+      "8583"
+    ],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "10385",
+    "name": "BELGIAN BROWN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S6010-Y10R",
+    "hex": "#7F7160",
+    "rgb": {
+      "r": 127,
+      "g": 113,
+      "b": 96
+    },
+    "luminance": 17.26,
+    "description": "En dempet, gyllen bruntone.",
+    "descriptionEN": "A golden brown.",
+    "application": "interior",
+    "matchingColors": [
+      "12075.0",
+      "20046.0"
+    ],
+    "imagesInterior": [
+      "10385_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "10683",
+    "name": "CASHMERE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3713-Y18R",
+    "hex": "#B19C80",
+    "rgb": {
+      "r": 177,
+      "g": 156,
+      "b": 128
+    },
+    "luminance": 34.798,
+    "description": "En dempet, sennepsgul tone.",
+    "descriptionEN": "A warm, brownish yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "11173",
+      "20208"
+    ],
+    "imagesInterior": [
+      "10683_1.jpg",
+      "10683_2.jpg",
+      "10683_3.jpg",
+      "10683_4.jpg",
+      "10683_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "10961",
+    "name": "RAW CANVAS",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3009-Y14R",
+    "hex": "#BEAF97",
+    "rgb": {
+      "r": 190,
+      "g": 175,
+      "b": 151
+    },
+    "luminance": 44.032,
+    "description": "En dempet, gyllen beigetone.",
+    "descriptionEN": "A brownish yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "1024.0",
+      "5030.0"
+    ],
+    "imagesInterior": [
+      "10961_1.jpg",
+      "10961_2.jpg",
+      "10961_3.jpg",
+      "10961_4.jpg",
+      "10961_5.jpg",
+      "10961_6.jpg",
+      "10961_7.jpg",
+      "10961_8.jpg",
+      "10961_9.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "11173",
+    "name": "HUMBLE YELLOW",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2008-Y15R",
+    "hex": "#D3C5AC",
+    "rgb": {
+      "r": 211,
+      "g": 197,
+      "b": 172
+    },
+    "luminance": 56.748,
+    "description": "En lys, dempet gultone.",
+    "descriptionEN": "A muted yellow.",
+    "application": "interior",
+    "matchingColors": [
+      "1276",
+      "8469"
+    ],
+    "imagesInterior": [
+      "11173_1.jpg",
+      "11173_2.jpg",
+      "11173_3.jpg",
+      "11173_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1276",
+    "name": "SOFT",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1507-Y16R",
+    "hex": "#DCD1BA",
+    "rgb": {
+      "r": 220,
+      "g": 209,
+      "b": 186
+    },
+    "luminance": 64.309,
+    "description": "En gyllen beigetone.",
+    "descriptionEN": "A golden beige.",
+    "application": "interior",
+    "matchingColors": [
+      "10961.0",
+      "10385.0"
+    ],
+    "imagesInterior": [
+      "1276_1.jpg",
+      "1276_2.jpg",
+      "1276_3.jpg",
+      "1276_4.jpg",
+      "1276_5.jpg",
+      "1276_6.jpg",
+      "1276_7.jpg",
+      "1276_8.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "8222",
+    "name": "KRYDDERURT/KRYDDGRÖNT",
+    "nameSE": "KRYDDGRÖNT",
+    "nameDK": "",
+    "ncs": "S2010-G80Y",
+    "hex": "#CAC5A9",
+    "rgb": {
+      "r": 202,
+      "g": 197,
+      "b": 169
+    },
+    "luminance": 55.185,
+    "description": "En gulaktig grønntone.",
+    "descriptionEN": "A yellowish green.",
+    "application": "interior",
+    "matchingColors": [
+      "1453",
+      "8493"
+    ],
+    "imagesInterior": [
+      "8222_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "8493",
+    "name": "GREEN TEA",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3916-G73Y",
+    "hex": "#A09B7C",
+    "rgb": {
+      "r": 160,
+      "g": 155,
+      "b": 124
+    },
+    "luminance": 32.294,
+    "description": "En gulaktig grønntone.",
+    "descriptionEN": "A golden green.",
+    "application": "interior",
+    "matchingColors": [
+      "1001",
+      "20218"
+    ],
+    "imagesInterior": [
+      "8493_1.jpg",
+      "8493_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "8575",
+    "name": "NATURAL GREEN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5615-G59Y",
+    "hex": "#7A7861",
+    "rgb": {
+      "r": 122,
+      "g": 120,
+      "b": 97
+    },
+    "luminance": 18.522,
+    "description": "En gulaktig grønntone.",
+    "descriptionEN": "A yellowish green.",
+    "application": "interior",
+    "matchingColors": [
+      "1024",
+      "8302"
+    ],
+    "imagesInterior": [
+      "8575_1.jpg",
+      "8575_2.jpg",
+      "8575_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "8494",
+    "name": "ORGANIC GREEN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "6711-G52Y",
+    "hex": "#646656",
+    "rgb": {
+      "r": 100,
+      "g": 102,
+      "b": 86
+    },
+    "luminance": 12.825,
+    "description": "En dyp, gyllen grønntone.",
+    "descriptionEN": "A dark, yellowish green.",
+    "application": "interior",
+    "matchingColors": [
+      "12075.0",
+      "8252.0"
+    ],
+    "imagesInterior": [
+      "8494_1.jpg",
+      "8494_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "8469",
+    "name": "GREEN LEAF",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S5010-G70Y",
+    "hex": "#8A8774",
+    "rgb": {
+      "r": 138,
+      "g": 135,
+      "b": 116
+    },
+    "luminance": 24.063,
+    "description": "En dempet, gulaktig grønntone.",
+    "descriptionEN": "A muted, yellowish green.",
+    "application": "interior",
+    "matchingColors": [
+      "10679.0",
+      "8252.0"
+    ],
+    "imagesInterior": [
+      "8469_1.jpg",
+      "8469_2.jpg",
+      "8469_3.jpg",
+      "8469_4.jpg",
+      "8469_5.jpg",
+      "8469_6.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "8252",
+    "name": "GREEN HARMONY",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S4010-G70Y",
+    "hex": "#9E9B86",
+    "rgb": {
+      "r": 158,
+      "g": 155,
+      "b": 134
+    },
+    "luminance": 32.428,
+    "description": "En dempet, gulaktig grønntone.",
+    "descriptionEN": "A muted, yellowish green.",
+    "application": "interior",
+    "matchingColors": [
+      "10678.0",
+      "394.0"
+    ],
+    "imagesInterior": [
+      "8252_1.jpg",
+      "8252_2.jpg",
+      "8252_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "8302",
+    "name": "LAURBÆR/LAGERTRÄD",
+    "nameSE": "LAGERTRÄD",
+    "nameDK": "",
+    "ncs": "S3010-G70Y",
+    "hex": "#B0AE96",
+    "rgb": {
+      "r": 176,
+      "g": 174,
+      "b": 150
+    },
+    "luminance": 41.782,
+    "description": "En gulaktig grønntone.",
+    "descriptionEN": "A muted, yellowish green.",
+    "application": "interior",
+    "matchingColors": [
+      "1024.0",
+      "8469.0"
+    ],
+    "imagesInterior": [
+      "8302_1.jpg",
+      "8302_2.jpg",
+      "8302_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "8596",
+    "name": "SUNNY GREEN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1810-G73Y",
+    "hex": "#D0CCB1",
+    "rgb": {
+      "r": 208,
+      "g": 204,
+      "b": 177
+    },
+    "luminance": 59.926,
+    "description": "En gulaktig grønntone.",
+    "descriptionEN": "A yellowish green.",
+    "application": "interior",
+    "matchingColors": [
+      "7236",
+      "1775"
+    ],
+    "imagesInterior": [
+      "8596_1.jpg",
+      "8596_2.jpg",
+      "8596_3.jpg",
+      "8596_4.jpg",
+      "8596_5.jpg",
+      "8596_6.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "7386",
+    "name": "PISTACHIO",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S1515-G40Y",
+    "hex": "#C8CDB0",
+    "rgb": {
+      "r": 200,
+      "g": 205,
+      "b": 176
+    },
+    "luminance": 59.152,
+    "description": "En frisk, gulaktig grønntone.",
+    "descriptionEN": "A golden green.",
+    "application": "interior",
+    "matchingColors": [
+      "1775",
+      "7685.0"
+    ],
+    "imagesInterior": [
+      "7386_1.jpg",
+      "7386_2.jpg",
+      "7386_3.jpg",
+      "7386_4.jpg",
+      "7386_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "7685",
+    "name": "SUBTLE GREEN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S3010-G40Y",
+    "hex": "#ABB19B",
+    "rgb": {
+      "r": 171,
+      "g": 175,
+      "b": 155
+    },
+    "luminance": 41.619,
+    "description": "En dempet grønntone.",
+    "descriptionEN": "A muted green.",
+    "application": "interior",
+    "matchingColors": [
+      "8583.0",
+      "7686.0"
+    ],
+    "imagesInterior": [
+      "7685_1.jpg",
+      "7685_2.jpg",
+      "7685_3.jpg",
+      "7685_4.jpg",
+      "7685_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "7629",
+    "name": "ANTIQUE GREEN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4708-G34Y",
+    "hex": "#8A8F81",
+    "rgb": {
+      "r": 138,
+      "g": 143,
+      "b": 129
+    },
+    "luminance": 26.635,
+    "description": "En dempet grønntone.",
+    "descriptionEN": "A muted green.",
+    "application": "interior",
+    "matchingColors": [
+      "1624.0",
+      "1973.0"
+    ],
+    "imagesInterior": [
+      "7629_1.jpg",
+      "7629_2.jpg",
+      "7629_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "7613",
+    "name": "NORTHERN MYSTIC",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "6508-G39Y",
+    "hex": "#696D61",
+    "rgb": {
+      "r": 105,
+      "g": 109,
+      "b": 97
+    },
+    "luminance": 14.717,
+    "description": "En dempet grønntone.",
+    "descriptionEN": "A dark, muted green.",
+    "application": "interior",
+    "matchingColors": [
+      "8470.0",
+      "7628.0"
+    ],
+    "imagesInterior": [
+      "7613_1.jpg",
+      "7613_2.jpg",
+      "7613_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "7686",
+    "name": "MINDFUL GREEN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5109-G10Y",
+    "hex": "#7C877C",
+    "rgb": {
+      "r": 124,
+      "g": 135,
+      "b": 124
+    },
+    "luminance": 23.036,
+    "description": "En dempet grønntone.",
+    "descriptionEN": "A muted green.",
+    "application": "interior",
+    "matchingColors": [
+      "1775.0",
+      "7386.0"
+    ],
+    "imagesInterior": [
+      "7686_1.jpg",
+      "7686_2.jpg",
+      "7686_3.jpg",
+      "7686_4.jpg",
+      "7686_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "7543",
+    "name": "DUSTY GREEN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S4010-G10Y",
+    "hex": "#8D9B8D",
+    "rgb": {
+      "r": 141,
+      "g": 155,
+      "b": 141
+    },
+    "luminance": 30.987,
+    "description": "En dempet grønntone.",
+    "descriptionEN": "A muted green.",
+    "application": "interior",
+    "matchingColors": [
+      "11173",
+      "10961"
+    ],
+    "imagesInterior": [
+      "7543_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "7628",
+    "name": "TREASURE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3508-G36Y",
+    "hex": "#A3A798",
+    "rgb": {
+      "r": 163,
+      "g": 167,
+      "b": 152
+    },
+    "luminance": 37.725,
+    "description": "En dempet grønntone.",
+    "descriptionEN": "A muted green.",
+    "application": "interior",
+    "matchingColors": [
+      "9918.0",
+      "7629"
+    ],
+    "imagesInterior": [
+      "7628_1.jpg",
+      "7628_10.jpg",
+      "7628_11.jpg",
+      "7628_2.jpg",
+      "7628_3.jpg",
+      "7628_4.jpg",
+      "7628_5.jpg",
+      "7628_6.jpg",
+      "7628_7.jpg",
+      "7628_8.jpg",
+      "7628_9.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "8281",
+    "name": "PALE LINDEN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S2005-G70Y",
+    "hex": "#C7C6B6",
+    "rgb": {
+      "r": 199,
+      "g": 198,
+      "b": 182
+    },
+    "luminance": 55.832,
+    "description": "En lys, dempet grønntone.",
+    "descriptionEN": "A muted, yellowish green.",
+    "application": "interior",
+    "matchingColors": [
+      "3377",
+      "8252.0"
+    ],
+    "imagesInterior": [
+      "8281_1.jpg",
+      "8281_2.jpg",
+      "8281_3.jpg",
+      "8281_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "6383",
+    "name": "IMAGINE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2311-B86G",
+    "hex": "#ACBFCF",
+    "rgb": {
+      "r": 172,
+      "g": 193,
+      "b": 183
+    },
+    "luminance": 50.174,
+    "description": "En frisk, blålig grønntone.",
+    "descriptionEN": "A bluish green.",
+    "application": "interior",
+    "matchingColors": [
+      "1024.0",
+      "5455.0"
+    ],
+    "imagesInterior": [
+      "6383_1.jpg",
+      "6383_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "kald"
+    ]
+  },
+  {
+    "id": "6384",
+    "name": "WISH",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3416-B51G",
+    "hex": "#88A5A2",
+    "rgb": {
+      "r": 136,
+      "g": 165,
+      "b": 162
+    },
+    "luminance": 34.804,
+    "description": "En frisk, blålig grønntone.",
+    "descriptionEN": "A bluish green.",
+    "application": "interior",
+    "matchingColors": [
+      "8470.0",
+      "5180.0"
+    ],
+    "imagesInterior": [
+      "6384_1.jpg",
+      "6384_2.jpg",
+      "6384_3.jpg",
+      "6384_4.jpg",
+      "6384_5.jpg",
+      "6384_6.jpg",
+      "6384_7.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "kald"
+    ]
+  },
+  {
+    "id": "6084",
+    "name": "SJØSMARAGD/SJÖSMARAGD",
+    "nameSE": "SJÖSMARAGD",
+    "nameDK": "",
+    "ncs": "S4020-B50G",
+    "hex": "#729592",
+    "rgb": {
+      "r": 114,
+      "g": 149,
+      "b": 146
+    },
+    "luminance": 27.083,
+    "description": "En frisk, blålig grønntone.",
+    "descriptionEN": "A bluish green.",
+    "application": "interior",
+    "matchingColors": [
+      "10679.0",
+      "0394"
+    ],
+    "imagesInterior": [
+      "6084_1.jpg",
+      "6084_2.jpg",
+      "6084_3.jpg",
+      "6084_4.jpg",
+      "6084_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "kald"
+    ]
+  },
+  {
+    "id": "5180",
+    "name": "OSLO",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S7010-B10G",
+    "hex": "#526064",
+    "rgb": {
+      "r": 82,
+      "g": 96,
+      "b": 100
+    },
+    "luminance": 10.995,
+    "description": "En dyp, grønnaktig blåtone.",
+    "descriptionEN": "A muted greenish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "8470",
+      "8064"
+    ],
+    "imagesInterior": [
+      "5180_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "5489",
+    "name": "FREE SPIRIT",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5412-B36G",
+    "hex": "#6A7E7E",
+    "rgb": {
+      "r": 106,
+      "g": 126,
+      "b": 126
+    },
+    "luminance": 19.485,
+    "description": "En grønnaktig blåtone.",
+    "descriptionEN": "A muted greenish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "0486",
+      "8583"
+    ],
+    "imagesInterior": [
+      "5489_1.jpg",
+      "5489_2.jpg",
+      "5489_3.jpg",
+      "5489_4.jpg",
+      "5489_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "6350",
+    "name": "SOFT TEAL",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3706-B93G",
+    "hex": "#9AA49E",
+    "rgb": {
+      "r": 154,
+      "g": 164,
+      "b": 158
+    },
+    "luminance": 35.832,
+    "description": "En dempet, grålig grønntone.",
+    "descriptionEN": "A muted, bluish green.",
+    "application": "interior",
+    "matchingColors": [
+      "7236",
+      "7555"
+    ],
+    "imagesInterior": [
+      "6350_1.jpg",
+      "6350_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "7163",
+    "name": "MINTY BREEZE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S3005-G20Y",
+    "hex": "#ACB2A8",
+    "rgb": {
+      "r": 172,
+      "g": 178,
+      "b": 168
+    },
+    "luminance": 43.367,
+    "description": "En dempet minttone.",
+    "descriptionEN": "A muted, minty green.",
+    "application": "interior",
+    "matchingColors": [
+      "7555",
+      "5180"
+    ],
+    "imagesInterior": [
+      "7163_1.jpg",
+      "7163_2.jpg",
+      "7163_3.jpg",
+      "7163_4.jpg",
+      "7163_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "7555",
+    "name": "SOFT MINT",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1706-G15Y",
+    "hex": "#C9D0C6",
+    "rgb": {
+      "r": 201,
+      "g": 208,
+      "b": 198
+    },
+    "luminance": 61.423,
+    "description": "En dempet minttone.",
+    "descriptionEN": "A muted, minty green.",
+    "application": "interior",
+    "matchingColors": [
+      "7236.0",
+      "5503"
+    ],
+    "imagesInterior": [
+      "7555_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "5452",
+    "name": "NORDIC BREEZE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2107-B01G",
+    "hex": "#BBC6C8",
+    "rgb": {
+      "r": 187,
+      "g": 198,
+      "b": 200
+    },
+    "luminance": 54.902,
+    "description": "En svak grønnaktig blåtone.",
+    "descriptionEN": "A muted greenish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "5503",
+      "12179"
+    ],
+    "imagesInterior": [
+      "5452_1.jpg",
+      "5452_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "4894",
+    "name": "OCEAN AIR",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3209-R97B",
+    "hex": "#9DAAAF",
+    "rgb": {
+      "r": 157,
+      "g": 170,
+      "b": 175
+    },
+    "luminance": 38.812,
+    "description": "En dempet blåtone.",
+    "descriptionEN": "A muted greenish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "1024",
+      "10961"
+    ],
+    "imagesInterior": [
+      "4894_1.jpg",
+      "4894_2.jpg",
+      "4894_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "4619",
+    "name": "DENIM BLÅ",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4819-R90B",
+    "hex": "#677E8E",
+    "rgb": {
+      "r": 103,
+      "g": 126,
+      "b": 142
+    },
+    "luminance": 19.642,
+    "description": "En rødlig blåtone.",
+    "descriptionEN": "A reddish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "1973",
+      "8064"
+    ],
+    "imagesInterior": [
+      "4619_1.jpg",
+      "4619_2.jpg",
+      "4619_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "kald"
+    ]
+  },
+  {
+    "id": "5455",
+    "name": "INDUSTRIAL BLUE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "6416-B02G",
+    "hex": "#4D616C",
+    "rgb": {
+      "r": 77,
+      "g": 97,
+      "b": 108
+    },
+    "luminance": 11.279,
+    "description": "En dyp blåtone.",
+    "descriptionEN": "A greenish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "1391.0",
+      "5489"
+    ],
+    "imagesInterior": [
+      "5455_1.jpg",
+      "5455_2.jpg",
+      "5455_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "kald"
+    ]
+  },
+  {
+    "id": "5030",
+    "name": "ST. PAULS BLUE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "6108-B08G",
+    "hex": "#697477",
+    "rgb": {
+      "r": 105,
+      "g": 116,
+      "b": 119
+    },
+    "luminance": 16.755,
+    "description": "En grønnaktig blåtone.",
+    "descriptionEN": "A muted greenish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "8470.0",
+      "7163.0"
+    ],
+    "imagesInterior": [
+      "5030_1.jpg",
+      "5030_2.jpg",
+      "5030_3.jpg",
+      "5030_4.jpg",
+      "5030_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "5504",
+    "name": "COASTAL BLUE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5411-B02G",
+    "hex": "#6D7D83",
+    "rgb": {
+      "r": 109,
+      "g": 125,
+      "b": 131
+    },
+    "luminance": 19.477,
+    "description": "En dempet blåtone.",
+    "descriptionEN": "A muted greenish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "0553",
+      "5503.0"
+    ],
+    "imagesInterior": [
+      "5504_1.jpg",
+      "5504_2.jpg",
+      "5504_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "kald"
+    ]
+  },
+  {
+    "id": "5503",
+    "name": "NATURAL BLUE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4209-B02G",
+    "hex": "#88959A",
+    "rgb": {
+      "r": 136,
+      "g": 149,
+      "b": 154
+    },
+    "luminance": 29.165,
+    "description": "En dempet blåtone.",
+    "descriptionEN": "A muted greenish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "1973.0",
+      "5504.0"
+    ],
+    "imagesInterior": [
+      "5503_1.jpg",
+      "5503_2.jpg",
+      "5503_3.jpg",
+      "5503_4.jpg",
+      "5503_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "5200",
+    "name": "DUSKY BLUE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3010-B",
+    "hex": "#9EADB2",
+    "rgb": {
+      "r": 158,
+      "g": 173,
+      "b": 178
+    },
+    "luminance": 40.364,
+    "description": "En dempet, gråblå tone.",
+    "descriptionEN": "A cool blue.",
+    "application": "interior",
+    "matchingColors": [
+      "1928.0",
+      "5452"
+    ],
+    "imagesInterior": [
+      "5200_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "4468",
+    "name": "ALLADIN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S1510-R80B",
+    "hex": "#C1CDD5",
+    "rgb": {
+      "r": 193,
+      "g": 205,
+      "b": 213
+    },
+    "luminance": 59.685,
+    "description": "En dempet, rødlig blåtone.",
+    "descriptionEN": "A muted reddish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "9918.0",
+      "4017.0"
+    ],
+    "imagesInterior": [
+      "4468_1.jpg",
+      "4468_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "4223",
+    "name": "SAMA",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S3020-R90B",
+    "hex": "#86A0B1",
+    "rgb": {
+      "r": 134,
+      "g": 160,
+      "b": 177
+    },
+    "luminance": 33.319,
+    "description": "En rødlig blåtone.",
+    "descriptionEN": "A reddish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "12077",
+      "4947"
+    ],
+    "imagesInterior": [
+      "4223_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "kald"
+    ]
+  },
+  {
+    "id": "4947",
+    "name": "TRUE BLUE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5133-R91B",
+    "hex": "#426884",
+    "rgb": {
+      "r": 66,
+      "g": 104,
+      "b": 132
+    },
+    "luminance": 12.666,
+    "description": "En fargesterk blåtone.",
+    "descriptionEN": "A vibrant blue.",
+    "application": "interior",
+    "matchingColors": [
+      "9918.0",
+      "12077.0"
+    ],
+    "imagesInterior": [
+      "4947_1.jpg",
+      "4947_2.jpg",
+      "4947_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "kald"
+    ]
+  },
+  {
+    "id": "4744",
+    "name": "SOPHISTICATED BLUE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "8105-R94B",
+    "hex": "#454A4D",
+    "rgb": {
+      "r": 69,
+      "g": 74,
+      "b": 77
+    },
+    "luminance": 6.7,
+    "description": "En lun, mørk, blåsort tone.",
+    "descriptionEN": "A muted blackish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "12077.0",
+      "0394"
+    ],
+    "imagesInterior": [
+      "4744_1.jpg",
+      "4744_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "4477",
+    "name": "DECO BLUE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S7010-R90B",
+    "hex": "#525C64",
+    "rgb": {
+      "r": 82,
+      "g": 92,
+      "b": 100
+    },
+    "luminance": 10.412,
+    "description": "En lun, dempet blåtone.",
+    "descriptionEN": "A muted reddish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "10342.0",
+      "10429.0"
+    ],
+    "imagesInterior": [
+      "4477_1.jpg",
+      "4477_2.jpg",
+      "4477_3.jpg",
+      "4477_4.jpg",
+      "4477_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "4638",
+    "name": "BYGE / DUNKELGRÅ",
+    "nameSE": "DUNKELGRÅ",
+    "nameDK": "",
+    "ncs": "S6010-R90B",
+    "hex": "#657078",
+    "rgb": {
+      "r": 101,
+      "g": 112,
+      "b": 120
+    },
+    "luminance": 15.786,
+    "description": "En lun, dempet blåtone.",
+    "descriptionEN": "A muted reddish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "10341.0",
+      "10342.0"
+    ],
+    "imagesInterior": [
+      "4638_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "4618",
+    "name": "KVELDSHIMMEL/KVÄLLSHIMMEL",
+    "nameSE": "KVÄLLSHIMMEL",
+    "nameDK": "",
+    "ncs": "S5010-R90B",
+    "hex": "#77838C",
+    "rgb": {
+      "r": 119,
+      "g": 131,
+      "b": 140
+    },
+    "luminance": 22.002,
+    "description": "En lun, dempet blåtone.",
+    "descriptionEN": "A muted reddish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "8470.0",
+      "4477.0"
+    ],
+    "imagesInterior": [
+      "4618_1.jpg",
+      "4618_2.jpg",
+      "4618_3.jpg",
+      "4618_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "kald"
+    ]
+  },
+  {
+    "id": "4017",
+    "name": "PILASTERBLÅ",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S3010-R90B",
+    "hex": "#9CAEBD",
+    "rgb": {
+      "r": 156,
+      "g": 170,
+      "b": 178
+    },
+    "luminance": 39.026,
+    "description": "En lun, dempet blåtone.",
+    "descriptionEN": "A muted reddish blue.",
+    "application": "interior",
+    "matchingColors": [
+      "1624.0",
+      "4618.0"
+    ],
+    "imagesInterior": [
+      "4017_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "kald"
+    ]
+  },
+  {
+    "id": "9915",
+    "name": "MORGENDIS/MORGONDIS",
+    "nameSE": "MORGONDIS",
+    "nameDK": "",
+    "ncs": "S1500-N",
+    "hex": "#D5D4CF",
+    "rgb": {
+      "r": 213,
+      "g": 212,
+      "b": 207
+    },
+    "luminance": 65.653,
+    "description": "En nøytral, kjølig gråtone.",
+    "descriptionEN": "A cool neutral grey.",
+    "application": "interior",
+    "matchingColors": [
+      "9918.0",
+      "4947"
+    ],
+    "imagesInterior": [
+      "9915_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1269",
+    "name": "DEMRING/GRYNING",
+    "nameSE": "GRYNING",
+    "nameDK": "",
+    "ncs": "2502-Y17R",
+    "hex": "#C0BEB6",
+    "rgb": {
+      "r": 192,
+      "g": 190,
+      "b": 182
+    },
+    "luminance": 51.419,
+    "description": "En ren gråtone.",
+    "descriptionEN": "A golden grey.",
+    "application": "interior",
+    "matchingColors": [
+      "9918.0",
+      "4618.0"
+    ],
+    "imagesInterior": [
+      "1269_1.jpg",
+      "1269_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "9913",
+    "name": "MATRIX/LAMMULL",
+    "nameSE": "LAMMULL",
+    "nameDK": "",
+    "ncs": "S6000-N",
+    "hex": "#7B7A79",
+    "rgb": {
+      "r": 123,
+      "g": 122,
+      "b": 121
+    },
+    "luminance": 19.499,
+    "description": "En nøytral, kjølig gråtone.",
+    "descriptionEN": "A cool neutral grey.",
+    "application": "interior",
+    "matchingColors": [
+      "9915",
+      "6350"
+    ],
+    "imagesInterior": [
+      "9913_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "20145",
+    "name": "WISDOM",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "7303-Y94R",
+    "hex": "#615957",
+    "rgb": {
+      "r": 97,
+      "g": 89,
+      "b": 87
+    },
+    "luminance": 10.425,
+    "description": "En dyp, svartaktig plommefarge.",
+    "descriptionEN": "A deep, plumish purple.",
+    "application": "interior",
+    "matchingColors": [
+      "1875",
+      "12076"
+    ],
+    "imagesInterior": [
+      "20145_1.jpg",
+      "20145_2.jpg",
+      "20145_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "3377",
+    "name": "SLATE LAVENDER",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S5005-R20B",
+    "hex": "#8E8687",
+    "rgb": {
+      "r": 142,
+      "g": 134,
+      "b": 135
+    },
+    "luminance": 24.425,
+    "description": "En dempet lavendeltone.",
+    "descriptionEN": "A muted lavender.",
+    "application": "interior",
+    "matchingColors": [
+      "8281",
+      "7628.0"
+    ],
+    "imagesInterior": [
+      "3377_1.jpg",
+      "3377_2.jpg",
+      "3377_3.jpg",
+      "3377_4.jpg",
+      "3377_5.jpg",
+      "3377_6.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "20218",
+    "name": "HEALING LAVENDER",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3904-Y95R",
+    "hex": "#A59D9A",
+    "rgb": {
+      "r": 165,
+      "g": 157,
+      "b": 154
+    },
+    "luminance": 34.474,
+    "description": "En dempet lavendeltone.",
+    "descriptionEN": "A muted lavender.",
+    "application": "interior",
+    "matchingColors": [
+      "12077",
+      "4638"
+    ],
+    "imagesInterior": [
+      "20218_1.jpg",
+      "20218_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "20186",
+    "name": "LAVENDER TOUCH",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2904-Y74R",
+    "hex": "#BBB2AD",
+    "rgb": {
+      "r": 187,
+      "g": 178,
+      "b": 173
+    },
+    "luminance": 45.558,
+    "description": "En gyllen, dempet lavendeltone.",
+    "descriptionEN": "A golden, muted lavender.",
+    "application": "interior",
+    "matchingColors": [
+      "1928.0",
+      "8281.0"
+    ],
+    "imagesInterior": [
+      "20186_1.jpg",
+      "20186_2.jpg",
+      "20186_3.jpg",
+      "20186_4.jpg",
+      "20186_5.jpg",
+      "20186_6.jpg",
+      "20186_7.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "2588",
+    "name": "MYK/MJUK",
+    "nameSE": "MJUK",
+    "nameDK": "",
+    "ncs": "S2005-Y80R",
+    "hex": "#CBC0B9",
+    "rgb": {
+      "r": 203,
+      "g": 192,
+      "b": 185
+    },
+    "luminance": 53.877,
+    "description": "En dempet, grålig rosatone.",
+    "descriptionEN": "A muted lavender.",
+    "application": "interior",
+    "matchingColors": [
+      "20218",
+      "7163"
+    ],
+    "imagesInterior": [
+      "2588_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1391",
+    "name": "LYS ANTIKKGRÅ/LJUS ANTIKGRÅ/LYS KLIDT GRÅ",
+    "nameSE": "LJUS ANTIKGRÅ",
+    "nameDK": "LYS KLIDT GRÅ",
+    "ncs": "S1502-Y",
+    "hex": "#D4D3C9",
+    "rgb": {
+      "r": 212,
+      "g": 211,
+      "b": 201
+    },
+    "luminance": 64.678,
+    "description": "En gyllen gråtone.",
+    "descriptionEN": "A golden grey.",
+    "application": "both",
+    "matchingColors": [
+      "1001.0",
+      "1032.0"
+    ],
+    "imagesInterior": [
+      "1391_1.jpg"
+    ],
+    "imagesExterior": [
+      "1391_1.jpg",
+      "1391_2.jpg"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ],
+    "staffColors": [
+      "1001",
+      "1973"
+    ],
+    "murColors": [
+      "1024",
+      "1462"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "staffNames": [
+      "Egghvit",
+      "Antikkgrå"
+    ],
+    "murNames": [
+      "Tidløs",
+      "Grå Skifer"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ]
+  },
+  {
+    "id": "1973",
+    "name": "ANTIKKGRÅ/ANTIKGRÅ",
+    "nameSE": "ANTIKGRÅ",
+    "nameDK": "",
+    "ncs": "S2502-Y",
+    "hex": "#BFBEB2",
+    "rgb": {
+      "r": 191,
+      "g": 188,
+      "b": 178
+    },
+    "luminance": 50.391,
+    "description": "En gyllen gråtone.",
+    "descriptionEN": "A golden grey colour.",
+    "application": "both",
+    "matchingColors": [
+      "1001.0",
+      "1462.0"
+    ],
+    "imagesInterior": [
+      "1973_1.jpg"
+    ],
+    "imagesExterior": [
+      "1973_1.jpg",
+      "1973_2.jpg",
+      "1973_3.jpg",
+      "1973_4.jpg",
+      "1973_5.jpg"
+    ],
+    "tags": [
+      "nøytral"
+    ],
+    "staffColors": [
+      "1024",
+      "1462"
+    ],
+    "murColors": [
+      "1877",
+      "1024"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "staffNames": [
+      "Tidløs",
+      "Grå Skifer"
+    ],
+    "murNames": [
+      "VAlmuefrø",
+      "Tidløs"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ]
+  },
+  {
+    "id": "1032",
+    "name": "GRÅ HARMONI",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S3502-Y",
+    "hex": "#AAA79F",
+    "rgb": {
+      "r": 170,
+      "g": 167,
+      "b": 159
+    },
+    "luminance": 38.818,
+    "description": "En gyllen gråtone.",
+    "descriptionEN": "A golden grey.",
+    "application": "interior",
+    "matchingColors": [
+      "1024.0",
+      "1462.0"
+    ],
+    "imagesInterior": [
+      "1032_1.jpg",
+      "1032_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "9938",
+    "name": "DEMPET SORT/NATURLIGT SVART",
+    "nameSE": "NATURLIGT SVART",
+    "nameDK": "",
+    "ncs": "S8500-N",
+    "hex": "#494948",
+    "rgb": {
+      "r": 73,
+      "g": 73,
+      "b": 72
+    },
+    "luminance": 6.615,
+    "description": "En nøytral, myk sorttone.",
+    "descriptionEN": "A slightly muted black.",
+    "application": "both",
+    "matchingColors": [
+      "10429.0",
+      "10683.0"
+    ],
+    "imagesInterior": [
+      "9938_1.jpg",
+      "9938_2.jpg",
+      "9938_3.jpg"
+    ],
+    "imagesExterior": [
+      "9938_1.jpg",
+      "9938_2.jpg",
+      "9938_3.jpg",
+      "9938_4.jpg",
+      "9938_5.jpg",
+      "9938_6.jpg",
+      "9938_7.jpg"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ],
+    "staffColors": [
+      "1462",
+      "1434"
+    ],
+    "murColors": [
+      "1877",
+      "9933"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "staffNames": [
+      "Grå Skifer",
+      "Labrador"
+    ],
+    "murNames": [
+      "Valmuefrø",
+      "Stenvegg"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ]
+  },
+  {
+    "id": "1434",
+    "name": "ELEGANT",
+    "nameSE": "",
+    "nameDK": "GRAFFIT GRÅ",
+    "ncs": "S7502-Y",
+    "hex": "#605D58",
+    "rgb": {
+      "r": 96,
+      "g": 93,
+      "b": 88
+    },
+    "luminance": 11.018,
+    "description": "En gyllen gråtone.",
+    "descriptionEN": "A golden grey.",
+    "application": "both",
+    "matchingColors": [
+      "1462.0",
+      "10683.0"
+    ],
+    "imagesInterior": [
+      "1434_1.jpg"
+    ],
+    "imagesExterior": [
+      "1434_1.jpg"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ],
+    "staffColors": [
+      "2279",
+      "1462"
+    ],
+    "murColors": [
+      "1462",
+      "11130"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "staffNames": [
+      "Dodenkopf",
+      "Grå Skifer"
+    ],
+    "murNames": [
+      "Grå Skifer",
+      "Shade"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ]
+  },
+  {
+    "id": "1462",
+    "name": "GRÅ SKIFER/GRÅ SKIFFER",
+    "nameSE": "GRÅ SKIFFER",
+    "nameDK": "",
+    "ncs": "S5502-Y",
+    "hex": "#84817A",
+    "rgb": {
+      "r": 132,
+      "g": 129,
+      "b": 122
+    },
+    "luminance": 22.037,
+    "description": "En gyllen gråtone.",
+    "descriptionEN": "A golden grey.",
+    "application": "both",
+    "matchingColors": [
+      "1973.0",
+      "4638.0"
+    ],
+    "imagesInterior": [
+      "1462_1.jpg"
+    ],
+    "imagesExterior": [
+      "1462_1.jpg",
+      "1462_2.jpg"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ],
+    "staffColors": [
+      "1973",
+      "1434"
+    ],
+    "murColors": [
+      "1877",
+      "1973"
+    ],
+    "terrasseColors": [
+      "9805"
+    ],
+    "staffNames": [
+      "Antikkgrå",
+      "Labrador"
+    ],
+    "murNames": [
+      "Valmuefrø",
+      "Antikkgrå"
+    ],
+    "terrasseNames": [
+      "Sløret Sort"
+    ]
+  },
+  {
+    "id": "1877",
+    "name": "VALMUEFRØ/VALLMOFRÖ",
+    "nameSE": "VALLMOFRÖ",
+    "nameDK": "",
+    "ncs": "S4502-Y",
+    "hex": "#96938B",
+    "rgb": {
+      "r": 150,
+      "g": 147,
+      "b": 139
+    },
+    "luminance": 29.278,
+    "description": "En gyllen gråtone.",
+    "descriptionEN": "A golden grey.",
+    "application": "interior",
+    "matchingColors": [
+      "1391.0",
+      "8252.0"
+    ],
+    "imagesInterior": [
+      "1877_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "8470",
+    "name": "SMOOTH WHITE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2003-G96Y",
+    "hex": "#CECCC0",
+    "rgb": {
+      "r": 206,
+      "g": 203,
+      "b": 192
+    },
+    "luminance": 59.682,
+    "description": "En gyllen grå, med lys grønn undertone.",
+    "descriptionEN": "A golden grey with light green undertones.",
+    "application": "interior",
+    "matchingColors": [
+      "7236.0",
+      "5030.0"
+    ],
+    "imagesInterior": [
+      "8470_1.jpg",
+      "8470_2.jpg",
+      "8470_3.jpg",
+      "8470_4.jpg",
+      "8470_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "12077",
+    "name": "SHEER GREY",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2102-Y26R",
+    "hex": null,
+    "rgb": {
+      "r": 204,
+      "g": 199,
+      "b": 190
+    },
+    "luminance": 57.515,
+    "description": "En lys, greige tone.",
+    "descriptionEN": "A warm grey.",
+    "application": "interior",
+    "matchingColors": [
+      "1622.0",
+      "12078.0"
+    ],
+    "imagesInterior": [
+      "12077_1.jpg",
+      "12077_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": []
+  },
+  {
+    "id": "12078",
+    "name": "COMFORT GREY",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2703-Y19R",
+    "hex": "#BEB9AF",
+    "rgb": {
+      "r": 190,
+      "g": 185,
+      "b": 175
+    },
+    "luminance": 48.808,
+    "description": "En lun gråtone.",
+    "descriptionEN": "A warm grey.",
+    "application": "interior",
+    "matchingColors": [
+      "0552",
+      "1376"
+    ],
+    "imagesInterior": [
+      "12078_1.jpg",
+      "12078_2.jpg",
+      "12078_3.jpg",
+      "12078_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1378",
+    "name": "KONTUR",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4202-Y11R",
+    "hex": "#9E9A93",
+    "rgb": {
+      "r": 158,
+      "g": 154,
+      "b": 147
+    },
+    "luminance": 32.56,
+    "description": "En lun, ren gråtone.",
+    "descriptionEN": "A warm, clean grey.",
+    "application": "both",
+    "matchingColors": [
+      "12078",
+      "4618"
+    ],
+    "imagesInterior": [
+      "1378_1.jpg"
+    ],
+    "imagesExterior": [
+      "1378_1.jpg",
+      "1378_2.jpg",
+      "1378_3.jpg"
+    ],
+    "tags": [
+      "nøytral"
+    ],
+    "staffColors": [
+      "1376",
+      "1899"
+    ],
+    "murColors": [
+      "1462",
+      "1491"
+    ],
+    "terrasseColors": [
+      "9073"
+    ],
+    "staffNames": [
+      "Frostrøyk",
+      "Front"
+    ],
+    "murNames": [
+      "Grå Skifer",
+      "Slipsten"
+    ],
+    "terrasseNames": [
+      "Shimmergrå"
+    ]
+  },
+  {
+    "id": "10249",
+    "name": "SOBER",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "6303-Y43R",
+    "hex": "#797371",
+    "rgb": {
+      "r": 121,
+      "g": 115,
+      "b": 109
+    },
+    "luminance": 17.498,
+    "description": "En gråaktig bruntone.",
+    "descriptionEN": "A warm, muted brown.",
+    "application": "interior",
+    "matchingColors": [
+      "10342.0",
+      "10429.0"
+    ],
+    "imagesInterior": [
+      "10249_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "10429",
+    "name": "DISKRET",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5302-Y32R",
+    "hex": "#8C867F",
+    "rgb": {
+      "r": 140,
+      "g": 134,
+      "b": 127
+    },
+    "luminance": 24.203,
+    "description": "En lun gråtone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1622.0",
+      "12078.0"
+    ],
+    "imagesInterior": [
+      "10429_1.jpg",
+      "10429_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "0553",
+    "name": "ASCOTT",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2203-Y13R",
+    "hex": "#C8C3B8",
+    "rgb": {
+      "r": 200,
+      "g": 195,
+      "b": 184
+    },
+    "luminance": 54.751,
+    "description": "En dempet, gråbeige tone.",
+    "descriptionEN": "A warm, grey.",
+    "application": "interior",
+    "matchingColors": [
+      "1624.0",
+      "1352.0"
+    ],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "10341",
+    "name": "KALK",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1603-Y31R",
+    "hex": "#D9D3C7",
+    "rgb": {
+      "r": 217,
+      "g": 211,
+      "b": 199
+    },
+    "luminance": 65.353,
+    "description": "En rødlig, greige tone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "9918.0",
+      "10342.0"
+    ],
+    "imagesInterior": [
+      "10341_1.jpg",
+      "10341_2.jpg",
+      "10341_3.jpg",
+      "10341_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1928",
+    "name": "SOMMERSNE/SOMMARSNÖ",
+    "nameSE": "SOMMARSNÖ",
+    "nameDK": "",
+    "ncs": "1102-Y10R",
+    "hex": "#E5E2D8",
+    "rgb": {
+      "r": 229,
+      "g": 226,
+      "b": 216
+    },
+    "luminance": 75.882,
+    "description": "En lun, greige tone.",
+    "descriptionEN": "A greyish white.",
+    "application": "interior",
+    "matchingColors": [
+      "9918.0",
+      "10679.0"
+    ],
+    "imagesInterior": [
+      "1928_1.jpg",
+      "1928_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "0552",
+    "name": "TUDOR",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1202-Y26R",
+    "hex": "#E1DBD1",
+    "rgb": {
+      "r": 225,
+      "g": 219,
+      "b": 209
+    },
+    "luminance": 71.483,
+    "description": "En lun, greige tone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "9918.0",
+      "10342.0"
+    ],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "12182",
+    "name": "GENTLE WHISPER",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1903-Y32R",
+    "hex": "#D3CBBF",
+    "rgb": {
+      "r": 211,
+      "g": 203,
+      "b": 191
+    },
+    "luminance": 60.367,
+    "description": "En lys, rødlig greige tone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1376.0",
+      "10429.0"
+    ],
+    "imagesInterior": [
+      "12182_1.jpg",
+      "12182_2.jpg",
+      "12182_3.jpg",
+      "12182_4.jpg",
+      "12182_5.jpg",
+      "12182_6.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "10342",
+    "name": "KALKGRÅ",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2903-Y30R",
+    "hex": "#BBB4A8",
+    "rgb": {
+      "r": 187,
+      "g": 180,
+      "b": 168
+    },
+    "luminance": 45.801,
+    "description": "En rødlig, greige tone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "10341.0",
+      "10429.0"
+    ],
+    "imagesInterior": [
+      "10342_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1145",
+    "name": "BAND STONE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5903-Y38R",
+    "hex": "#807972",
+    "rgb": {
+      "r": 128,
+      "g": 121,
+      "b": 114
+    },
+    "luminance": 19.441,
+    "description": "En lun gråtone.",
+    "descriptionEN": "A warm, muted brown.",
+    "application": "interior",
+    "matchingColors": [
+      "12076",
+      "20217"
+    ],
+    "imagesInterior": [
+      "1145_1.jpg",
+      "1145_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1352",
+    "name": "FORM",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4605-Y10R",
+    "hex": "#9B948A",
+    "rgb": {
+      "r": 155,
+      "g": 148,
+      "b": 138
+    },
+    "luminance": 30.072,
+    "description": "En lun gråtone.",
+    "descriptionEN": "A warm grey.",
+    "application": "interior",
+    "matchingColors": [
+      "10679.0",
+      "4638.0"
+    ],
+    "imagesInterior": [
+      "1352_1.jpg",
+      "1352_2.jpg",
+      "1352_3.jpg",
+      "1352_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "0394",
+    "name": "VARMGRÅ",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3504-Y19R",
+    "hex": "#AFA79C",
+    "rgb": {
+      "r": 175,
+      "g": 169,
+      "b": 156
+    },
+    "luminance": 39.779,
+    "description": "En lun gråtone.",
+    "descriptionEN": "A warm grey.",
+    "application": "interior",
+    "matchingColors": [
+      "1376.0",
+      "20167"
+    ],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "10679",
+    "name": "WASHED LINEN",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2303-Y14R",
+    "hex": "#C9C3B6",
+    "rgb": {
+      "r": 201,
+      "g": 195,
+      "b": 182
+    },
+    "luminance": 54.928,
+    "description": "En lun, gråbeige tone.",
+    "descriptionEN": "A muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1001.0",
+      "4477"
+    ],
+    "imagesInterior": [
+      "10679_1.jpg",
+      "10679_2.jpg",
+      "10679_3.jpg",
+      "10679_4.jpg",
+      "10679_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1024",
+    "name": "TIDLØS/TIDLÖS",
+    "nameSE": "TIDLÖS",
+    "nameDK": "",
+    "ncs": "S1002-Y",
+    "hex": "#E0DDD3",
+    "rgb": {
+      "r": 224,
+      "g": 221,
+      "b": 211
+    },
+    "luminance": 72.411,
+    "description": "En svak gulaktig, grå hvittone.",
+    "descriptionEN": "A pale, yellowish white with grey undertone.",
+    "application": "both",
+    "matchingColors": [
+      "1391.0",
+      "1973.0"
+    ],
+    "imagesInterior": [
+      "1024_1.jpg",
+      "1024_2.jpg",
+      "1024_3.jpg",
+      "1024_4.jpg",
+      "1024_5.jpg"
+    ],
+    "imagesExterior": [
+      "1024_1.jpg",
+      "1024_2.jpg",
+      "1024_3.jpg"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ],
+    "staffColors": [
+      "1001",
+      "1973"
+    ],
+    "murColors": [
+      "1973",
+      "1877"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "staffNames": [
+      "Egghvit",
+      "Antikkgrå"
+    ],
+    "murNames": [
+      "Antikkgrå",
+      "Valmuefrø"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ]
+  },
+  {
+    "id": "1931",
+    "name": "KOKOS",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1203-Y19R",
+    "hex": "#E3DDCD",
+    "rgb": {
+      "r": 227,
+      "g": 221,
+      "b": 205
+    },
+    "luminance": 72.302,
+    "description": "En varm, dempet beigetone.",
+    "descriptionEN": "A muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1624.0",
+      "12075"
+    ],
+    "imagesInterior": [
+      "1931_1.jpg",
+      "1931_2.jpg",
+      "1931_3.jpg",
+      "1931_4.jpg",
+      "1931_5.jpg",
+      "1931_6.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "1876",
+    "name": "HVIT TE/VITT TE",
+    "nameSE": "VITT TE",
+    "nameDK": "",
+    "ncs": "1805-Y20R",
+    "hex": "#D4CBB9",
+    "rgb": {
+      "r": 212,
+      "g": 203,
+      "b": 185
+    },
+    "luminance": 60.387,
+    "description": "En dempet, gulaktig beigetone.",
+    "descriptionEN": "A muted, golden beige.",
+    "application": "interior",
+    "matchingColors": [
+      "0486",
+      "8252.0"
+    ],
+    "imagesInterior": [
+      "1876_1.jpg",
+      "1876_2.jpg",
+      "1876_3.jpg",
+      "1876_4.jpg",
+      "1876_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "12076",
+    "name": "MODERN BEIGE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2805-Y27R",
+    "hex": "#BFA7A4",
+    "rgb": {
+      "r": 191,
+      "g": 179,
+      "b": 164
+    },
+    "luminance": 46.113,
+    "description": "En varm beigetone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "12075.0",
+      "5504.0"
+    ],
+    "imagesInterior": [
+      "12076_1.jpg",
+      "12076_2.jpg",
+      "12076_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "12181",
+    "name": "SOFT COMFORT",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5504-Y24R",
+    "hex": "#8A8176",
+    "rgb": {
+      "r": 138,
+      "g": 129,
+      "b": 118
+    },
+    "luminance": 22.405,
+    "description": "En lun, greige tone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "10342.0",
+      "20046.0"
+    ],
+    "imagesInterior": [
+      "12181_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "11130",
+    "name": "SHADE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4505-Y20R",
+    "hex": "#9D9379",
+    "rgb": {
+      "r": 157,
+      "g": 147,
+      "b": 134
+    },
+    "luminance": 29.798,
+    "description": "En lun, gråbeige tone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "12075.0",
+      "12120.0"
+    ],
+    "imagesInterior": [
+      "11130_1.jpg",
+      "11130_2.jpg",
+      "11130_3.jpg",
+      "11130_4.jpg",
+      "11130_5.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "1233",
+    "name": "MOHAIR",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S4005-Y20R",
+    "hex": "#A69A8B",
+    "rgb": {
+      "r": 164,
+      "g": 154,
+      "b": 139
+    },
+    "luminance": 32.777,
+    "description": "En lun, dempet beigetone.",
+    "descriptionEN": "A muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "0486",
+      "1876.0"
+    ],
+    "imagesInterior": [
+      "1233_1.jpg",
+      "1233_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "12075",
+    "name": "SOOTHING BEIGE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2305-Y22R",
+    "hex": "#CAC2AF",
+    "rgb": {
+      "r": 202,
+      "g": 192,
+      "b": 175
+    },
+    "luminance": 53.318,
+    "description": "En dempet beigetone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1376.0",
+      "12290"
+    ],
+    "imagesInterior": [
+      "12075_1.jpg",
+      "12075_2.jpg",
+      "12075_3.jpg",
+      "12075_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "10678",
+    "name": "SPACE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1704-Y19R",
+    "hex": "#D6CFC7",
+    "rgb": {
+      "r": 214,
+      "g": 207,
+      "b": 191
+    },
+    "luminance": 62.64,
+    "description": "En varm, dempet beigetone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1624.0",
+      "1233.0"
+    ],
+    "imagesInterior": [
+      "10678_1.jpg",
+      "10678_2.jpg",
+      "10678_3.jpg",
+      "10678_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1875",
+    "name": "SANS",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1003-Y21R",
+    "hex": "#E6DFD1",
+    "rgb": {
+      "r": 230,
+      "g": 223,
+      "b": 206
+    },
+    "luminance": 73.964,
+    "description": "En varm beigetone.",
+    "descriptionEN": "A warm beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1001.0",
+      "1140.0"
+    ],
+    "imagesInterior": [
+      "1875_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "1140",
+    "name": "SAND",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S2005-Y30R",
+    "hex": "#CFD2B4",
+    "rgb": {
+      "r": 207,
+      "g": 197,
+      "b": 180
+    },
+    "luminance": 56.229,
+    "description": "En varm beigetone.",
+    "descriptionEN": "A warm, muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1931.0",
+      "20208"
+    ],
+    "imagesInterior": [
+      "1140_1.jpg",
+      "1140_2.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "12180",
+    "name": "PRESENT",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3304-Y32R",
+    "hex": "#B6A79E",
+    "rgb": {
+      "r": 181,
+      "g": 171,
+      "b": 158
+    },
+    "luminance": 41.582,
+    "description": "En rødaktig beigetone.",
+    "descriptionEN": "A muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "12182",
+      "1145.0"
+    ],
+    "imagesInterior": [
+      "12180_1.jpeg",
+      "12180_2.jpeg",
+      "12180_3.jpeg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1929",
+    "name": "MUSKATNØTT/MUSKOTNÖT",
+    "nameSE": "MUSKOTNÖT",
+    "nameDK": "",
+    "ncs": "4806-Y38R",
+    "hex": "#A19485",
+    "rgb": {
+      "r": 161,
+      "g": 148,
+      "b": 133
+    },
+    "luminance": 30.48,
+    "description": "En varm beigetone.",
+    "descriptionEN": "A warm brown.",
+    "application": "interior",
+    "matchingColors": [
+      "1875.0",
+      "1140.0"
+    ],
+    "imagesInterior": [
+      "1929_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1623",
+    "name": "MARRAKESH",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3606-Y29R",
+    "hex": "#AFAA91",
+    "rgb": {
+      "r": 174,
+      "g": 161,
+      "b": 145
+    },
+    "luminance": 36.583,
+    "description": "En varm beigetone.",
+    "descriptionEN": "A warm brown.",
+    "application": "interior",
+    "matchingColors": [
+      "1140.0",
+      "20046"
+    ],
+    "imagesInterior": [
+      "1623_1.jpg",
+      "1623_2.jpg",
+      "1623_3.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "12290",
+    "name": "ANTWERP BEIGE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3105-Y25R",
+    "hex": "#B9AFA5",
+    "rgb": {
+      "r": 185,
+      "g": 175,
+      "b": 159
+    },
+    "luminance": 43.409,
+    "description": "En lun, dempet beigetone.",
+    "descriptionEN": "A muted beige.",
+    "application": "interior",
+    "matchingColors": [
+      "12075.0",
+      "12217.0"
+    ],
+    "imagesInterior": [
+      "12290_1.jpg",
+      "12290_2.jpg",
+      "12290_3.jpg",
+      "12290_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1359",
+    "name": "MACCHIATO",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S2005-Y40R",
+    "hex": "#D6D3C0",
+    "rgb": {
+      "r": 206,
+      "g": 193,
+      "b": 177
+    },
+    "luminance": 54.465,
+    "description": "En varm, rødaktig beigetone.",
+    "descriptionEN": "A reddish beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1376.0",
+      "2951"
+    ],
+    "imagesInterior": [
+      "1359_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1519",
+    "name": "VANILJE/VANILJ",
+    "nameSE": "VANILJ",
+    "nameDK": "",
+    "ncs": "S1005-Y30R",
+    "hex": "#E5DCD0",
+    "rgb": {
+      "r": 229,
+      "g": 218,
+      "b": 200
+    },
+    "luminance": 70.699,
+    "description": "En varm beigetone.",
+    "descriptionEN": "A warm beige.",
+    "application": "interior",
+    "matchingColors": [
+      "1929",
+      "20167"
+    ],
+    "imagesInterior": [
+      "1519_1.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "7236",
+    "name": "CHI",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "0401-G42Y",
+    "hex": "#F3F4EE",
+    "rgb": {
+      "r": 243,
+      "g": 244,
+      "b": 238
+    },
+    "luminance": 89.639,
+    "description": "Krittende hvit, med grønn undertone.",
+    "descriptionEN": "A crisp, white with green undertones.",
+    "application": "interior",
+    "matchingColors": [
+      "7555.0",
+      "7163.0"
+    ],
+    "imagesInterior": [
+      "7236_1.jpg",
+      "7236_2.jpg",
+      "7236_3.jpg",
+      "7236_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "9918",
+    "name": "KLASSISK HVIT/KLASSISK VIT",
+    "nameSE": "KLASSISK VIT",
+    "nameDK": "",
+    "ncs": "S0500-N",
+    "hex": "#F0EFEA",
+    "rgb": {
+      "r": 240,
+      "g": 239,
+      "b": 234
+    },
+    "luminance": 86.432,
+    "description": "En nøytral hvittone.",
+    "descriptionEN": "A pure white.",
+    "application": "both",
+    "matchingColors": [
+      "1378",
+      "4947"
+    ],
+    "imagesInterior": [
+      "9918_1.jpg",
+      "9918_2.jpg",
+      "9918_3.jpg",
+      "9918_4.jpg",
+      "9918_5.jpg",
+      "9918_6.jpg",
+      "9918_7.jpg",
+      "9918_8.jpg",
+      "9918_9.jpg"
+    ],
+    "imagesExterior": [
+      "9918_1.jfif",
+      "9918_2.jfif",
+      "9918_3.jfif",
+      "9918_4.jfif",
+      "9918_5.jfif",
+      "9918_6.jfif",
+      "9918_7.jfif",
+      "9918_8.jfif"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ],
+    "staffColors": [
+      "8025",
+      "1877"
+    ],
+    "murColors": [
+      "1462",
+      "1973"
+    ],
+    "terrasseColors": [
+      "900029"
+    ],
+    "staffNames": [
+      "Skodde",
+      "Valmuefrø"
+    ],
+    "murNames": [
+      "Grå Skifter",
+      "Antikkgrå"
+    ],
+    "terrasseNames": [
+      "Natrulig Sølvgrå"
+    ]
+  },
+  {
+    "id": "1624",
+    "name": "LETTHET/LÄTTHET",
+    "nameSE": "LÄTTHET",
+    "nameDK": "",
+    "ncs": "0501-Y01R",
+    "hex": "#F2F1E8",
+    "rgb": {
+      "r": 242,
+      "g": 241,
+      "b": 232
+    },
+    "luminance": 87.535,
+    "description": "En svakt gyllen hvittone.",
+    "descriptionEN": "A light, golden white.",
+    "application": "both",
+    "matchingColors": [
+      "10679.0",
+      "0394"
+    ],
+    "imagesInterior": [
+      "1624_1.jpg",
+      "1624_2.jpg",
+      "1624_3.jpg"
+    ],
+    "imagesExterior": [
+      "1624_1.jpg",
+      "1624_2.jpg",
+      "1624_3.jpg",
+      "1624_4.jpg",
+      "1624_5.jpg",
+      "1624_6.jpg",
+      "1624_7.jpg"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ],
+    "staffColors": [
+      "1024",
+      "1973"
+    ],
+    "murColors": [
+      "1024",
+      "1973"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "staffNames": [
+      "Tidløs",
+      "Antikkgrå"
+    ],
+    "murNames": [
+      "Tidløs",
+      "Antikkgrå"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ]
+  },
+  {
+    "id": "1622",
+    "name": "REFLEKSJON/REFLEKTION",
+    "nameSE": "REFLEKTION",
+    "nameDK": "",
+    "ncs": "0801-Y25R",
+    "hex": "#EBEAE2",
+    "rgb": {
+      "r": 235,
+      "g": 233,
+      "b": 226
+    },
+    "luminance": 81.363,
+    "description": "En lun, gråaktig hvittone.",
+    "descriptionEN": "A warm greyish white with red undertones",
+    "application": "both",
+    "matchingColors": [
+      "12077.0",
+      "0394"
+    ],
+    "imagesInterior": [
+      "1622_1.jpg",
+      "1622_2.jpg",
+      "1622_3.jpg",
+      "1622_4.jpg"
+    ],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ],
+    "staffColors": [
+      "1016",
+      "1939"
+    ],
+    "murColors": [
+      "11130",
+      "1491"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "staffNames": [
+      "Blek Sand",
+      "Sandbeige"
+    ],
+    "murNames": [
+      "Shade",
+      "Slipsten"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ]
+  },
+  {
+    "id": "1001",
+    "name": "EGGHVIT/EGGVIT",
+    "nameSE": "EGGVIT",
+    "nameDK": "",
+    "ncs": "0502-Y",
+    "hex": "#EFEDE3",
+    "rgb": {
+      "r": 239,
+      "g": 237,
+      "b": 227
+    },
+    "luminance": 84.334,
+    "description": "En gyllen hvittone.",
+    "descriptionEN": "A light, golden white.",
+    "application": "both",
+    "matchingColors": [
+      "1973.0",
+      "1032.0"
+    ],
+    "imagesInterior": [
+      "1001_1.jpg",
+      "1001_2.jpg",
+      "1001_3.jpg",
+      "1001_4.jpg"
+    ],
+    "imagesExterior": [
+      "1001_1.jpg",
+      "1001_2.jpg",
+      "1001_3.jpg",
+      "1001_4.jpg",
+      "1001_5.jpg",
+      "1001_6.jpg",
+      "1001_7.jpg"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ],
+    "staffColors": [
+      "1391",
+      "1973"
+    ],
+    "murColors": [
+      "1973",
+      "1462"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "staffNames": [
+      "Lys Antikkgrå",
+      "Antikkgrå"
+    ],
+    "murNames": [
+      "Antikkgrå",
+      "Grå Skifer"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ]
+  },
+  {
+    "id": "1453",
+    "name": "BOMULL",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S0502-Y",
+    "hex": "#F0EFDA",
+    "rgb": {
+      "r": 240,
+      "g": 239,
+      "b": 226
+    },
+    "luminance": 85.636,
+    "description": "En gyllen hvittone.",
+    "descriptionEN": "A golden white.",
+    "application": "both",
+    "matchingColors": [
+      "0394",
+      "20046.0"
+    ],
+    "imagesInterior": [
+      "1453_1.jpg"
+    ],
+    "imagesExterior": [
+      "1453_1.jpg",
+      "1453_2.jpg",
+      "1453_3.jpg",
+      "1453_4.jpg",
+      "1453_5.jpg",
+      "1453_6.jpg"
+    ],
+    "tags": [
+      "lys",
+      "varm"
+    ],
+    "staffColors": [
+      "1024",
+      "8025"
+    ],
+    "murColors": [
+      "1877",
+      "1973"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "staffNames": [
+      "Tidløs",
+      "Skodde"
+    ],
+    "murNames": [
+      "Valmuefrø",
+      "Antikkgrå"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ]
+  },
+  {
+    "id": "0486",
+    "name": "SILKE",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "0702-Y35R",
+    "hex": "#EAE7DC",
+    "rgb": {
+      "r": 234,
+      "g": 231,
+      "b": 220
+    },
+    "luminance": 79.798,
+    "description": "En dempet, gyllen hvittone.",
+    "descriptionEN": "A golden white.",
+    "application": "interior",
+    "matchingColors": [
+      "10678",
+      "12290"
+    ],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1376",
+    "name": "FROSTRØYK/FROSTRÖK/PERLE",
+    "nameSE": "FROSTRÖK",
+    "nameDK": "PERLE",
+    "ncs": "1002-Y24R",
+    "hex": "#E5E0D4",
+    "rgb": {
+      "r": 229,
+      "g": 224,
+      "b": 212
+    },
+    "luminance": 74.479,
+    "description": "En lun, grålig hvittone.",
+    "descriptionEN": "A warm, greyish white.",
+    "application": "both",
+    "matchingColors": [
+      "1624.0",
+      "12083"
+    ],
+    "imagesInterior": [
+      "1376_1.jpg",
+      "1376_2.jpg",
+      "1376_3.jpg"
+    ],
+    "imagesExterior": [
+      "1376_1.jpg"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ],
+    "staffColors": [
+      "1624",
+      "394"
+    ],
+    "murColors": [
+      "11130",
+      "1491"
+    ],
+    "terrasseColors": [
+      "9072"
+    ],
+    "staffNames": [
+      "Letthet",
+      "Varmgrå"
+    ],
+    "murNames": [
+      "Shade",
+      "Slipsten"
+    ],
+    "terrasseNames": [
+      "Naturgrå"
+    ]
+  },
+  {
+    "id": "10784",
+    "name": "Skyggehvit",
+    "nameSE": "SKUGGVIT",
+    "nameDK": "",
+    "ncs": "1002-Y13R",
+    "hex": "#E3E4DB",
+    "rgb": {
+      "r": 231,
+      "g": 228,
+      "b": 218
+    },
+    "luminance": 77.326,
+    "description": "En grålig hvittone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "10784_1.jpg"
+    ],
+    "staffColors": [
+      "1624",
+      "1378"
+    ],
+    "staffNames": [
+      "Letthet",
+      "Kontur"
+    ],
+    "murColors": [
+      "1625",
+      "1973"
+    ],
+    "murNames": [
+      "Letthet",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1105",
+    "name": "Villahvit",
+    "nameSE": "VILLAVIT",
+    "nameDK": "",
+    "ncs": "0502-Y08R",
+    "hex": "#E1DED7",
+    "rgb": {
+      "r": 241,
+      "g": 239,
+      "b": 229
+    },
+    "luminance": 86.319,
+    "description": "En gyllen hvittone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1105_1.jpg",
+      "1105_2.jpg"
+    ],
+    "staffColors": [
+      "731",
+      "8413"
+    ],
+    "staffNames": [
+      "Demihvit",
+      "Herregårdsgrønn"
+    ],
+    "murColors": [
+      "1402",
+      "1491"
+    ],
+    "murNames": [
+      "Canvas",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "9072"
+    ],
+    "terrasseNames": [
+      "Naturgrå"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "10416",
+    "name": "Perlehvit",
+    "nameSE": "PÄRLVIT",
+    "nameDK": "",
+    "ncs": "0604-Y04R",
+    "hex": "#E4DFD5",
+    "rgb": {
+      "r": 239,
+      "g": 234,
+      "b": 219
+    },
+    "luminance": 82.084,
+    "description": "En gyllen hvittone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "10416_1.jpg"
+    ],
+    "staffColors": [
+      "1394",
+      "8413"
+    ],
+    "staffNames": [
+      "Os",
+      "Herregårdsgrønn"
+    ],
+    "murColors": [
+      "1402",
+      "11130"
+    ],
+    "murNames": [
+      "Canvas",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "471",
+    "name": "Lys antikk",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "0802-G98Y",
+    "hex": "#DEDDD9",
+    "rgb": {
+      "r": 234,
+      "g": 229,
+      "b": 218
+    },
+    "luminance": 78.666,
+    "description": "En lun, beigeaktig hvittone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "staffColors": [
+      "1016",
+      "1284"
+    ],
+    "staffNames": [
+      "Blek Sand",
+      "Svolvær"
+    ],
+    "murColors": [
+      "1491",
+      "1973"
+    ],
+    "murNames": [
+      "Slipsten",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "9072"
+    ],
+    "terrasseNames": [
+      "Naturgrå"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "182",
+    "name": "Perlegrå",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1204-Y24R",
+    "hex": "#DADAD2",
+    "rgb": {
+      "r": 225,
+      "g": 218,
+      "b": 202
+    },
+    "luminance": 70.477,
+    "description": "En grålig beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0182_1.jpg",
+      "0182_2.jpg"
+    ],
+    "staffColors": [
+      "1283",
+      "175"
+    ],
+    "staffNames": [
+      "Lys Grå Umbra",
+      "Tjærebrun"
+    ],
+    "murColors": [
+      "11130",
+      "1491"
+    ],
+    "murNames": [
+      "Shade",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "343",
+    "name": "Antikkhvit",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1006-Y26R",
+    "hex": "#EBECE6",
+    "rgb": {
+      "r": 229,
+      "g": 218,
+      "b": 199
+    },
+    "luminance": 70.803,
+    "description": "En rødlig beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "staffColors": [
+      "1283",
+      "1284"
+    ],
+    "staffNames": [
+      "Lys Grå Umbra",
+      "Svolvær"
+    ],
+    "murColors": [
+      "11130",
+      "1491"
+    ],
+    "murNames": [
+      "Shade",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1816",
+    "name": "Strand",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2308-Y25R",
+    "hex": "#E3E0D7",
+    "rgb": {
+      "r": 205,
+      "g": 189,
+      "b": 165
+    },
+    "luminance": 52.003,
+    "description": "En rødlig beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "staffColors": [
+      "343",
+      "175"
+    ],
+    "staffNames": [
+      "Antikkhvit",
+      "Tjærebrun"
+    ],
+    "murColors": [
+      "1001",
+      "1973"
+    ],
+    "murNames": [
+      "Egghvit",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "9052"
+    ],
+    "terrasseNames": [
+      "Eksotisk Tre"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1486",
+    "name": "Rå umbra blek",
+    "nameSE": "RÅ UMBRA BLEK",
+    "nameDK": "",
+    "ncs": "2508-Y20R",
+    "hex": "#E2DFD6",
+    "rgb": {
+      "r": 198,
+      "g": 184,
+      "b": 162
+    },
+    "luminance": 48.923,
+    "description": "En gyllen beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "staffColors": [
+      "182",
+      "546"
+    ],
+    "staffNames": [
+      "Perlegrå",
+      "Vika"
+    ],
+    "murColors": [
+      "1376",
+      "1877"
+    ],
+    "murNames": [
+      "Frostrøyk",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "2182",
+    "name": "Nøtt",
+    "nameSE": "NÖT",
+    "nameDK": "NØD",
+    "ncs": "8006-Y63R",
+    "hex": "#ECEAE4",
+    "rgb": {
+      "r": 84,
+      "g": 72,
+      "b": 67
+    },
+    "luminance": 6.995,
+    "description": "En rødlig bruntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "staffColors": [
+      "343",
+      "10168"
+    ],
+    "staffNames": [
+      "Antikkhvit",
+      "Muted Yellow"
+    ],
+    "murColors": [
+      "11130",
+      "1877"
+    ],
+    "murNames": [
+      "Shade",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "734",
+    "name": "Brunsvart",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "8501-G90Y",
+    "hex": "#E4E0D5",
+    "rgb": {
+      "r": 68,
+      "g": 66,
+      "b": 65
+    },
+    "luminance": 5.526,
+    "description": "En sortaktig bruntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0734_1.jpg",
+      "0734_2.jpg",
+      "0734_3.jpg"
+    ],
+    "staffColors": [
+      "1016",
+      "1284"
+    ],
+    "staffNames": [
+      "Blek Sand",
+      "Svolvær"
+    ],
+    "murColors": [
+      "11130",
+      "1877"
+    ],
+    "murNames": [
+      "Shade",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "10292",
+    "name": "Gjenskinn",
+    "nameSE": "LJUS SAND",
+    "nameDK": "",
+    "ncs": "0905-Y15R",
+    "hex": "#DBD8CF",
+    "rgb": {
+      "r": 234,
+      "g": 226,
+      "b": 205
+    },
+    "luminance": null,
+    "description": "En lys, dempet gultone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [],
+    "staffColors": [
+      "1624",
+      "10293"
+    ],
+    "staffNames": [
+      "Letthet",
+      "Lys Hamp"
+    ],
+    "murColors": [
+      "1624",
+      "10293"
+    ],
+    "murNames": [
+      "Letthet",
+      "Lys Hamp"
+    ],
+    "terrasseColors": [
+      "9072"
+    ],
+    "terrasseNames": [
+      "Naturgrå"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1108",
+    "name": "Fyn",
+    "nameSE": "",
+    "nameDK": "LYS STRANDSAND",
+    "ncs": "S1005-Y10R",
+    "hex": "#E1DDD6",
+    "rgb": {
+      "r": 228,
+      "g": 221,
+      "b": 202
+    },
+    "luminance": 72.491,
+    "description": "En dempet beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1108_1.jpg"
+    ],
+    "staffColors": [
+      "1001",
+      "10293"
+    ],
+    "staffNames": [
+      "Egghvit",
+      "Lys Hamp"
+    ],
+    "murColors": [
+      "1001",
+      "11130"
+    ],
+    "murNames": [
+      "Egghvit",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1283",
+    "name": "Lys grå umbra",
+    "nameSE": "LJUS GRÅ UMBRA",
+    "nameDK": "",
+    "ncs": "2806-Y22R",
+    "hex": "#DAD5CC",
+    "rgb": {
+      "r": 190,
+      "g": 180,
+      "b": 161
+    },
+    "luminance": 46.231,
+    "description": "En dempet beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1283_1.jpg"
+    ],
+    "staffColors": [
+      "1376",
+      "1284"
+    ],
+    "staffNames": [
+      "Frostrøyk",
+      "Svolvær"
+    ],
+    "murColors": [
+      "1376",
+      "1877"
+    ],
+    "murNames": [
+      "Frostrøyk",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90001"
+    ],
+    "terrasseNames": [
+      "Fjellbris"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1939",
+    "name": "Sandbeige",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S3005-Y20R",
+    "hex": "#DCD4C9",
+    "rgb": {
+      "r": 183,
+      "g": 173,
+      "b": 156
+    },
+    "luminance": 42.397,
+    "description": "En dempet beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1939_1.jpg",
+      "1939_2.jpg"
+    ],
+    "staffColors": [
+      "1376",
+      "10254"
+    ],
+    "staffNames": [
+      "Frostrøyk",
+      "Brun Jord"
+    ],
+    "murColors": [
+      "1376",
+      "1877"
+    ],
+    "murNames": [
+      "Frostrøyk",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1284",
+    "name": "Svolvær",
+    "nameSE": "SVOLVÄR",
+    "nameDK": "",
+    "ncs": "3805-Y17R",
+    "hex": "#C8BCAB",
+    "rgb": {
+      "r": 170,
+      "g": 160,
+      "b": 145
+    },
+    "luminance": 35.579,
+    "description": "En dempet beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1284_1.jpg",
+      "1284_2.jpg",
+      "1284_3.jpg"
+    ],
+    "staffColors": [
+      "1001",
+      "1016"
+    ],
+    "staffNames": [
+      "Egghvit",
+      "Blek Sand"
+    ],
+    "murColors": [
+      "1491",
+      "1973"
+    ],
+    "murNames": [
+      "Slipesten",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90002"
+    ],
+    "terrasseNames": [
+      "Gråsvart"
+    ],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "10254",
+    "name": "Brun jord",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S5005-Y20R",
+    "hex": "#BFB8A9",
+    "rgb": {
+      "r": 147,
+      "g": 137,
+      "b": 124
+    },
+    "luminance": 25.592,
+    "description": "En dempet bruntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "10254_1.jpg",
+      "10254_2.jpg"
+    ],
+    "staffColors": [
+      "1024",
+      "1284"
+    ],
+    "staffNames": [
+      "Tidløs",
+      "Svolvær"
+    ],
+    "murColors": [
+      "1491",
+      "1973"
+    ],
+    "murNames": [
+      "Slipesten",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "9072"
+    ],
+    "terrasseNames": [
+      "Naturgrå"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "175",
+    "name": "Tjærebrun",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "8204-Y54R",
+    "hex": "#B6B4A8",
+    "rgb": {
+      "r": 83,
+      "g": 75,
+      "b": 70
+    },
+    "luminance": 7.325,
+    "description": "En dempet, rødlig bruntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0175_1.jpg",
+      "0175_2.jpg"
+    ],
+    "staffColors": [
+      "182",
+      "10168"
+    ],
+    "staffNames": [
+      "Perlegrå",
+      "Muted Yellow"
+    ],
+    "murColors": [
+      "11130",
+      "1877"
+    ],
+    "murNames": [
+      "Shade",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "99",
+    "name": "Sort",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "9500-N",
+    "hex": "#756C5D",
+    "rgb": {
+      "r": 64,
+      "g": 62,
+      "b": 59
+    },
+    "luminance": 4.888,
+    "description": "En helt sort tone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0099_1.jpg"
+    ],
+    "staffColors": [
+      "1899",
+      "1223"
+    ],
+    "staffNames": [
+      "Front",
+      "Høststemning"
+    ],
+    "murColors": [
+      "1877",
+      "1462"
+    ],
+    "murNames": [
+      "Valmuefrø",
+      "Grå Skifer"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "mørk",
+      "varm",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1274",
+    "name": "Dus",
+    "nameSE": "FROSTIG",
+    "nameDK": "",
+    "ncs": "1103-Y09R",
+    "hex": "#D2CEC3",
+    "rgb": {
+      "r": 226,
+      "g": 223,
+      "b": 211
+    },
+    "luminance": null,
+    "description": "En svakt gyllen gråtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1274_1.jpg"
+    ],
+    "staffColors": [
+      "1624",
+      "1462"
+    ],
+    "staffNames": [
+      "Letthet",
+      "Grå Skifer"
+    ],
+    "murColors": [
+      "1877",
+      "1024"
+    ],
+    "murNames": [
+      "Valmuefrø",
+      "Tidløs"
+    ],
+    "terrasseColors": [
+      "9073"
+    ],
+    "terrasseNames": [
+      "Shimmergrå"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "731",
+    "name": "Demihvit",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1404-Y05R",
+    "hex": "#BEBAAC",
+    "rgb": {
+      "r": 216,
+      "g": 209,
+      "b": 191
+    },
+    "luminance": 63.854,
+    "description": "En dempet, gyllen beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0731_1.jpg"
+    ],
+    "staffColors": [
+      "10416",
+      "7653"
+    ],
+    "staffNames": [
+      "Perlehvit",
+      "Stockholmsgrønn"
+    ],
+    "murColors": [
+      "1402",
+      "11130"
+    ],
+    "murNames": [
+      "Canvas",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "9074"
+    ],
+    "terrasseNames": [
+      "Nordisk Tre"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1016",
+    "name": "Blek sand",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S2005-Y20R",
+    "hex": "#C5C0B5",
+    "rgb": {
+      "r": 205,
+      "g": 197,
+      "b": 181
+    },
+    "luminance": 56.312,
+    "description": "En dempet, gyllen beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1016_1.jpg",
+      "1016_2.jpg",
+      "1016_3.jpg"
+    ],
+    "staffColors": [
+      "1376",
+      "1283"
+    ],
+    "staffNames": [
+      "Frostrøyk",
+      "Lys Grå Umbra"
+    ],
+    "murColors": [
+      "11129",
+      "1024"
+    ],
+    "murNames": [
+      "Smoky Grey",
+      "Tidløs"
+    ],
+    "terrasseColors": [
+      "9074"
+    ],
+    "terrasseNames": [
+      "Nordisk Tre"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1141",
+    "name": "Natural beige",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2505-Y20R",
+    "hex": "#C5BEB1",
+    "rgb": {
+      "r": 197,
+      "g": 188,
+      "b": 171
+    },
+    "luminance": 50.741,
+    "description": "En dempet, gyllen beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1141_1.jpg",
+      "1141_2.jpg",
+      "1141_3.jpg"
+    ],
+    "staffColors": [
+      "1284",
+      "9938"
+    ],
+    "staffNames": [
+      "Svolvær",
+      "Dempet Sort"
+    ],
+    "murColors": [
+      "1376",
+      "1877"
+    ],
+    "murNames": [
+      "Frostrøyk",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "8558",
+    "name": "Balmy grey",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2805-G96Y",
+    "hex": "#B9B1A4",
+    "rgb": {
+      "r": 188,
+      "g": 183,
+      "b": 168
+    },
+    "luminance": 47.201,
+    "description": "En dempet, grønnaktig, gyllen beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "8558_1.jpg",
+      "8558_2.jpg",
+      "8558_3.jpg"
+    ],
+    "staffColors": [
+      "1274",
+      "745"
+    ],
+    "staffNames": [
+      "Dus",
+      "Grønn Umbra"
+    ],
+    "murColors": [
+      "1024",
+      "1877"
+    ],
+    "murNames": [
+      "Tidløs",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90001"
+    ],
+    "terrasseNames": [
+      "Fjellbris"
+    ],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "394",
+    "name": "Varmgrå",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3504-Y19R",
+    "hex": "#B1A99E",
+    "rgb": {
+      "r": 175,
+      "g": 169,
+      "b": 156
+    },
+    "luminance": 39.779,
+    "description": "En lun gråtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [
+      "0394_1.jpg",
+      "0394_2.jpg"
+    ],
+    "imagesExterior": [
+      "0394_1.jpg",
+      "0394_2.jpg"
+    ],
+    "staffColors": [
+      "182",
+      "546"
+    ],
+    "staffNames": [
+      "Perlegrå",
+      "Vika"
+    ],
+    "murColors": [
+      "1376",
+      "1973"
+    ],
+    "murNames": [
+      "Frostrøyk",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "546",
+    "name": "Vika",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "6505-G98Y",
+    "hex": "#A0978D",
+    "rgb": {
+      "r": 125,
+      "g": 116,
+      "b": 104
+    },
+    "luminance": 17.828,
+    "description": "En gulaktig bruntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0546_1.jpg",
+      "0546_2.jpg",
+      "0546_3.jpg",
+      "0546_4.jpg",
+      "0546_5.jpg",
+      "0546_6.jpg",
+      "0546_7.jpg"
+    ],
+    "staffColors": [
+      "1453",
+      "1108"
+    ],
+    "staffNames": [
+      "Bomull",
+      "Fyn"
+    ],
+    "murColors": [
+      "1901",
+      "1973"
+    ],
+    "murNames": [
+      "Marmor",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1069",
+    "name": "Villagrå",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2002-Y03R",
+    "hex": "#B3B2AD",
+    "rgb": {
+      "r": 201,
+      "g": 199,
+      "b": 190
+    },
+    "luminance": 57.229,
+    "description": "En gyllen gråtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1069_1.jpg"
+    ],
+    "staffColors": [
+      "1024",
+      "5445"
+    ],
+    "staffNames": [
+      "Tidløs",
+      "Delicate Blue"
+    ],
+    "murColors": [
+      "1462",
+      "11130"
+    ],
+    "murNames": [
+      "Grå Skifer",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "8025",
+    "name": "Skodde",
+    "nameSE": "",
+    "nameDK": "ØRKENSAND",
+    "ncs": "2803-G99Y",
+    "hex": "#C5C2B9",
+    "rgb": {
+      "r": 187,
+      "g": 183,
+      "b": 172
+    },
+    "luminance": null,
+    "description": "En gyllen gråtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "8025_1.jpg",
+      "8025_2.jpg",
+      "8025_3.jpg"
+    ],
+    "staffColors": [
+      "1376",
+      "2006"
+    ],
+    "staffNames": [
+      "Frostrøyk",
+      "Husmannsrød"
+    ],
+    "murColors": [
+      "1402",
+      "1877"
+    ],
+    "murNames": [
+      "Canvas",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1899",
+    "name": "Front",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S6502-Y",
+    "hex": "#676863",
+    "rgb": {
+      "r": 113,
+      "g": 111,
+      "b": 106
+    },
+    "luminance": 15.975,
+    "description": "En mørk, gyllen gråtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1899_1.jpg"
+    ],
+    "staffColors": [
+      "1378",
+      "2006"
+    ],
+    "staffNames": [
+      "Kontur",
+      "Husmannsrød"
+    ],
+    "murColors": [
+      "1462",
+      "11130"
+    ],
+    "murNames": [
+      "Grå Skifer",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "7043",
+    "name": "Refleks",
+    "nameSE": "REFLEX",
+    "nameDK": "",
+    "ncs": "S1502-G",
+    "hex": "#C8C7C2",
+    "rgb": {
+      "r": 206,
+      "g": 210,
+      "b": 205
+    },
+    "luminance": 63.512,
+    "description": "En kjølig, grønnaktig gråtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "7043_1.jpg",
+      "7043_2.jpg",
+      "7043_3.jpg",
+      "7043_4.jpg"
+    ],
+    "staffColors": [
+      "9918",
+      "1378"
+    ],
+    "staffNames": [
+      "Klassisk Hvit",
+      "Kontur"
+    ],
+    "murColors": [
+      "1638",
+      "1973"
+    ],
+    "murNames": [
+      "Horisont",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "5556",
+    "name": "Nordic blue",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S3005-B",
+    "hex": "#ABB6BA",
+    "rgb": {
+      "r": 167,
+      "g": 175,
+      "b": 177
+    },
+    "luminance": 42.049,
+    "description": "En dempet, kjølig blåtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "5556_1.jpg",
+      "5556_2.jpg",
+      "5556_3.jpg",
+      "5556_4.jpg"
+    ],
+    "staffColors": [
+      "1622",
+      "347"
+    ],
+    "staffNames": [
+      "Refleksjon",
+      "Malmblå"
+    ],
+    "murColors": [
+      "1973",
+      "1877"
+    ],
+    "murNames": [
+      "Antikkgrå",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "4710",
+    "name": "Duggblå",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4305-R99B",
+    "hex": "#95A1A7",
+    "rgb": {
+      "r": 144,
+      "g": 151,
+      "b": 153
+    },
+    "luminance": 30.388,
+    "description": "En dempet blåtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "4710_1.jpg",
+      "4710_2.jpg",
+      "4710_3.jpg"
+    ],
+    "staffColors": [
+      "1024",
+      "730"
+    ],
+    "staffNames": [
+      "Tidløs",
+      "Fjellblå"
+    ],
+    "murColors": [
+      "1973",
+      "1491"
+    ],
+    "murNames": [
+      "Antikkgrå",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "9073"
+    ],
+    "terrasseNames": [
+      "Shimmergrå"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "4252",
+    "name": "Kjønnrøk dempet",
+    "nameSE": "KIMRÖK DÄMPAD",
+    "nameDK": "",
+    "ncs": "5709-R97B",
+    "hex": "#667A86",
+    "rgb": {
+      "r": 109,
+      "g": 121,
+      "b": 127
+    },
+    "luminance": 18.437,
+    "description": "En dempet blåtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "4252_1.jpg",
+      "4252_2.jpg",
+      "4252_3.jpg"
+    ],
+    "staffColors": [
+      "1024",
+      "1973"
+    ],
+    "staffNames": [
+      "Tidløs",
+      "Antikkgrå"
+    ],
+    "murColors": [
+      "1973",
+      "1877"
+    ],
+    "murNames": [
+      "Antikkgrå",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "9073"
+    ],
+    "terrasseNames": [
+      "Shimmergrå"
+    ],
+    "tags": [
+      "mørk",
+      "kald"
+    ]
+  },
+  {
+    "id": "5445",
+    "name": "Delicate blue",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "6009-B",
+    "hex": "#6A7C8A",
+    "rgb": {
+      "r": 102,
+      "g": 113,
+      "b": 119
+    },
+    "luminance": null,
+    "description": "En dempet blåtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "5445_1.jpg"
+    ],
+    "staffColors": [
+      "1069",
+      "1378"
+    ],
+    "staffNames": [
+      "Villagrå",
+      "Kontur"
+    ],
+    "murColors": [
+      "1973",
+      "1877"
+    ],
+    "murNames": [
+      "Antikkgrå",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "9073"
+    ],
+    "terrasseNames": [
+      "Shimmergrå"
+    ],
+    "tags": [
+      "kald"
+    ]
+  },
+  {
+    "id": "730",
+    "name": "Fjellblå",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "7707-R96B",
+    "hex": "#33434E",
+    "rgb": {
+      "r": 65,
+      "g": 75,
+      "b": 80
+    },
+    "luminance": 6.671,
+    "description": "En dyp blåtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0730_1.jpg"
+    ],
+    "staffColors": [
+      "1973",
+      "1462"
+    ],
+    "staffNames": [
+      "Antikkgrå",
+      "Grå Skifer"
+    ],
+    "murColors": [
+      "1462",
+      "11130"
+    ],
+    "murNames": [
+      "Grå Skifer",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "9073"
+    ],
+    "terrasseNames": [
+      "Shimmergrå"
+    ],
+    "tags": [
+      "mørk",
+      "kald"
+    ]
+  },
+  {
+    "id": "9937",
+    "name": "Aske",
+    "nameSE": "ASKA",
+    "nameDK": "",
+    "ncs": "S7500-N",
+    "hex": "#414342",
+    "rgb": {
+      "r": 96,
+      "g": 96,
+      "b": 95
+    },
+    "luminance": 11.593,
+    "description": "En nøytral, kjølig gråtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "9937_1.jpg"
+    ],
+    "staffColors": [
+      "10293",
+      "9938"
+    ],
+    "staffNames": [
+      "Lys Hamp",
+      "Dempet Sort"
+    ],
+    "murColors": [
+      "9933",
+      "11130"
+    ],
+    "murNames": [
+      "Stenvegg",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "9073"
+    ],
+    "terrasseNames": [
+      "Shimmergrå"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "92",
+    "name": "Herregård",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1909-Y02R",
+    "hex": "#D9D5CA",
+    "rgb": {
+      "r": 212,
+      "g": 200,
+      "b": 173
+    },
+    "luminance": 58.279,
+    "description": "En grønnaktig gultone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0092_1.jpg"
+    ],
+    "staffColors": [
+      "10416",
+      "8413"
+    ],
+    "staffNames": [
+      "Perlehvit",
+      "Herregårdsgrønn"
+    ],
+    "murColors": [
+      "1402",
+      "1877"
+    ],
+    "murNames": [
+      "Canvas",
+      "Valmuefrø"
+    ],
+    "terrasseColors": [
+      "9706"
+    ],
+    "terrasseNames": [
+      "Svaberg"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "10293",
+    "name": "Lys hamp",
+    "nameSE": "LJUS HAMPA",
+    "nameDK": "",
+    "ncs": "3208-Y07R",
+    "hex": "#CEC4B2",
+    "rgb": {
+      "r": 185,
+      "g": 173,
+      "b": 150
+    },
+    "luminance": 42.237,
+    "description": "En dempet, beigaktig gultone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "10293_1.jpg",
+      "10293_2.jpg",
+      "10293_3.jpg",
+      "10293_4.jpg",
+      "10293_5.jpg",
+      "10293_6.jpg"
+    ],
+    "staffColors": [
+      "10416",
+      "745"
+    ],
+    "staffNames": [
+      "Perlehvit",
+      "Grønn Umbra"
+    ],
+    "murColors": [
+      "1402",
+      "1462"
+    ],
+    "murNames": [
+      "Canvas",
+      "Grå Skifer"
+    ],
+    "terrasseColors": [
+      "9706"
+    ],
+    "terrasseNames": [
+      "Svaberg"
+    ],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1394",
+    "name": "Os",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S2005-Y",
+    "hex": "#B3A791",
+    "rgb": {
+      "r": 204,
+      "g": 198,
+      "b": 181
+    },
+    "luminance": 56.512,
+    "description": "En dempet, grønnaktig beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1394_1.jpg",
+      "1394_2.jpg",
+      "1394_3.jpg",
+      "1394_4.jpg",
+      "1394_5.jpg"
+    ],
+    "staffColors": [
+      "1105",
+      "8413"
+    ],
+    "staffNames": [
+      "Villahvit",
+      "Herregårdsgrønn"
+    ],
+    "murColors": [
+      "1402",
+      "11130"
+    ],
+    "murNames": [
+      "Canvas",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "9072"
+    ],
+    "terrasseNames": [
+      "Naturgrå"
+    ],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "7053",
+    "name": "Lærdal",
+    "nameSE": "LÄRDAL",
+    "nameDK": "",
+    "ncs": "3209-G46Y",
+    "hex": "#C9CDCC",
+    "rgb": {
+      "r": 170,
+      "g": 172,
+      "b": 155
+    },
+    "luminance": 40.605,
+    "description": "En dempet, gyllen grønntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "7053_1.jpg",
+      "7053_2.jpg",
+      "7053_3.jpg",
+      "7053_4.jpg"
+    ],
+    "staffColors": [
+      "1024",
+      "7653"
+    ],
+    "staffNames": [
+      "Tidløs",
+      "Stockholmsgrønn"
+    ],
+    "murColors": [
+      "1877",
+      "1402"
+    ],
+    "murNames": [
+      "Valmuefrø",
+      "Canvas"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "8426",
+    "name": "Dewy green",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S4010-G50Y",
+    "hex": "#A4AA9D",
+    "rgb": {
+      "r": 152,
+      "g": 155,
+      "b": 137
+    },
+    "luminance": 31.776,
+    "description": "En dempet, gyllen grønntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "8426_1.jpg",
+      "8426_2.jpg"
+    ],
+    "staffColors": [
+      "10784",
+      "8413"
+    ],
+    "staffNames": [
+      "Skyggehvit",
+      "Herregårdsgrønn"
+    ],
+    "murColors": [
+      "1024",
+      "1491"
+    ],
+    "murNames": [
+      "Tidløs",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "9072"
+    ],
+    "terrasseNames": [
+      "Naturgrå"
+    ],
+    "tags": [
+      "nøytral"
+    ]
+  },
+  {
+    "id": "7653",
+    "name": "Stockholmsgrønn",
+    "nameSE": "STOCKHOLMSGRÖN",
+    "nameDK": "",
+    "ncs": "S5010-G30Y",
+    "hex": "#939A8A",
+    "rgb": {
+      "r": 129,
+      "g": 136,
+      "b": 122
+    },
+    "luminance": 23.607,
+    "description": "En dempet grønntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "7653_1.jpg",
+      "7653_2.jpg",
+      "7653_3.jpg",
+      "7653_4.jpg"
+    ],
+    "staffColors": [
+      "1024",
+      "7053"
+    ],
+    "staffNames": [
+      "Tidløs",
+      "Lærdal"
+    ],
+    "murColors": [
+      "1973",
+      "1491"
+    ],
+    "murNames": [
+      "Antikkgrå",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "8413",
+    "name": "Herregårdsgrønn",
+    "nameSE": "HERRGÅRDSGRÖN",
+    "nameDK": "",
+    "ncs": "S6010-G50Y",
+    "hex": "#838E80",
+    "rgb": {
+      "r": 115,
+      "g": 117,
+      "b": 100
+    },
+    "luminance": 17.153,
+    "description": "En dempet, gyllen grønntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "8413_1.jpg",
+      "8413_2.jpg"
+    ],
+    "staffColors": [
+      "1016",
+      "745"
+    ],
+    "staffNames": [
+      "Blek Sand",
+      "Grønn Umbra"
+    ],
+    "murColors": [
+      "11129",
+      "11130"
+    ],
+    "murNames": [
+      "Smoky Grey",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "745",
+    "name": "Grønn umbra",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "7310-G57Y",
+    "hex": "#757968",
+    "rgb": {
+      "r": 90,
+      "g": 90,
+      "b": 77
+    },
+    "luminance": 10.098,
+    "description": "En dyp, gyllen grønntone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0745_1.jpg",
+      "0745_2.jpg",
+      "0745_3.jpg"
+    ],
+    "staffColors": [
+      "731",
+      "1284"
+    ],
+    "staffNames": [
+      "Demihvit",
+      "Svolvær"
+    ],
+    "murColors": [
+      "1491",
+      "11130"
+    ],
+    "murNames": [
+      "Slipesten",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "9072"
+    ],
+    "terrasseNames": [
+      "Naturgrå"
+    ],
+    "tags": [
+      "mørk",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "1037",
+    "name": "Sandsten",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "S1005-Y20R",
+    "hex": "#DED7C9",
+    "rgb": {
+      "r": 229,
+      "g": 218,
+      "b": 198
+    },
+    "luminance": 71.128,
+    "description": "En gyllen beigetone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1037_1.jpg",
+      "1037_2.jpg",
+      "1037_3.jpg",
+      "1037_4.jpg"
+    ],
+    "staffColors": [
+      "1001",
+      "1486"
+    ],
+    "staffNames": [
+      "Egghvit",
+      "Rå Umbra Blek"
+    ],
+    "murColors": [
+      "1624",
+      "1491"
+    ],
+    "murNames": [
+      "Letthet",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "12136",
+    "name": "Gentle yellow",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1508-Y10R",
+    "hex": "#DBD3C8",
+    "rgb": {
+      "r": 223,
+      "g": 209,
+      "b": 182
+    },
+    "luminance": 64.615,
+    "description": "En dempet gultone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "12136_1.jpg",
+      "12136_2.jpg"
+    ],
+    "staffColors": [
+      "10292",
+      "8413"
+    ],
+    "staffNames": [
+      "Gjenskinn",
+      "Herregårdsgrønn"
+    ],
+    "murColors": [
+      "1001",
+      "1901"
+    ],
+    "murNames": [
+      "Egghvit",
+      "Marmor"
+    ],
+    "terrasseColors": [
+      "9072"
+    ],
+    "terrasseNames": [
+      "Naturgrå"
+    ],
+    "tags": [
+      "lys",
+      "nøytral"
+    ]
+  },
+  {
+    "id": "10168",
+    "name": "Muted yellow",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3024-Y21R",
+    "hex": "#D7B893",
+    "rgb": {
+      "r": 196,
+      "g": 159,
+      "b": 116
+    },
+    "luminance": 37.832,
+    "description": "En lun, dempet okergul tone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "10168_1.jpg",
+      "10168_2.jpg",
+      "10168_3.jpg"
+    ],
+    "staffColors": [
+      "1284",
+      "734"
+    ],
+    "staffNames": [
+      "Svolvær",
+      "Brunsvart"
+    ],
+    "murColors": [
+      "1491",
+      "1973"
+    ],
+    "murNames": [
+      "Slipesten",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "1465",
+    "name": "Demigul",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1126-Y12R",
+    "hex": "#C9A372",
+    "rgb": {
+      "r": 243,
+      "g": 207,
+      "b": 148
+    },
+    "luminance": 65.746,
+    "description": "En frisk gultone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1465_1.jpg",
+      "1465_2.jpg",
+      "1465_3.jpg"
+    ],
+    "staffColors": [
+      "1453",
+      "1124"
+    ],
+    "staffNames": [
+      "Bomull",
+      "Skagengul"
+    ],
+    "murColors": [
+      "1001",
+      "1491"
+    ],
+    "murNames": [
+      "Egghvit",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "90000"
+    ],
+    "terrasseNames": [
+      "Terrassebrun"
+    ],
+    "tags": [
+      "lys",
+      "varm"
+    ]
+  },
+  {
+    "id": "1124",
+    "name": "Skagengul",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "1832-Y18R",
+    "hex": "#F4CE9F",
+    "rgb": {
+      "r": 224,
+      "g": 178,
+      "b": 121
+    },
+    "luminance": 49.263,
+    "description": "En lun okergul tone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1124_1.jpg"
+    ],
+    "staffColors": [
+      "1574",
+      "12136"
+    ],
+    "staffNames": [
+      "Kalksten",
+      "Gentle Yellow"
+    ],
+    "murColors": [
+      "11130",
+      "1491"
+    ],
+    "murNames": [
+      "Shade",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "152",
+    "name": "Staverngul",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "3252-Y26R",
+    "hex": "#E7BC81",
+    "rgb": {
+      "r": 183,
+      "g": 123,
+      "b": 66
+    },
+    "luminance": 24.534,
+    "description": "En fargesterk, varm okergul tone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0152_1.jpg",
+      "0152_2.jpg",
+      "0152_3.jpg"
+    ],
+    "staffColors": [
+      "1001",
+      "745"
+    ],
+    "staffNames": [
+      "Egghvit",
+      "Grønn Umbra"
+    ],
+    "murColors": [
+      "1402",
+      "11130"
+    ],
+    "murNames": [
+      "Canvas",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "676"
+    ],
+    "terrasseNames": [
+      "Tjærebrun"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "1223",
+    "name": "Høststemning",
+    "nameSE": "HÖSTSTÄMNING",
+    "nameDK": "",
+    "ncs": "S4040-Y30R",
+    "hex": "#C57C2E",
+    "rgb": {
+      "r": 169,
+      "g": 117,
+      "b": 77
+    },
+    "luminance": 21.763,
+    "description": "En varm okergul tone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "1223_1.jpg",
+      "1223_2.jpg"
+    ],
+    "staffColors": [
+      "1016",
+      "10168"
+    ],
+    "staffNames": [
+      "Blek Sand",
+      "Muted Yellow"
+    ],
+    "murColors": [
+      "11130",
+      "1491"
+    ],
+    "murNames": [
+      "Shade",
+      "Slipsten"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "239",
+    "name": "Mellomrosa",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "2412-Y65R",
+    "hex": "#C8BBA6",
+    "rgb": {
+      "r": 205,
+      "g": 178,
+      "b": 163
+    },
+    "luminance": 47.473,
+    "description": "En gyllen rosatone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0239_1.jpg"
+    ],
+    "staffColors": [
+      "10784",
+      "745"
+    ],
+    "staffNames": [
+      "Skyggehvit",
+      "Grønn Umbra"
+    ],
+    "murColors": [
+      "1024",
+      "1973"
+    ],
+    "murNames": [
+      "Tidløs",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "varm"
+    ]
+  },
+  {
+    "id": "20118",
+    "name": "Amber red",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "4725-Y66R",
+    "hex": "#CBB0A4",
+    "rgb": {
+      "r": 155,
+      "g": 108,
+      "b": 92
+    },
+    "luminance": 18.514,
+    "description": "En rustikk, gyllen rødtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "20118_1.jpg",
+      "20118_2.jpg",
+      "20118_3.jpg",
+      "20118_4.jpg"
+    ],
+    "staffColors": [
+      "2047",
+      "20141"
+    ],
+    "staffNames": [
+      "Brunkvarts",
+      "Gyldenrød Tegl"
+    ],
+    "murColors": [
+      "11130",
+      "20141"
+    ],
+    "murNames": [
+      "Shade",
+      "Gyldenrød Tegl"
+    ],
+    "terrasseColors": [
+      "90002"
+    ],
+    "terrasseNames": [
+      "Gråsvart"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "25",
+    "name": "Rørosrød",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5038-Y83R",
+    "hex": "#A56454",
+    "rgb": {
+      "r": 132,
+      "g": 72,
+      "b": 64
+    },
+    "luminance": 9.898,
+    "description": "En klar, gyllen rødtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0025_1.jpg",
+      "0025_2.jpg",
+      "0025_3.jpg",
+      "0025_4.jpg"
+    ],
+    "staffColors": [
+      "1376",
+      "394"
+    ],
+    "staffNames": [
+      "Frostrøyk",
+      "Varmgrå"
+    ],
+    "murColors": [
+      "1500",
+      "1973"
+    ],
+    "murNames": [
+      "Grafittgrå",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "42",
+    "name": "Villvin",
+    "nameSE": "",
+    "nameDK": "",
+    "ncs": "5239-Y86R",
+    "hex": "#8C3632",
+    "rgb": {
+      "r": 129,
+      "g": 72,
+      "b": 65
+    },
+    "luminance": 9.668,
+    "description": "En klar, gyllen rødtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "0042_1.jpg",
+      "0042_2.jpg"
+    ],
+    "staffColors": [
+      "1939",
+      "546"
+    ],
+    "staffNames": [
+      "Sandbeige",
+      "Vika"
+    ],
+    "murColors": [
+      "1491",
+      "11130"
+    ],
+    "murNames": [
+      "Slipesten",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "90028"
+    ],
+    "terrasseNames": [
+      "Skyggebrun"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "2142",
+    "name": "Vestlandsrød",
+    "nameSE": "VESTLANDSRÖD",
+    "nameDK": "",
+    "ncs": "4060-Y90R",
+    "hex": "#893B36",
+    "rgb": {
+      "r": 131,
+      "g": 64,
+      "b": 62
+    },
+    "luminance": 8.843,
+    "description": "En klar rødtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "2142_1.jpg",
+      "2142_2.jpg"
+    ],
+    "staffColors": [
+      "1376",
+      "1378"
+    ],
+    "staffNames": [
+      "Frostrøyk",
+      "Kontur"
+    ],
+    "murColors": [
+      "1500",
+      "1973"
+    ],
+    "murNames": [
+      "Grafittgrå",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "2006",
+    "name": "Husmannsrød",
+    "nameSE": "HUSMANSRÖD",
+    "nameDK": "",
+    "ncs": "6040-Y90R",
+    "hex": "#963134",
+    "rgb": {
+      "r": 110,
+      "g": 66,
+      "b": 63
+    },
+    "luminance": 7.614,
+    "description": "En dyp, klar rødtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "2006_1.jpg",
+      "2006_2.jpg",
+      "2006_3.jpg"
+    ],
+    "staffColors": [
+      "1376",
+      "394"
+    ],
+    "staffNames": [
+      "Frostrøyk",
+      "Varmgrå"
+    ],
+    "murColors": [
+      "11129",
+      "1973"
+    ],
+    "murNames": [
+      "Smoky Grey",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "2746",
+    "name": "Mørk rubin",
+    "nameSE": "MÖRK RUBIN",
+    "nameDK": "",
+    "ncs": "S5540-Y90R",
+    "hex": "#672E2D",
+    "rgb": {
+      "r": 108,
+      "g": 61,
+      "b": 59
+    },
+    "luminance": 6.791,
+    "description": "En dyp, klar rødtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "2746_1.jpg",
+      "2746_2.jpg"
+    ],
+    "staffColors": [
+      "394",
+      "1899"
+    ],
+    "staffNames": [
+      "Varmgrå",
+      "Front"
+    ],
+    "murColors": [
+      "11129",
+      "1973"
+    ],
+    "murNames": [
+      "Smoky Grey",
+      "Antikkgrå"
+    ],
+    "terrasseColors": [
+      "90029"
+    ],
+    "terrasseNames": [
+      "Naturlig Sølvgrå"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  },
+  {
+    "id": "2279",
+    "name": "Dodenkopf",
+    "nameSE": "CAPUT MORTUM",
+    "nameDK": "",
+    "ncs": "6621-Y97R",
+    "hex": "#642527",
+    "rgb": {
+      "r": 99,
+      "g": 69,
+      "b": 69
+    },
+    "luminance": 7.412,
+    "description": "En dyp, burgunderaktig rødtone.",
+    "descriptionEN": "",
+    "application": "exterior",
+    "matchingColors": [],
+    "imagesInterior": [],
+    "imagesExterior": [
+      "2279_1.jpg",
+      "2279_2.jpg"
+    ],
+    "staffColors": [
+      "1462",
+      "1434"
+    ],
+    "staffNames": [
+      "Grå Skifer",
+      "Labrador"
+    ],
+    "murColors": [
+      "1462",
+      "11130"
+    ],
+    "murNames": [
+      "Grå Skifer",
+      "Shade"
+    ],
+    "terrasseColors": [
+      "9805"
+    ],
+    "terrasseNames": [
+      "Sløret Sort"
+    ],
+    "tags": [
+      "mørk",
+      "varm"
+    ]
+  }
+]
