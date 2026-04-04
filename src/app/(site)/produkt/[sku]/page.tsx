@@ -7,6 +7,7 @@ import { Breadcrumb } from "@/components/pdp/Breadcrumb";
 import { ProductHeroClient } from "@/components/pdp/ProductHeroClient";
 import { RatingStars } from "@/components/pdp/RatingStars";
 import { SEED_PRODUCTS, SEED_ARTICLES, SEED_COLORS } from "@/lib/seed/data";
+import { getProductBySlug } from "@/lib/productData";
 import { buildBreadcrumbJsonLd } from "@/lib/seo/structured-data";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
 import { StaggerReveal, StaggerItem } from "@/components/motion/StaggerReveal";
@@ -29,12 +30,11 @@ async function getProduct(slug: string): Promise<any | null> {
   try {
     const sanityProduct = await client.fetch(PRODUCT_BY_SLUG_QUERY, { slug });
     if (sanityProduct) {
-      // Merge: Sanity data wins, but fill missing fields from seed
       return {
-        ...seed,               // seed as base (has rating, equipment, images with packshot)
-        ...sanityProduct,      // Sanity overwrites what it has
-        images: seed?.images || sanityProduct.images, // prefer seed images (has packshot)
-        rating: seed?.rating,  // not in Sanity schema yet
+        ...seed,
+        ...sanityProduct,
+        images: seed?.images || sanityProduct.images,
+        rating: seed?.rating,
         recommendedEquipment: seed?.recommendedEquipment || sanityProduct.recommendedEquipment,
         notSuitableFor: seed?.notSuitableFor,
         _source: "sanity",
@@ -43,22 +43,32 @@ async function getProduct(slug: string): Promise<any | null> {
   } catch {
     // Fallback silently
   }
+
+  // Try families.json data
+  const familyProduct = getProductBySlug(slug);
+  if (familyProduct) {
+    return {
+      ...seed,
+      sku: familyProduct.sku,
+      displayName: familyProduct.displayName,
+      brand: familyProduct.brand,
+      productLine: familyProduct.productLine,
+      subtitle: familyProduct.subtitle,
+      longDescription: familyProduct.longDescription,
+      highlights: familyProduct.highlights,
+      variants: familyProduct.variants,
+      slug: { current: familyProduct.slug },
+      _colorOptions: familyProduct.colorOptions,
+      _specs: familyProduct.specs,
+      _finishName: familyProduct.finishName,
+      _applicationArea: familyProduct.applicationArea,
+      _source: "families",
+    };
+  }
+
   if (seed) return { ...seed, _source: "seed" };
   return null;
 }
-
-const ALL_COLORS = [
-  { name: "Warm Blush", colorCode: "2856", hexValue: "#ab8073", ncsCode: "S 3923-Y74R", slug: "jotun-2856-warm-blush" },
-  ...SEED_COLORS.warmBlush.relatedColors,
-  { name: "Timeless", colorCode: "1024", hexValue: "#f0ebe3", ncsCode: "S 0804-Y30R", slug: "jotun-1024-timeless" },
-  { name: "Deco Blue", colorCode: "4477", hexValue: "#4a6670", ncsCode: "S 5020-B10G", slug: "jotun-4477-deco-blue" },
-  { name: "Greige Light", colorCode: "1376", hexValue: "#c7c0b5", ncsCode: "S 1505-Y40R", slug: "jotun-1376-greige-light" },
-  { name: "Evening Green", colorCode: "8469", hexValue: "#2d3b35", ncsCode: "S 7010-G10Y", slug: "jotun-8469-evening-green" },
-  { name: "Linen", colorCode: "10341", hexValue: "#d1c8b8", ncsCode: "S 1505-Y30R", slug: "jotun-10341-linen" },
-  { name: "Pale Sea", colorCode: "5225", hexValue: "#9bb4b5", ncsCode: "S 2010-B30G", slug: "jotun-5225-pale-sea" },
-  { name: "Desert Pink", colorCode: "2782", hexValue: "#c8a696", ncsCode: "S 2015-Y60R", slug: "jotun-2782-desert-pink" },
-  { name: "Wild Dove", colorCode: "2588", hexValue: "#8f8a82", ncsCode: "S 3502-Y", slug: "jotun-2588-wild-dove" },
-];
 
 export const revalidate = 3600;
 
@@ -183,7 +193,7 @@ export default async function ProductPage({ params }: Props) {
         <Container>
           <ProductHeroClient
             product={product}
-            availableColors={ALL_COLORS}
+            availableColors={product._colorOptions || []}
             initialColor={null}
           />
         </Container>
@@ -341,14 +351,14 @@ export default async function ProductPage({ params }: Props) {
             {product.displayName} finnes i alle Lady-kul&oslash;rer. Her er noen av de mest popul&aelig;re:
           </p>
           <div className="mt-6 flex gap-4 overflow-x-auto pb-2">
-            {ALL_COLORS.slice(0, 8).map((c) => (
-              <Link key={c.slug} href={`/farge/${c.slug}`} className="group flex-shrink-0 text-center">
+            {(product._colorOptions || []).slice(0, 8).map((c: any) => (
+              <Link key={c.colorCode} href={`/farge/${c.colorCode}`} className="group flex-shrink-0 text-center">
                 <div
                   className="h-16 w-16 rounded-full shadow-sm transition-transform group-hover:scale-110"
                   style={{ backgroundColor: c.hexValue }}
                 />
                 <p className="mt-2 text-xs font-medium">{c.name}</p>
-                <p className="text-[10px] text-zinc-400">{c.colorCode}</p>
+                <p className="text-[10px] text-zinc-400">{c.ncsCode}</p>
               </Link>
             ))}
           </div>

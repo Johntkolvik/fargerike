@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SEED_PRODUCT_LIST, SEED_COLORS, SEED_ARTICLES } from "@/lib/seed/data";
+import { getAllProducts } from "@/lib/productData";
 
 export const metadata: Metadata = {
   title: "Fargerike – Norges fargehandel | Maling, farger og inspirasjon",
@@ -97,33 +98,24 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Produkter – PLP-teaser */}
+      {/* Produkter – alle malinger fra families.json */}
       <section className="bg-zinc-50 py-16">
         <Container>
-          <div className="flex items-end justify-between">
-            <div>
-              <h2 className="text-2xl font-bold">Populære produkter</h2>
-              <p className="mt-2 text-zinc-600">Mest solgte veggmalinger hos Fargerike</p>
-            </div>
-            <Link href="/kategori/veggmaling" className="text-sm font-medium underline">
-              Se alle →
-            </Link>
-          </div>
+          <h2 className="text-2xl font-bold">Malingsprodukter</h2>
+          <p className="mt-2 text-zinc-600">Jotuns komplette sortiment for interiør og eksteriør</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {SEED_PRODUCT_LIST.map((product) => (
+            {getAllProducts().map((product) => (
               <Link
                 key={product.slug}
                 href={`/produkt/${product.slug}`}
                 className="group rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:shadow-md"
               >
                 <div className="flex aspect-square items-center justify-center rounded-lg bg-zinc-100 p-4">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={product.imageUrl}
-                    alt={product.displayName}
-                    className="max-h-full object-contain"
-                    loading="lazy"
-                  />
+                  <div className="text-center">
+                    <p className="text-xs text-zinc-400 uppercase">{product.applicationArea}</p>
+                    <p className="mt-1 text-lg font-bold text-zinc-700">{product.displayName}</p>
+                    <p className="mt-1 text-xs text-zinc-500">{product.finishName}</p>
+                  </div>
                 </div>
                 <div className="mt-4">
                   <p className="text-xs text-zinc-500">{product.brand} {product.productLine}</p>
@@ -132,7 +124,7 @@ export default function Home() {
                   </h3>
                   <p className="mt-0.5 text-xs text-zinc-500">{product.subtitle}</p>
                   <div className="mt-3 flex flex-wrap gap-1.5">
-                    {product.highlights.map((h, i) => (
+                    {product.highlights.slice(0, 3).map((h, i) => (
                       <span
                         key={i}
                         className="rounded-full bg-zinc-100 px-2 py-0.5 text-[10px] font-medium text-zinc-600"
@@ -142,7 +134,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="mt-3 text-sm font-semibold">
-                    Fra {product.priceFrom} kr
+                    Fra {product.variants[0]?.price} kr
                   </p>
                 </div>
               </Link>
