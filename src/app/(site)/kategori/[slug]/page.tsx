@@ -116,6 +116,12 @@ export default async function CategoryPage({ params }: Props) {
                 </select>
               </div>
 
+              {products.length === 0 ? (
+                <div className="rounded-xl border-2 border-dashed border-zinc-300 py-16 text-center">
+                  <p className="text-zinc-500">Ingen produkter i denne kategorien ennå.</p>
+                  <Link href="/" className="mt-3 inline-block text-sm font-medium underline">Tilbake til forsiden</Link>
+                </div>
+              ) : (
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {products.map((product) => (
                   <Link
@@ -159,6 +165,7 @@ export default async function CategoryPage({ params }: Props) {
                   </Link>
                 ))}
               </div>
+              )}
             </div>
           </div>
         </Container>

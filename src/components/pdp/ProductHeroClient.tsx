@@ -164,11 +164,7 @@ export function ProductHeroClient({ product, availableColors, initialColor }: Pr
         selectedColor={selectedColor?.name}
         disabled={!hasColor || !hasItems}
         onAddToCart={() => {
-          console.log("Add to cart:", {
-            product: product.displayName,
-            color: selectedColor?.name,
-            selections,
-          });
+          // TODO: Integrate with Omnium cart API
         }}
       />
     </div>
