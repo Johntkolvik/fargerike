@@ -146,31 +146,33 @@ export default function Home() {
         <Container>
           <h2 className="text-2xl font-bold">Utforsk farger</h2>
           <p className="mt-2 text-zinc-600">
-            Finn din farge – fra varme jordtoner til kjølige nordiske nyanser.
+            Finn din farge blant 600+ Jotun-kulører – fra varme jordtoner til kjølige nordiske nyanser.
           </p>
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-5">
-            {[
-              { ...warmBlush, slug: { current: warmBlush.slug.current } },
-              ...warmBlush.relatedColors.map((c) => ({
-                name: c.name,
-                colorCode: c.colorCode,
-                hexValue: c.hexValue,
-                slug: { current: c.slug },
-              })),
-            ].map((c) => (
-              <Link
-                key={c.slug.current}
-                href={`/farge/${c.slug.current}`}
-                className="group text-center"
-              >
-                <div
-                  className="aspect-square rounded-2xl shadow-sm transition-all group-hover:shadow-md group-hover:scale-105"
-                  style={{ backgroundColor: c.hexValue }}
-                />
-                <p className="mt-3 text-sm font-medium">{c.name}</p>
-                <p className="text-xs text-zinc-500">{c.colorCode}</p>
-              </Link>
-            ))}
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
+              href="/farge"
+              className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white hover:bg-zinc-800"
+            >
+              Utforsk alle kulører
+            </Link>
+            <Link
+              href="/farge/velger"
+              className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-white"
+            >
+              Fargevelger
+            </Link>
+            <Link
+              href="/farge/fargekart"
+              className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-white"
+            >
+              Fargekart
+            </Link>
+            <Link
+              href="/farge/ncs"
+              className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-white"
+            >
+              NCS-oppslag
+            </Link>
           </div>
         </Container>
       </section>

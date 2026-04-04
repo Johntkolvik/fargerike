@@ -21,6 +21,15 @@ export function Header() {
           </div>
 
           <nav className="hidden items-center gap-6 text-sm md:flex">
+            <Link href="/farge" className="font-medium hover:underline">
+              Utforsk farger
+            </Link>
+            <Link href="/farge/velger" className="hover:underline">
+              Fargevelger
+            </Link>
+            <Link href="/farge/fargekart" className="hover:underline">
+              Fargekart
+            </Link>
             <Link href="/butikker" className="hover:underline">
               Finn butikk
             </Link>
