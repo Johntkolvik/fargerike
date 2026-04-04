@@ -58,6 +58,18 @@ User stories bruker prefix: US-F (farge), US-P (produkt), US-T (trygghet), US-K 
 mg-color krav bruker prefix: M (must), S (should), N (nice-to-have).
 Referer alltid til krav-ID når du implementerer, slik vi bevarer sporbarhet.
 
+## QA etter hver edit
+
+**Kjør alltid QA før commit/deploy.** Vi har brukt for mye tid på å fikse build-feil i produksjon.
+
+Etter kodeendringer, gjør følgende:
+1. `npx next build` – verifiser at bygget går igjennom uten feil
+2. Sjekk for vanlige Next.js-feller: manglende `"use client"`, `useSearchParams` uten `<Suspense>`, env-variabler som mangler fallback
+3. Hvis nye sider/ruter: verifiser at det ikke er konflikter med eksisterende ruter (f.eks. to dynamiske `[slug]`-ruter på samme nivå)
+4. Hvis env-avhengig kode: sørg for fallback-verdier så bygget ikke krasjer uten env vars (Vercel-bygg har ikke alltid alle env tilgjengelig)
+
+Ikke push kode som ikke bygger lokalt.
+
 ## Teknisk stack
 
 - **Frontend:** Next.js (App Router)
