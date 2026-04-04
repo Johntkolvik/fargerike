@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SEED_ARTICLES, SEED_PRODUCTS, SEED_COLORS } from "@/lib/seed/data";
@@ -27,14 +28,7 @@ export default async function ArticlePage({ params }: Props) {
   const article = ARTICLE_MAP[slug];
 
   if (!article) {
-    return (
-      <Container>
-        <div className="py-20 text-center">
-          <h1 className="text-2xl font-bold">Artikkel ikke funnet</h1>
-          <Link href="/" className="mt-4 inline-block text-sm underline">Tilbake til forsiden</Link>
-        </div>
-      </Container>
-    );
+    notFound();
   }
 
   const isHowTo = "steps" in article && article.steps;

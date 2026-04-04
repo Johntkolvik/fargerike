@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SEED_PRODUCTS, SEED_ARTICLES, SEED_COLORS } from "@/lib/seed/data";
 import { ProductV2Hero } from "@/components/pdp-v2/ProductV2Hero";
@@ -30,11 +30,7 @@ export default async function ProductV2Page({ params }: Props) {
   const product = sku === "lady-pure-color" ? SEED_PRODUCTS.ladyPureColor : null;
 
   if (!product) {
-    return (
-      <div className="flex min-h-[60vh] items-center justify-center">
-        <h1 className="text-2xl font-light tracking-tight">Ikke funnet</h1>
-      </div>
-    );
+    notFound();
   }
 
   const articles = [SEED_ARTICLES.howToPaintWall, SEED_ARTICLES.choosingColorBedroom, SEED_ARTICLES.paintSafeForKids];

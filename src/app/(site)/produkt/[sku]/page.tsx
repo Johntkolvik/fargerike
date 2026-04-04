@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumb } from "@/components/pdp/Breadcrumb";
@@ -97,15 +98,7 @@ export default async function ProductPage({ params }: Props) {
   const product = await getProduct(sku);
 
   if (!product) {
-    return (
-      <Container>
-        <div className="py-20 text-center">
-          <h1 className="text-2xl font-bold">Produkt ikke funnet</h1>
-          <p className="mt-2 text-zinc-500">Produktet &laquo;{sku}&raquo; finnes ikke enn&aring;.</p>
-          <Link href="/" className="mt-4 inline-block text-sm underline">Tilbake til forsiden</Link>
-        </div>
-      </Container>
-    );
+    notFound();
   }
 
   const articles = [SEED_ARTICLES.howToPaintWall, SEED_ARTICLES.paintSafeForKids, SEED_ARTICLES.choosingColorBedroom];

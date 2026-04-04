@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -15,6 +16,7 @@ export default async function StoreProfilePage({ params }: Props) {
   const { slug } = await params;
 
   // TODO: Fetch store from Sanity using STORE_BY_SLUG_QUERY
+  // For now, all slugs render a placeholder — replace with notFound() when Sanity data is live
   return (
     <Container>
       <div className="py-12">

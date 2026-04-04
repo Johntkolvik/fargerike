@@ -1,8 +1,31 @@
 "use client";
 
+import Image from "next/image";
 import { PortableText, type PortableTextComponents, type PortableTextBlock } from "@portabletext/react";
+import { urlFor } from "@/lib/sanity/image";
 
 const components: PortableTextComponents = {
+  types: {
+    image: ({ value }) => {
+      if (!value?.asset?._ref) return null;
+      return (
+        <figure className="my-8">
+          <Image
+            src={urlFor(value).width(800).url()}
+            alt={value.alt || ""}
+            width={800}
+            height={450}
+            className="w-full rounded-lg"
+          />
+          {value.caption && (
+            <figcaption className="mt-2 text-center text-sm text-zinc-500">
+              {value.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+    },
+  },
   marks: {
     link: ({ children, value }) => (
       <a

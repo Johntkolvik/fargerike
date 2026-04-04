@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
+
+const KNOWN_SERVICES = ["fargekonsultasjon", "fargematch", "utleie", "hjemmebesok"];
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -14,6 +17,10 @@ export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
 
   // TODO: Fetch service from Sanity using SERVICE_BY_SLUG_QUERY
+  if (!KNOWN_SERVICES.includes(slug)) {
+    notFound();
+  }
+
   return (
     <Container>
       <div className="py-12">

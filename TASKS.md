@@ -1,6 +1,6 @@
 # TASKS – Fargerike
 
-Sist oppdatert: 2026-04-02
+Sist oppdatert: 2026-04-04
 
 ## Aktive oppgaver
 
@@ -16,7 +16,7 @@ Sist oppdatert: 2026-04-02
 
 - [ ] **Book innføringsmøte med Petter Sandholt** – MG-riggen (Omnium, Sanity, PIM, integrasjoner). Petter sa ja 19. mars. Nødvendig for workshop 17. april.
 - [ ] **Forberede workshop 17. april** – As-is analyse av dagens Fargerike-plattform. Tildelt i Monday.com.
-- [ ] **Hent transcripts fra 19. mars-møtene** – Oppstartsmøte Markedsføring + SEO. Var under prosessering 30. mars (fjerde dag).
+- [ ] **Hent transcripts fra 19. mars-møtene** – Oppstartsmøte Markedsføring + SEO. Fortsatt «pending» i Trale per 3. april (15 dager). Sjekk med support.
 - [ ] **Produktnavn og datamodell** – Monday.com-oppgave. Kartlegge nåværende produktnavnstruktur.
 - [ ] **Tracking og måling (heatmap)** – Monday.com-oppgave. Sette opp Clarity/heatmap?
 - [ ] **Konkurrentanalyse/business review** – Fra oppstartsmøte 11. mars. Deadline 22. april.
@@ -226,3 +226,5 @@ Basert på audit 26. mars. Alle oppgaver gjelder `src/app/(site)/produkt/[sku]/p
 - [x] Daglig oppdatering 30. mars (påskehelg) – ingen nye svar nødvendig, alle kanaler stille. Transcripts fra 19. mars fortsatt under prosessering. (`03-transcripts/20260330 - Daglig oppdatering.md`)
 - [x] Daglig oppdatering 31. mars (påskeuke) – 3 uleste e-poster lest (BC FFH oppsummering, FargePIM kick-off, Algolia purring). Utkast til svar Eline (datafeed) og Algolia-oppfølging. Ingen nye Slack-svar nødvendig. (`03-transcripts/20260331 - Daglig oppdatering.md`)
 - [x] Daglig oppdatering 2. april (Skjærtorsdag) – Ingen nye e-poster eller Slack-meldinger. Alle møter avlyst (påske). BC FFH-mail og FargePIM kick-off-mail lest. Utkast til svar Eline (prisestimat + datafeed) og Algolia-supplement klart. (`03-transcripts/20260402 - Daglig oppdatering.md`)
+- [x] Daglig oppdatering 3. april (Langfredag) – Alle kanaler stille (påske). Begge møter avlyst. Transkripter 19. mars fortsatt pending i Trale (15 dager). Ingen nye svar nødvendig. (`03-transcripts/20260403 - Daglig oppdatering.md`)
+- [x] Daglig oppdatering 4. april (Påskeaften) – Alle kanaler stille. Ingen nye e-poster, Slack-meldinger eller møter. Transkripter 19. mars fortsatt pending i Trale (16 dager). Første arbeidsdag mandag 7. april – da må oppgavene under 🔴 tas. (`03-transcripts/20260404 - Daglig oppdatering.md`)
