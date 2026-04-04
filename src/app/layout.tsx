@@ -13,8 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fargerike",
-  description: "Fargerike – Norges fargehandel",
+  metadataBase: new URL("https://fargerike.vercel.app"),
+  title: {
+    default: "Fargerike – Norges fargehandel",
+    template: "%s | Fargerike",
+  },
+  description: "Maling, farger og inspirasjon. Finn din farge blant 600+ kulører, bestill fargeprøver, og få ekspertrådgivning i din nærmeste butikk.",
+  openGraph: {
+    siteName: "Fargerike",
+    locale: "nb_NO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

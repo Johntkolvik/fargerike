@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SEED_PRODUCT_LIST, SEED_COLORS, SEED_ARTICLES } from "@/lib/seed/data";
+
+export const metadata: Metadata = {
+  title: "Fargerike – Norges fargehandel | Maling, farger og inspirasjon",
+  description: "Finn din farge blant 600+ kulører, bestill fargeprøver, og få ekspertrådgivning i 89 butikker over hele Norge.",
+  openGraph: {
+    title: "Fargerike – Norges fargehandel",
+    description: "Maling, farger og inspirasjon. Utforsk kulører, produkter og guider.",
+  },
+};
 
 const CATEGORIES = [
   { title: "Veggmaling", slug: "veggmaling", description: "Innvendig vegg og tak", count: 12 },

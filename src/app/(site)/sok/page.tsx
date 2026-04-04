@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "Søk | Fargerike",
   description: "Søk etter produkter, farger og guider hos Fargerike",
+  robots: "noindex",
 };
 
 export default function SearchPage() {

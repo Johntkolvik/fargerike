@@ -8,8 +8,10 @@ type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const name = slug.replace(/-/g, " ");
   return {
-    title: `${slug} | Tjenester | Fargerike`,
+    title: `${name.charAt(0).toUpperCase() + name.slice(1)} | Tjenester | Fargerike`,
+    description: `Book ${name} hos Fargerike. Personlig rådgivning og ekspertise i din nærmeste butikk.`,
   };
 }
 

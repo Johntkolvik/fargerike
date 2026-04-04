@@ -1,4 +1,10 @@
-export { metadata, viewport } from "next-sanity/studio";
+import type { Metadata } from "next";
+export { viewport } from "next-sanity/studio";
+
+export const metadata: Metadata = {
+  title: "Sanity Studio | Fargerike",
+  robots: "noindex, nofollow",
+};
 
 export default function StudioLayout({
   children,
