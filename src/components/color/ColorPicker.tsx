@@ -2,14 +2,10 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import colorsData from "../../../data/colors.json";
-import familiesData from "../../../data/families.json";
 import type { Color, Family } from "@/lib/color/types";
+import { colors as allColors, families } from "@/lib/color/colorData";
 import { getContrastColor, getAllImages, sortByHue } from "@/lib/color/colorUtils";
 import ColorGrid from "./ColorGrid";
-
-const allColors = colorsData as Color[];
-const families = familiesData as Family[];
 
 export default function ColorPicker() {
   const [selectedFamily, setSelectedFamily] = useState<Family | null>(families[0] ?? null);

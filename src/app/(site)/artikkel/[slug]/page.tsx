@@ -5,6 +5,8 @@ import { Container } from "@/components/ui/Container";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SEED_ARTICLES, SEED_PRODUCTS, SEED_COLORS } from "@/lib/seed/data";
 
+export const revalidate = 3600;
+
 type Props = { params: Promise<{ slug: string }> };
 
 const ARTICLE_MAP: Record<string, (typeof SEED_ARTICLES)[keyof typeof SEED_ARTICLES]> = {

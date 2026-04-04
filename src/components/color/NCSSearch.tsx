@@ -2,11 +2,8 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import colorsData from "../../../data/colors.json";
-import type { Color } from "@/lib/color/types";
+import { colors as allColors } from "@/lib/color/colorData";
 import { ncsDistance, searchColors } from "@/lib/color/colorUtils";
-
-const allColors = colorsData as Color[];
 
 export default function NCSSearch() {
   const [query, setQuery] = useState("");

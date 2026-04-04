@@ -1,14 +1,9 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import colorsData from "../../../data/colors.json";
-import collectionsData from "../../../data/collections.json";
-import type { Color, Collection } from "@/lib/color/types";
+import { colors as allColors, collections } from "@/lib/color/colorData";
 import { sortByHue } from "@/lib/color/colorUtils";
 import ColorGrid from "./ColorGrid";
-
-const allColors = colorsData as Color[];
-const collections = collectionsData as Collection[];
 
 export default function Collections() {
   const [activeId, setActiveId] = useState<string>(collections[0]?.id ?? "");

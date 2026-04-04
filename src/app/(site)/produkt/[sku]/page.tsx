@@ -60,6 +60,8 @@ const ALL_COLORS = [
   { name: "Wild Dove", colorCode: "2588", hexValue: "#8f8a82", ncsCode: "S 3502-Y", slug: "jotun-2588-wild-dove" },
 ];
 
+export const revalidate = 3600;
+
 // SEO-1: Canonical + SEO-2: Open Graph + SEO-6: Robots
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { sku } = await params;

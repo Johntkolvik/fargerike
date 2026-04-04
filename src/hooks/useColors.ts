@@ -1,22 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import colorsData from "../../data/colors.json";
-import collectionsData from "../../data/collections.json";
-import familiesData from "../../data/families.json";
 import type {
-  Color,
-  Collection,
-  Family,
   ApplicationFilter,
   TempFilter,
   LightFilter,
 } from "@/lib/color/types";
+import { colors, collections, families } from "@/lib/color/colorData";
 import { searchColors } from "@/lib/color/colorUtils";
-
-const colors = colorsData as Color[];
-const collections = collectionsData as Collection[];
-const families = familiesData as Family[];
 
 export function useColors() {
   const [query, setQuery] = useState("");

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Finn butikk | Fargerike",
   description: "Finn din nærmeste Fargerike-butikk",

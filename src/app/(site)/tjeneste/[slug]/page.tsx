@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 
+export const revalidate = 3600;
+
 const KNOWN_SERVICES = ["fargekonsultasjon", "fargematch", "utleie", "hjemmebesok"];
 
 type Props = { params: Promise<{ slug: string }> };
