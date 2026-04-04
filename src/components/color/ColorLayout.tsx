@@ -91,8 +91,11 @@ export default function ColorLayout({ children }: { children: React.ReactNode })
     <FavoritesProvider>
       <CartProvider>
         <div className="min-h-screen bg-warm-50 text-warm-700">
+          <a href="#color-main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold">
+            Hopp til hovedinnhold
+          </a>
           <ColorNav />
-          <main>{children}</main>
+          <main id="color-main">{children}</main>
         </div>
       </CartProvider>
     </FavoritesProvider>

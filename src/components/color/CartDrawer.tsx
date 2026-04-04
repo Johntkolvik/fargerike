@@ -34,6 +34,7 @@ export default function CartDrawer({ open, onClose }: Props) {
           </h2>
           <button
             onClick={onClose}
+            aria-label="Lukk handlekurv"
             className="flex h-10 w-10 items-center justify-center rounded-full bg-warm-100 text-warm-600 hover:bg-warm-200 transition-colors"
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

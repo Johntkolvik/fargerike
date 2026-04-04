@@ -196,6 +196,7 @@ export default function SpecDrawer({ open, onClose, spec }: SpecDrawerProps) {
             <h2 className="text-xl font-bold text-warm-900">{spec.title}</h2>
             <button
               onClick={onClose}
+              aria-label="Lukk"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-warm-100 text-warm-600 hover:bg-warm-200 transition-colors"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
