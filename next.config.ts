@@ -2,11 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   typescript: {
-    // TODO: Fjern dette når ~/package-lock.json er slettet og lokal build fungerer
+    // TODO: Remove once all TS errors are fixed
     ignoreBuildErrors: true,
-  },
-  turbopack: {
-    root: ".",
   },
   images: {
     remotePatterns: [
