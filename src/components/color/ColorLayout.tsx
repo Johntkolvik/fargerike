@@ -26,8 +26,9 @@ function ColorNav() {
       <nav className="sticky top-0 z-40 border-b border-warm-200 bg-warm-50/95 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl flex items-center justify-between px-5 py-3 sm:px-8">
           <div className="flex items-center gap-6">
-            <Link href="/" className="text-lg font-bold text-warm-900 tracking-tight">
-              Fargerike
+            <Link href="/" className="shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/fargerike_logo.svg" alt="Fargerike" className="h-6" />
             </Link>
             <div className="hidden sm:flex items-center gap-1">
               {links.map((link) => (

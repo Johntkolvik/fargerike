@@ -6,8 +6,9 @@ export function Header() {
     <header className="border-b border-zinc-200 bg-white">
       <Container>
         <div className="flex h-16 items-center justify-between gap-4">
-          <Link href="/" className="text-xl font-bold tracking-tight">
-            Fargerike
+          <Link href="/" className="shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/fargerike_logo.svg" alt="Fargerike" className="h-7" />
           </Link>
 
           <div className="hidden flex-1 max-w-md mx-8 md:block">

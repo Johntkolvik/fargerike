@@ -1,11 +1,12 @@
 # TASKS – Fargerike
 
-Sist oppdatert: 2026-04-04
+Sist oppdatert: 2026-04-05
 
 ## Aktive oppgaver
 
 ### 🔴 Første arbeidsdag etter påske (7. april)
 
+- [ ] **⚠️ Vercel build-feil** – 3 mislykkede prod-deploy på `main` den 4. april (kl. 08:00–08:17). Sjekk deployment-loggen og fiks. Kan blokkere videre utvikling.
 - [ ] **Svar Eline – Prisestimat Luc** – Gi tilbakemelding på 9 estimerte oppgaver (~70-80t). Anbefaling: prioriter SEO-kritiske (SSR, schema, robots) og hold igjen på sitemap/paginering. Utkast i briefing 27.03.
 - [ ] **Svar Eline – Datafeed Google Ads** – Bekreft at forespørsler kan gå via deg fremover. Oscar+Luc kan kjøre på med XML-feed. Utkast i briefing 27.03.
 - [ ] **Svar Jotun (Magnus Sjögren)** – Bekreft at domener kommer etter avklaring av avtale internt i MG.
@@ -228,3 +229,4 @@ Basert på audit 26. mars. Alle oppgaver gjelder `src/app/(site)/produkt/[sku]/p
 - [x] Daglig oppdatering 2. april (Skjærtorsdag) – Ingen nye e-poster eller Slack-meldinger. Alle møter avlyst (påske). BC FFH-mail og FargePIM kick-off-mail lest. Utkast til svar Eline (prisestimat + datafeed) og Algolia-supplement klart. (`03-transcripts/20260402 - Daglig oppdatering.md`)
 - [x] Daglig oppdatering 3. april (Langfredag) – Alle kanaler stille (påske). Begge møter avlyst. Transkripter 19. mars fortsatt pending i Trale (15 dager). Ingen nye svar nødvendig. (`03-transcripts/20260403 - Daglig oppdatering.md`)
 - [x] Daglig oppdatering 4. april (Påskeaften) – Alle kanaler stille. Ingen nye e-poster, Slack-meldinger eller møter. Transkripter 19. mars fortsatt pending i Trale (16 dager). Første arbeidsdag mandag 7. april – da må oppgavene under 🔴 tas. (`03-transcripts/20260404 - Daglig oppdatering.md`)
+- [x] Daglig oppdatering 5. april (2. påskedag) – Påskestille. 3 Vercel build-feil oppdaget (4. april) – lagt til som 🔴-oppgave. Alle Slack-kanaler stille. Trale-transkripter 17 dager pending. (`03-transcripts/20260405 - Daglig oppdatering.md`)
