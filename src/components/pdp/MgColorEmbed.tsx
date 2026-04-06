@@ -8,6 +8,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
+import { colors as _localColors, collections as _localCollections } from "@/lib/color/colorData";
 
 // ── Types ──────────────────────────────────────────────
 
@@ -35,69 +36,42 @@ type Props = {
   isOpen?: boolean; onOpenChange?: (open: boolean) => void; brand?: string;
 };
 
-// ── Data loading (from Sanity) ─────────────────────────
+// ── Data loading (from local JSON) ────────────────────
 
-const SANITY_PROJECT_ID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "mp884evv";
-const SANITY_DATASET = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
-const SANITY_API = `https://${SANITY_PROJECT_ID}.api.sanity.io/v2026-03-25/data/query/${SANITY_DATASET}`;
+let _cachedData: { colors: MgColor[]; collections: MgCollection[] } | null = null;
 
-// Session-level cache (lives until page reload, not across navigations)
-let _dataPromise: Promise<{ colors: MgColor[]; collections: MgCollection[] }> | null = null;
-
-async function sanityFetch<T>(query: string): Promise<T> {
-  const res = await fetch(`${SANITY_API}?query=${encodeURIComponent(query)}`);
-  const json = await res.json();
-  return json.result;
-}
-
-async function loadMgData() {
-  if (_dataPromise) return _dataPromise;
-  _dataPromise = _doLoadMgData();
-  return _dataPromise;
-}
-
-async function _doLoadMgData() {
-  try {
-    const [colors, sanityCollections] = await Promise.all([
-      sanityFetch<any[]>(`*[_type == "color" && defined(hexValue)]{ "id": _id, "colorCode": colorCode, "name": name, "ncs": ncsCode, "hex": hexValue, "luminance": luminance, "description": description, "application": usage[0], "brand": brand, "colorFamily": colorFamily, "matchingColors": [], "descriptionEN": "", "tags": [] } | order(name asc)`),
-      sanityFetch<any[]>(`*[_type == "colorCollection"]{ "id": _id, "name": name, "brand": brand, "applicationArea": applicationArea, "description": description, "year": year, "type": collectionType, "colorCodes": colorCodes } | order(name asc)`),
-    ]);
-
-    // Map colorCodes to colorIds (matching against color.colorCode)
-    const codeToIds = new Map<string, string[]>();
-    for (const c of colors) {
-      const code = c.colorCode || "";
-      if (!codeToIds.has(code)) codeToIds.set(code, []);
-      codeToIds.get(code)!.push(c.colorCode || c.id);
-    }
-
-    const collections: MgCollection[] = sanityCollections.map((col) => ({
-      ...col,
-      colorIds: (col.colorCodes || []).flatMap((code) => {
-        // Jotun colorCodes in collections are raw numbers like "2782"
-        // but in Sanity they're stored as "JOTUN 2782" on the color doc
-        const directMatch = codeToIds.get(code) || [];
-        const jotunMatch = codeToIds.get(`JOTUN ${code}`) || [];
-        return [...directMatch, ...jotunMatch];
-      }),
+function loadMgData(): Promise<{ colors: MgColor[]; collections: MgCollection[] }> {
+  if (!_cachedData) {
+    const colors: MgColor[] = _localColors.map((c) => ({
+      id: c.id,
+      name: c.name,
+      ncs: c.ncs,
+      hex: c.hex,
+      luminance: c.luminance,
+      description: c.description,
+      descriptionEN: c.descriptionEN,
+      application: c.application,
+      matchingColors: c.matchingColors,
+      tags: c.tags,
+      brand: "Jotun",
+      colorCode: c.id,
+      colorFamily: undefined,
     }));
 
-    // For brand collections without colorCodes (Fargerike, Scanox, NCS),
-    // populate colorIds from all colors of that brand
-    for (const col of collections) {
-      if (col.colorIds.length === 0 && col.brand) {
-        col.colorIds = colors
-          .filter((c) => c.brand === col.brand)
-          .map((c: any) => c.colorCode || c.id);
-      }
-    }
+    const collections: MgCollection[] = _localCollections.map((col) => ({
+      id: col.id,
+      name: col.name,
+      brand: col.brand,
+      applicationArea: col.applicationArea,
+      description: col.description,
+      year: col.year,
+      type: col.type,
+      colorIds: col.colorIds,
+    }));
 
-    return { colors, collections };
-  } catch (e) {
-    console.error("Failed to load mg-color data from Sanity:", e);
-    _dataPromise = null; // Allow retry on next open
-    return { colors: [], collections: [] };
+    _cachedData = { colors, collections };
   }
+  return Promise.resolve(_cachedData);
 }
 
 // ── Constants ──────────────────────────────────────────
