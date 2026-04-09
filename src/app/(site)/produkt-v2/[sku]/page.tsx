@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { SEED_PRODUCTS, SEED_ARTICLES, SEED_COLORS } from "@/lib/seed/data";
+import { SEED_PRODUCTS, SEED_ARTICLES } from "@/lib/seed/data";
 import { getProductBySlug } from "@/lib/productData";
 import { ProductV2Hero } from "@/components/pdp-v2/ProductV2Hero";
 import { getAllProductAttributes } from "@/lib/sanity/productAttributes";
@@ -50,7 +50,7 @@ export default async function ProductV2Page({ params }: Props) {
         }}
       />
 
-      <ProductV2Hero product={displayProduct as any} colors={SEED_COLORS} articles={articles} productAttributes={productAttributes} />
+      <ProductV2Hero product={displayProduct as any} colors={displayProduct?._colorOptions || familyProduct?.colorOptions || []} articles={articles} productAttributes={productAttributes} />
     </>
   );
 }
