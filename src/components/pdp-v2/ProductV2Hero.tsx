@@ -13,7 +13,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, useScroll, useTransform, AnimatePresence, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { MgColorEmbed } from "@/components/pdp/MgColorEmbed";
-import { SpecGrid } from "@/components/pdp/SpecGrid";
+import { SpecGrid, type AttributeMap } from "@/components/pdp/SpecGrid";
 import { RatingStars } from "@/components/pdp/RatingStars";
 
 type ColorOption = { name: string; colorCode: string; hexValue: string; ncsCode?: string; slug: string };
@@ -41,6 +41,7 @@ type Props = {
   };
   colors: ColorOption[];
   articles: Article[];
+  productAttributes?: AttributeMap;
 };
 
 function isLight(hex: string) {
@@ -59,7 +60,7 @@ const EQUIP_LABELS: Record<string, string> = {
   masking: "Maskering", protection: "Beskyttelse",
 };
 
-export function ProductV2Hero({ product, colors, articles }: Props) {
+export function ProductV2Hero({ product, colors, articles, productAttributes = {} }: Props) {
   const [selectedColor, setSelectedColor] = useState<ColorOption | null>(null);
   const [colorDrawerOpen, setColorDrawerOpen] = useState(false);
   const [quantities, setQuantities] = useState<number[]>(() => (product.variants ?? []).map(() => 0));
@@ -134,7 +135,10 @@ export function ProductV2Hero({ product, colors, articles }: Props) {
     return { transform: `translate(${translateX}px, ${translateY}px) scale(${scale})` };
   };
 
-  const equipmentByCategory = Object.groupBy(product.recommendedEquipment ?? [], (e) => e.category);
+  const equipmentByCategory: Record<string, any[]> = {};
+  for (const e of product.recommendedEquipment ?? []) {
+    (equipmentByCategory[e.category] ??= []).push(e);
+  }
 
   return (
     <>
@@ -414,7 +418,7 @@ export function ProductV2Hero({ product, colors, articles }: Props) {
         {/* Tekniske spesifikasjoner */}
         <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="pb-20">
           <h2 className="text-3xl font-light tracking-tight" style={serif}>Teknisk</h2>
-          <SpecGrid specs={[
+          <SpecGrid attributes={productAttributes} specs={[
             { label: "Dekning", value: product.coverage ?? "8–10 m²/L", code: "coverage" },
             { label: "Strøk", value: "2", code: "coats" },
             { label: "Tørketid", value: "2 t", code: "dryingTime" },

@@ -84,6 +84,18 @@ export const HOMEPAGE_QUERY = defineQuery(`{
   }
 }`);
 
+export const ALL_PRODUCT_ATTRIBUTES_QUERY = defineQuery(`
+  *[_type == "productAttribute"]{
+    code,
+    name,
+    shortDescription,
+    whyItMatters,
+    regulatoryContext,
+    unit,
+    scale[]{ label, value, description, isBest }
+  }
+`);
+
 export const SITEMAP_QUERY = defineQuery(`{
   "products": *[_type == "product"]{ "slug": slug.current, _updatedAt },
   "colors": *[_type == "color"]{ "slug": slug.current, _updatedAt },

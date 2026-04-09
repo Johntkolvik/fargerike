@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { SEED_PRODUCTS, SEED_ARTICLES, SEED_COLORS } from "@/lib/seed/data";
 import { getProductBySlug } from "@/lib/productData";
 import { ProductV2Hero } from "@/components/pdp-v2/ProductV2Hero";
+import { getAllProductAttributes } from "@/lib/sanity/productAttributes";
 
 type Props = { params: Promise<{ sku: string }> };
 
@@ -28,7 +29,12 @@ export default async function ProductV2Page({ params }: Props) {
     notFound();
   }
 
-  const articles = [SEED_ARTICLES.howToPaintWall, SEED_ARTICLES.choosingColorBedroom, SEED_ARTICLES.paintSafeForKids];
+  const [articles, productAttributes] = await Promise.all([
+    Promise.resolve([SEED_ARTICLES.howToPaintWall, SEED_ARTICLES.choosingColorBedroom, SEED_ARTICLES.paintSafeForKids]),
+    getAllProductAttributes(),
+  ]);
+
+  const displayProduct = product || familyProduct;
 
   return (
     <>
@@ -36,15 +42,15 @@ export default async function ProductV2Page({ params }: Props) {
         data={{
           "@context": "https://schema.org",
           "@type": "Product",
-          name: product.displayName,
-          brand: { "@type": "Brand", name: product.brand },
-          description: product.longDescription || product.subtitle,
-          sku: product.sku,
-          image: product.images?.[0]?.url,
+          name: displayProduct!.displayName,
+          brand: { "@type": "Brand", name: displayProduct!.brand || "Jotun" },
+          description: displayProduct!.longDescription || displayProduct!.subtitle,
+          sku: displayProduct!.sku,
+          image: product?.images?.[0]?.url,
         }}
       />
 
-      <ProductV2Hero product={product} colors={ALL_COLORS} articles={articles} />
+      <ProductV2Hero product={displayProduct as any} colors={SEED_COLORS} articles={articles} productAttributes={productAttributes} />
     </>
   );
 }

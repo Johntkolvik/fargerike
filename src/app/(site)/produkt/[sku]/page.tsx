@@ -14,6 +14,7 @@ import { StaggerReveal, StaggerItem } from "@/components/motion/StaggerReveal";
 import { SpecGrid } from "@/components/pdp/SpecGrid";
 import { client } from "@/lib/sanity/client";
 import { PRODUCT_BY_SLUG_QUERY } from "@/lib/sanity/queries";
+import { getAllProductAttributes } from "@/lib/sanity/productAttributes";
 
 type Props = { params: Promise<{ sku: string }> };
 
@@ -107,7 +108,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductPage({ params }: Props) {
   const { sku } = await params;
-  const product = await getProduct(sku);
+  const [product, productAttributes] = await Promise.all([
+    getProduct(sku),
+    getAllProductAttributes(),
+  ]);
 
   if (!product) {
     notFound();
@@ -128,10 +132,10 @@ export default async function ProductPage({ params }: Props) {
     protection: "Beskyttelse",
   };
 
-  const equipmentByCategory = Object.groupBy(
-    product.recommendedEquipment ?? [],
-    (e) => e.category,
-  );
+  const equipmentByCategory: Record<string, any[]> = {};
+  for (const e of product.recommendedEquipment ?? []) {
+    (equipmentByCategory[e.category] ??= []).push(e);
+  }
 
   const breadcrumbItems = [
     { label: "Forside", href: "/" },
@@ -374,7 +378,7 @@ export default async function ProductPage({ params }: Props) {
             <p className="mt-2 text-[15px] text-zinc-500">Trykk p&aring; en verdi for &aring; l&aelig;re mer.</p>
           </ScrollReveal>
 
-          <SpecGrid productName={product.displayName} specs={[
+          <SpecGrid productName={product.displayName} attributes={productAttributes} specs={[
             { label: "Dekning", value: "8\u201310 m\u00b2/L", code: "coverage" },
             { label: "Str\u00f8k", value: "2", code: "coats" },
             { label: "T\u00f8rketid", value: "2 t", code: "dryingTime" },

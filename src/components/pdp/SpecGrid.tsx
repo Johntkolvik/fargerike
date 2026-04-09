@@ -6,7 +6,7 @@ type Spec = { label: string; value: string; code: string };
 
 type ScaleItem = { label: string; value: number; description: string; isBest: boolean };
 
-type AttributeData = {
+export type AttributeData = {
   name: string;
   shortDescription: string;
   whyItMatters: string;
@@ -15,28 +15,8 @@ type AttributeData = {
   scale?: ScaleItem[];
 };
 
-const SANITY_PROJECT_ID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "mp884evv";
-const SANITY_DATASET = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
-
-const ATTR_QUERY = `*[_type == "productAttribute" && code == $code][0]{ name, shortDescription, whyItMatters, regulatoryContext, unit, scale[]{ label, value, description, isBest } }`;
-
-const attrCache = new Map<string, AttributeData | null>();
-
-async function fetchAttribute(code: string): Promise<AttributeData | null> {
-  if (attrCache.has(code)) return attrCache.get(code)!;
-  try {
-    const url = new URL(`https://${SANITY_PROJECT_ID}.api.sanity.io/v2026-03-25/data/query/${SANITY_DATASET}`);
-    url.searchParams.set("query", ATTR_QUERY);
-    url.searchParams.set("$code", `"${code}"`);
-    const res = await fetch(url.toString());
-    if (!res.ok) return null;
-    const json = await res.json();
-    attrCache.set(code, json.result);
-    return json.result;
-  } catch {
-    return null;
-  }
-}
+/** Map of attribute code → attribute data, pre-fetched on the server. */
+export type AttributeMap = Record<string, AttributeData>;
 
 /* ── Scale gauge visualization ─────────────────────── */
 
@@ -114,24 +94,21 @@ function ScaleGauge({ scale, activeIndex }: { scale: ScaleItem[]; activeIndex: n
 
 /* ── Main SpecGrid component ───────────────────────── */
 
-export function SpecGrid({ specs, productName = "dette produktet" }: { specs: Spec[]; productName?: string }) {
+export function SpecGrid({ specs, productName = "dette produktet", attributes = {} }: { specs: Spec[]; productName?: string; attributes?: AttributeMap }) {
   const [activeSpec, setActiveSpec] = useState<Spec | null>(null);
-  const [attrData, setAttrData] = useState<AttributeData | null>(null);
-  const [loading, setLoading] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const openDrawer = useCallback(async (spec: Spec) => {
+  // Look up attribute data synchronously from the pre-fetched map
+  const attrData = activeSpec ? (attributes[activeSpec.code] ?? null) : null;
+
+  const openDrawer = useCallback((spec: Spec) => {
     setActiveSpec(spec);
-    setLoading(true);
     setIsAnimating(true);
-    const data = await fetchAttribute(spec.code);
-    setAttrData(data);
-    setLoading(false);
   }, []);
 
   const closeDrawer = useCallback(() => {
     setIsAnimating(false);
-    setTimeout(() => { setActiveSpec(null); setAttrData(null); }, 250);
+    setTimeout(() => { setActiveSpec(null); }, 250);
   }, []);
 
   useEffect(() => {
@@ -211,12 +188,7 @@ export function SpecGrid({ specs, productName = "dette produktet" }: { specs: Sp
 
             {/* Scrollable content */}
             <div className="flex-1 overflow-y-auto px-7 pb-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {loading ? (
-                <div className="py-20 flex flex-col items-center gap-3">
-                  <div className="h-7 w-7 rounded-full border-2 border-zinc-200 border-t-zinc-900 animate-spin" />
-                  <p className="text-xs text-zinc-400">Laster...</p>
-                </div>
-              ) : attrData ? (
+              {attrData ? (
                 <div className="space-y-8">
                   {/* Big value */}
                   <div className="rounded-2xl bg-zinc-50 border border-zinc-200/60 p-6">
