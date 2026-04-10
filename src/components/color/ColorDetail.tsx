@@ -6,6 +6,9 @@ import { useColor, useColorsByIds, useFamilies } from "@/hooks/useColors";
 import { getContrastColor, getAllImages } from "@/lib/color/colorUtils";
 import { getBucketImage } from "@/lib/color/bucketImages";
 import { useCart } from "@/context/CartContext";
+import { VolumeSelector } from "@/components/shared/VolumeSelector";
+import { familyProductsToVolumeOptions } from "@/lib/cart/toVolumeOptions";
+import type { VolumeSelectionItem } from "@/hooks/useVolumeSelection";
 import ImageGallery from "./ImageGallery";
 import MatchingColors from "./MatchingColors";
 import PaintCalculator from "./PaintCalculator";
@@ -21,7 +24,6 @@ export default function ColorDetail({ id }: { id: string }) {
   const families = useFamilies(color?.application);
   const images = color ? getAllImages(color) : [];
   const [selectedFamily, setSelectedFamily] = useState<string | null>(null);
-  const [quantities, setQuantities] = useState<Record<string, number>>({});
   const { addItem } = useCart();
 
   if (!color) {
@@ -58,19 +60,25 @@ export default function ColorDetail({ id }: { id: string }) {
     items,
   }));
 
-  function adjustQty(fillLevel: string, delta: number) {
-    setQuantities((prev) => ({
-      ...prev,
-      [fillLevel]: Math.max(0, (prev[fillLevel] || 0) + delta),
-    }));
-  }
+  const volumeOptions = activeFamily
+    ? familyProductsToVolumeOptions(activeFamily.products)
+    : [];
 
-  const cartItems = activeFamily?.products
-    .map((p) => ({ ...p, qty: quantities[p.fillLevel] || 0 }))
-    .filter((p) => p.qty > 0) ?? [];
-  const cartTotal = cartItems.reduce((sum, p) => sum + p.qty * p.priceNOK, 0);
-  const cartLiters = cartItems.reduce((sum, p) => sum + p.qty * parseFloat(p.fillLevel), 0);
-  const hasItems = cartItems.length > 0;
+  function handleAddToCart(items: VolumeSelectionItem[]) {
+    if (!activeFamily) return;
+    items.forEach((item) => {
+      addItem({
+        colorId: color.id,
+        colorName: color.name,
+        colorHex: color.hex ?? "#ddd",
+        familyName: activeFamily.name,
+        finishName: activeFamily.finishName,
+        fillLevel: item.option.fillLevel,
+        priceNOK: item.option.price,
+        quantity: item.quantity,
+      });
+    });
+  }
 
   return (
     <div>
@@ -137,7 +145,6 @@ export default function ColorDetail({ id }: { id: string }) {
                         key={f.familyCode}
                         onClick={() => {
                           setSelectedFamily(f.familyCode);
-                          setQuantities({});
                         }}
                         className={`w-full rounded-xl border p-3 text-left transition-all ${
                           (activeFamily?.familyCode === f.familyCode)
@@ -172,88 +179,17 @@ export default function ColorDetail({ id }: { id: string }) {
             </div>
 
             {activeFamily && activeFamily.products.length > 0 && (
-              <div className="rounded-xl border border-warm-200 bg-white p-5 space-y-4">
-                <div className="text-[11px] uppercase tracking-wider text-warm-400 font-medium">Velg størrelse og antall</div>
-                <div className="space-y-2">
-                  {activeFamily.products.map((p) => {
-                    const qty = quantities[p.fillLevel] || 0;
-                    return (
-                      <div
-                        key={p.productCode}
-                        className="flex items-center gap-3 rounded-lg border border-warm-200 px-4 py-3"
-                      >
-                        <div className="flex-1 min-w-0">
-                          <div className="text-sm font-semibold text-warm-900">{p.fillLevel}L</div>
-                          <div className="text-xs text-warm-400">{p.priceNOK},- per stk</div>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <button
-                            onClick={() => adjustQty(p.fillLevel, -1)}
-                            disabled={qty === 0}
-                            className="flex h-9 w-9 items-center justify-center rounded-lg border border-warm-300 text-sm text-warm-600 transition-colors hover:bg-warm-100 disabled:opacity-25"
-                          >
-                            -
-                          </button>
-                          <span className="w-7 text-center text-sm font-semibold text-warm-900">{qty}</span>
-                          <button
-                            onClick={() => adjustQty(p.fillLevel, 1)}
-                            className="flex h-9 w-9 items-center justify-center rounded-lg border border-warm-300 text-sm text-warm-600 transition-colors hover:bg-warm-100"
-                          >
-                            +
-                          </button>
-                        </div>
-                        {qty > 0 && (
-                          <div className="w-20 text-right text-sm font-semibold text-warm-900">
-                            {(qty * p.priceNOK).toLocaleString("nb-NO")},-
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <div className="border-t border-warm-200 pt-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm text-warm-500">
-                      {hasItems
-                        ? `${cartItems.reduce((s, p) => s + p.qty, 0)} spann · ${cartLiters.toFixed(1)}L`
-                        : "Ingen valgt"}
-                    </span>
-                    <span className={`text-2xl font-bold transition-colors ${hasItems ? "text-warm-900" : "text-warm-300"}`}>
-                      {hasItems ? `${cartTotal.toLocaleString("nb-NO")},-` : "0,-"}
-                    </span>
-                  </div>
-                  <button
-                    disabled={!hasItems}
-                    onClick={() => {
-                      if (!activeFamily) return;
-                      cartItems.forEach((item) => {
-                        addItem({
-                          colorId: color.id,
-                          colorName: color.name,
-                          colorHex: color.hex ?? "#ddd",
-                          familyName: activeFamily.name,
-                          finishName: activeFamily.finishName,
-                          fillLevel: item.fillLevel,
-                          priceNOK: item.priceNOK,
-                          quantity: item.qty,
-                        });
-                      });
-                      setQuantities({});
-                    }}
-                    className={`w-full rounded-xl py-4 text-sm font-semibold transition-colors ${
-                      hasItems
-                        ? "bg-warm-900 text-warm-50 hover:bg-warm-800"
-                        : "bg-warm-200 text-warm-400 cursor-not-allowed"
-                    }`}
-                  >
-                    Legg i handlekurv
-                  </button>
-                  <div className="mt-3 flex items-center justify-center gap-4 text-xs text-warm-400">
-                    <span>2-3 dagers levering</span>
-                    <span>&middot;</span>
-                    <span>Svanemerket</span>
-                  </div>
+              <div className="rounded-xl border border-warm-200 bg-white p-5">
+                <VolumeSelector
+                  key={activeFamily.familyCode}
+                  options={volumeOptions}
+                  variant="full"
+                  onAdd={handleAddToCart}
+                />
+                <div className="mt-3 flex items-center justify-center gap-4 text-xs text-warm-400">
+                  <span>2-3 dagers levering</span>
+                  <span>&middot;</span>
+                  <span>Svanemerket</span>
                 </div>
               </div>
             )}

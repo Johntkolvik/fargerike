@@ -15,6 +15,10 @@ import Link from "next/link";
 import { MgColorEmbed } from "@/components/pdp/MgColorEmbed";
 import { SpecGrid, type AttributeMap } from "@/components/pdp/SpecGrid";
 import { RatingStars } from "@/components/pdp/RatingStars";
+import { VolumeSelector } from "@/components/shared/VolumeSelector";
+import { pdpVariantsToVolumeOptions } from "@/lib/cart/toVolumeOptions";
+import type { VolumeSelectionItem } from "@/hooks/useVolumeSelection";
+import { useCart } from "@/context/CartContext";
 
 type ColorOption = { name: string; colorCode: string; hexValue: string; ncsCode?: string; slug: string };
 type Variant = { volume: string; price: number; isPopular?: boolean };
@@ -63,9 +67,15 @@ const EQUIP_LABELS: Record<string, string> = {
 export function ProductV2Hero({ product, colors, articles, productAttributes = {} }: Props) {
   const [selectedColor, setSelectedColor] = useState<ColorOption | null>(null);
   const [colorDrawerOpen, setColorDrawerOpen] = useState(false);
-  const [quantities, setQuantities] = useState<number[]>(() => (product.variants ?? []).map(() => 0));
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalItems, setTotalItems] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
+  const { addItem } = useCart();
+
+  const volumeOptions = product.variants
+    ? pdpVariantsToVolumeOptions(product.variants)
+    : [];
 
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
@@ -77,8 +87,21 @@ export function ProductV2Hero({ product, colors, articles, productAttributes = {
   const textMuted = light ? "text-zinc-600" : "text-white/70";
   const borderColor = light ? "border-black/10" : "border-white/20";
 
-  const totalPrice = (product.variants ?? []).reduce((s, v, i) => s + v.price * quantities[i], 0);
-  const totalItems = quantities.reduce((s, q) => s + q, 0);
+  function handleAddToCart(items: VolumeSelectionItem[]) {
+    if (!selectedColor) return;
+    items.forEach((item) => {
+      addItem({
+        colorId: selectedColor.colorCode,
+        colorName: selectedColor.name,
+        colorHex: selectedColor.hexValue,
+        familyName: product.displayName,
+        finishName: product.productLine,
+        fillLevel: item.option.fillLevel,
+        priceNOK: item.option.price,
+        quantity: item.quantity,
+      });
+    });
+  }
 
   const packshot = product.images?.find((img) => img.imageType === "packshot");
   const allImages = product.images ?? [];
@@ -317,51 +340,27 @@ export function ProductV2Hero({ product, colors, articles, productAttributes = {
                   )}
                 </button>
 
-                {/* Volume counters */}
+                {/* Volume counters — shared module */}
                 <div className="mt-6">
-                  <p className="text-xs font-medium tracking-wide text-zinc-500 uppercase">Velg størrelse</p>
-                  <div className="mt-3 space-y-2">
-                    {product.variants?.map((v, i) => (
-                      <div
-                        key={i}
-                        className={`flex items-center justify-between rounded-xl px-4 py-3 transition-colors ${
-                          quantities[i] > 0 ? "bg-zinc-100" : "bg-zinc-50"
-                        }`}
-                      >
-                        <div>
-                          <span className="text-sm font-semibold">{v.volume}</span>
-                          {v.isPopular && (
-                            <span className="ml-2 rounded-full bg-amber-100 px-1.5 py-0.5 text-[9px] font-semibold text-amber-800">Populær</span>
-                          )}
-                          <div className="text-xs text-zinc-500">
-                            {v.price.toLocaleString("nb-NO")} kr
-                            <span className="ml-1 text-zinc-400">({Math.round(v.price / parseFloat(v.volume))} kr/L)</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <button type="button" onClick={() => setQuantities((q) => { const n = [...q]; n[i] = Math.max(0, n[i] - 1); return n; })} disabled={quantities[i] <= 0} className="flex h-7 w-7 items-center justify-center rounded-full text-sm hover:bg-zinc-200 disabled:opacity-30">−</button>
-                          <span className="w-6 text-center text-sm font-semibold tabular-nums">{quantities[i]}</span>
-                          <button type="button" onClick={() => setQuantities((q) => { const n = [...q]; n[i] = Math.min(20, n[i] + 1); return n; })} className="flex h-7 w-7 items-center justify-center rounded-full text-sm hover:bg-zinc-200">+</button>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Total + CTA */}
-                <div className="mt-6">
-                  {totalItems > 0 && (
-                    <p className="mb-3 text-right text-2xl font-light tabular-nums">
-                      {totalPrice.toLocaleString("nb-NO")} kr
-                    </p>
+                  <VolumeSelector
+                    options={volumeOptions}
+                    variant="full"
+                    colorName={selectedColor?.name}
+                    onAdd={selectedColor ? handleAddToCart : undefined}
+                    onChange={(items, price) => {
+                      setTotalPrice(price);
+                      setTotalItems(items.reduce((s, i) => s + i.quantity, 0));
+                    }}
+                  />
+                  {!selectedColor && (
+                    <button
+                      type="button"
+                      disabled
+                      className="mt-4 w-full rounded-full bg-zinc-900/40 py-4 text-sm font-semibold text-white cursor-not-allowed"
+                    >
+                      Velg farge for &aring; fortsette
+                    </button>
                   )}
-                  <button
-                    type="button"
-                    disabled={!selectedColor || totalItems === 0}
-                    className="w-full rounded-full bg-zinc-900 py-4 text-sm font-semibold text-white transition-all hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed"
-                  >
-                    {!selectedColor ? "Velg farge for å fortsette" : totalItems === 0 ? "Velg volum" : "Legg i handlekurv"}
-                  </button>
                   <p className="mt-2 text-center text-xs text-zinc-400">Hentes i butikk &middot; Fri frakt til butikk</p>
                 </div>
               </div>

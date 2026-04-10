@@ -5,12 +5,36 @@ import Link from "next/link";
 import type { Color, Family } from "@/lib/color/types";
 import { colors as allColors, families } from "@/lib/color/colorData";
 import { getContrastColor, getAllImages, sortByHue } from "@/lib/color/colorUtils";
+import { useCart } from "@/context/CartContext";
+import { VolumeSelector } from "@/components/shared/VolumeSelector";
+import { familyProductsToVolumeOptions } from "@/lib/cart/toVolumeOptions";
+import type { VolumeSelectionItem } from "@/hooks/useVolumeSelection";
 import ColorGrid from "./ColorGrid";
 
 export default function ColorPicker() {
   const [selectedFamily, setSelectedFamily] = useState<Family | null>(families[0] ?? null);
   const [selectedColor, setSelectedColor] = useState<Color | null>(null);
-  const [selectedVolume, setSelectedVolume] = useState<string | null>(null);
+  const { addItem } = useCart();
+
+  const volumeOptions = selectedFamily
+    ? familyProductsToVolumeOptions(selectedFamily.products)
+    : [];
+
+  function handleAddToCart(items: VolumeSelectionItem[]) {
+    if (!selectedColor || !selectedFamily) return;
+    items.forEach((item) => {
+      addItem({
+        colorId: selectedColor.id,
+        colorName: selectedColor.name,
+        colorHex: selectedColor.hex ?? "#ddd",
+        familyName: selectedFamily.name,
+        finishName: selectedFamily.finishName,
+        fillLevel: item.option.fillLevel,
+        priceNOK: item.option.price,
+        quantity: item.quantity,
+      });
+    });
+  }
 
   const compatibleColors = useMemo(() => {
     if (!selectedFamily) return sortByHue(allColors);
@@ -40,7 +64,6 @@ export default function ColorPicker() {
             onClick={() => {
               setSelectedFamily(f);
               setSelectedColor(null);
-              setSelectedVolume(null);
             }}
             className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-colors ${
               selectedFamily?.familyCode === f.familyCode
@@ -62,9 +85,6 @@ export default function ColorPicker() {
             colors={compatibleColors}
             onSelect={(c) => {
               setSelectedColor(c);
-              setSelectedVolume(
-                selectedFamily?.products[0]?.fillLevel ?? null
-              );
             }}
             compact
           />
@@ -100,33 +120,18 @@ export default function ColorPicker() {
 
               {selectedFamily && selectedFamily.products.length > 0 && (
                 <div className="rounded-2xl border border-warm-200 bg-white p-5">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mb-4">
                     <div>
                       <div className="font-semibold text-warm-900">{selectedFamily.name}</div>
                       <div className="text-xs text-warm-400">{selectedFamily.finishName}</div>
                     </div>
                   </div>
-                  <div className="mt-4">
-                    <div className="text-[11px] uppercase tracking-wider text-warm-400 font-medium mb-2">Størrelse</div>
-                    <div className="flex gap-2">
-                      {selectedFamily.products.map((p) => (
-                        <button
-                          key={p.productCode}
-                          onClick={() => setSelectedVolume(p.fillLevel)}
-                          className={`flex-1 rounded-full border py-2.5 text-sm font-medium transition-colors ${
-                            selectedVolume === p.fillLevel
-                              ? "border-warm-900 bg-warm-900 text-warm-50"
-                              : "border-warm-300 text-warm-600 hover:border-warm-500"
-                          }`}
-                        >
-                          {p.fillLevel}L
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  <button className="mt-4 w-full rounded-full bg-warm-900 py-3 text-sm font-medium text-warm-50 transition-colors hover:bg-warm-800">
-                    Legg i handlekurv
-                  </button>
+                  <VolumeSelector
+                    key={`${selectedFamily.familyCode}-${selectedColor?.id}`}
+                    options={volumeOptions}
+                    variant="compact"
+                    onAdd={handleAddToCart}
+                  />
                 </div>
               )}
 

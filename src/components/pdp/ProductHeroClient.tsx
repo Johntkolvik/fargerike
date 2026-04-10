@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ImageGallery } from "./ImageGallery";
 import { MgColorEmbed } from "./MgColorEmbed";
-import { VolumePicker, type VariantQuantity } from "./VolumePicker";
-import { AddToCartButton } from "./AddToCartButton";
+import { VolumeSelector } from "@/components/shared/VolumeSelector";
+import { pdpVariantsToVolumeOptions } from "@/lib/cart/toVolumeOptions";
+import type { VolumeSelectionItem } from "@/hooks/useVolumeSelection";
+import { useCart } from "@/context/CartContext";
 import { RatingStars } from "./RatingStars";
 import { StickyBuyBar } from "./StickyBuyBar";
 import Link from "next/link";
@@ -32,11 +34,32 @@ type Props = {
 export function ProductHeroClient({ product, availableColors, initialColor }: Props) {
   const [selectedColor, setSelectedColor] = useState<ColorOption | null>(initialColor ?? null);
   const [colorDrawerOpen, setColorDrawerOpen] = useState(false);
-  const [selections, setSelections] = useState<VariantQuantity[]>([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [hasItems, setHasItems] = useState(false);
+  const currentItemsRef = useRef<VolumeSelectionItem[]>([]);
+  const { addItem } = useCart();
 
   const hasColor = !!selectedColor;
-  const hasItems = selections.length > 0;
+
+  const volumeOptions = product.variants
+    ? pdpVariantsToVolumeOptions(product.variants)
+    : [];
+
+  function handleAddToCart(items: VolumeSelectionItem[]) {
+    if (!selectedColor) return;
+    items.forEach((item) => {
+      addItem({
+        colorId: selectedColor.colorCode,
+        colorName: selectedColor.name,
+        colorHex: selectedColor.hexValue,
+        familyName: product.displayName,
+        finishName: product.productLine,
+        fillLevel: item.option.fillLevel,
+        priceNOK: item.option.price,
+        quantity: item.quantity,
+      });
+    });
+  }
 
   return (
     <div className="grid gap-8 py-12 lg:grid-cols-2 lg:py-16" id="product-hero">
@@ -123,16 +146,19 @@ export function ProductHeroClient({ product, availableColors, initialColor }: Pr
           />
         </div>
 
-        {/* Volume picker – each variant gets its own counter */}
+        {/* Volume picker – shared module */}
         {product.variants && (
           <div className="mt-6">
-            <VolumePicker
-              variants={product.variants}
-              coverage={product.coverage}
+            <VolumeSelector
+              options={volumeOptions}
+              variant="full"
               colorName={selectedColor?.name}
-              onChange={(sels, total) => {
-                setSelections(sels);
-                setTotalPrice(total);
+              coverage={product.coverage}
+              onAdd={hasColor ? handleAddToCart : undefined}
+              onChange={(items, price) => {
+                currentItemsRef.current = items;
+                setTotalPrice(price);
+                setHasItems(items.length > 0);
               }}
             />
           </div>
@@ -140,11 +166,15 @@ export function ProductHeroClient({ product, availableColors, initialColor }: Pr
 
         {/* CTAs */}
         <div className="mt-6 space-y-3">
-          <AddToCartButton
-            productName={product.displayName}
-            disabled={!hasColor || !hasItems}
-            missingSelection={!hasColor ? "farge" : !hasItems ? "størrelse" : undefined}
-          />
+          {!hasColor && (
+            <button
+              type="button"
+              disabled
+              className="w-full rounded-full bg-zinc-200 py-3.5 text-sm font-semibold text-zinc-400 cursor-not-allowed"
+            >
+              Velg farge f&oslash;rst
+            </button>
+          )}
           <Link
             href="/butikker"
             className="flex items-center justify-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors"
@@ -164,7 +194,9 @@ export function ProductHeroClient({ product, availableColors, initialColor }: Pr
         selectedColor={selectedColor?.name}
         disabled={!hasColor || !hasItems}
         onAddToCart={() => {
-          // TODO: Integrate with Omnium cart API
+          if (currentItemsRef.current.length > 0) {
+            handleAddToCart(currentItemsRef.current);
+          }
         }}
       />
     </div>
