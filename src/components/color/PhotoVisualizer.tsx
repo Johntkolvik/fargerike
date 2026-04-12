@@ -16,9 +16,11 @@ interface Props {
   matchingColors?: { hex: string; name: string }[];
   isOpen: boolean;
   onClose: () => void;
+  onImageUploaded?: (base64: string) => void;
+  preloadedImage?: string;
 }
 
-export default function PhotoVisualizer({ color, matchingColors, isOpen, onClose }: Props) {
+export default function PhotoVisualizer({ color, matchingColors, isOpen, onClose, onImageUploaded, preloadedImage }: Props) {
   const state = useVisualizerState();
   const [activeHex, setActiveHex] = useState(color.hex ?? "#cccccc");
   const [compareMode, setCompareMode] = useState<"side" | "toggle">("side");
@@ -50,8 +52,19 @@ export default function PhotoVisualizer({ color, matchingColors, isOpen, onClose
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
+  // Load preloaded image when opening with a saved "Mine bilder" image
+  useEffect(() => {
+    if (isOpen && preloadedImage && !state.image) {
+      const img = new Image();
+      img.onload = () => state.setImage(img, preloadedImage);
+      img.src = preloadedImage.startsWith("data:") ? preloadedImage : `data:image/jpeg;base64,${preloadedImage}`;
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen, preloadedImage]);
+
   const handleImageReady = useCallback((img: HTMLImageElement, base64: string) => {
     state.setImage(img, base64);
+    onImageUploaded?.(base64);
   }, [state]);
 
   // Escape key

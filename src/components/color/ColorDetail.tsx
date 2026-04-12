@@ -15,6 +15,7 @@ import PaintCalculator from "./PaintCalculator";
 import SpecsGrid from "./SpecsGrid";
 import FavoriteButton from "./FavoriteButton";
 import PhotoVisualizer from "./PhotoVisualizer";
+import { useUserImages } from "@/hooks/useUserImages";
 
 export default function ColorDetail({ id }: { id: string }) {
   const color = useColor(id);
@@ -26,7 +27,9 @@ export default function ColorDetail({ id }: { id: string }) {
   const images = color ? getAllImages(color) : [];
   const [selectedFamily, setSelectedFamily] = useState<string | null>(null);
   const [visualizerOpen, setVisualizerOpen] = useState(false);
+  const [preloadedImage, setPreloadedImage] = useState<string | undefined>();
   const { addItem } = useCart();
+  const { images: userImages, addImage: addUserImage, removeImage: removeUserImage } = useUserImages();
 
   if (!color) {
     return (
@@ -238,11 +241,40 @@ export default function ColorDetail({ id }: { id: string }) {
         )}
       </div>
 
+      {/* Mine bilder — saved user photos */}
+      {userImages.length > 0 && (
+        <div className="mt-8">
+          <div className="text-[11px] font-medium uppercase tracking-wider text-warm-400">Mine bilder</div>
+          <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
+            {userImages.map((ui) => (
+              <div key={ui.id} className="group relative shrink-0">
+                <button
+                  onClick={() => { setPreloadedImage(ui.full); setVisualizerOpen(true); }}
+                  className="h-16 w-16 overflow-hidden rounded-lg border border-warm-200 transition-all hover:border-warm-400 hover:shadow-sm"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={ui.thumbnail} alt="Lagret bilde" className="h-full w-full object-cover" />
+                </button>
+                <button
+                  onClick={() => removeUserImage(ui.id)}
+                  className="absolute -top-1.5 -right-1.5 hidden h-5 w-5 items-center justify-center rounded-full bg-warm-900 text-[10px] text-white group-hover:flex"
+                  aria-label="Fjern bilde"
+                >
+                  &times;
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <PhotoVisualizer
         color={color}
         matchingColors={matching.filter((c) => c.hex).map((c) => ({ hex: c.hex!, name: c.name }))}
         isOpen={visualizerOpen}
-        onClose={() => setVisualizerOpen(false)}
+        onClose={() => { setVisualizerOpen(false); setPreloadedImage(undefined); }}
+        onImageUploaded={addUserImage}
+        preloadedImage={preloadedImage}
       />
     </div>
   );
