@@ -7,16 +7,19 @@ import { useVolumeSelection, type VolumeSelectionItem } from "@/hooks/useVolumeS
 
 export interface VolumeSelectorProps {
   options: VolumeOption[];
-  /** "full" for PDP, "compact" for color detail/picker sidebars */
   variant?: "full" | "compact";
-  /** Called when user clicks "add to cart" */
   onAdd?: (items: VolumeSelectionItem[]) => void;
-  /** Optional onChange to sync parent state */
   onChange?: (items: VolumeSelectionItem[], totalPrice: number, totalLiters: number) => void;
-  /** Color name to display in the blanding info (full variant only) */
   colorName?: string;
-  /** Coverage string like "8–10 m²/L" */
   coverage?: string;
+}
+
+function CampaignBadge({ percent }: { percent: number }) {
+  return (
+    <span className="inline-flex items-center rounded-md bg-red-50 px-1.5 py-0.5 text-[10px] font-bold tracking-tight text-red-600 ring-1 ring-inset ring-red-100">
+      &minus;{percent}%
+    </span>
+  );
 }
 
 export function VolumeSelector({
@@ -47,152 +50,195 @@ export function VolumeSelector({
 
   const isCompact = variant === "compact";
 
-  return (
-    <div>
-      <p className="mb-3 text-[11px] font-medium uppercase tracking-wider text-warm-400">
-        Velg st&oslash;rrelse og antall
-      </p>
+  // Calculate original total (without campaigns) to show savings
+  const totalWithoutCampaign = items.reduce(
+    (sum, i) => sum + i.option.price * i.quantity, 0,
+  );
+  const totalSaved = totalWithoutCampaign - totalPrice;
 
-      <div className="space-y-2">
+  return (
+    <div className="select-none">
+      {/* ── Volume rows ── */}
+      <div className={isCompact ? "space-y-1.5" : "space-y-2"}>
         {options.map((opt) => {
           const qty = getQuantity(opt.fillLevel);
           const isDisabled = opt.stock === "out_of_stock";
-          const isActive = qty > 0;
           const stockLabel = getStockLabel(opt.stock, opt.stockCount, opt.deliveryDays);
-          const perLiter = Math.round(opt.price / parseFloat(opt.fillLevel));
+          const hasCampaign = opt.campaignPrice != null && opt.campaignPrice < opt.price;
+          const effectivePrice = hasCampaign ? opt.campaignPrice! : opt.price;
+          const discountPercent = hasCampaign
+            ? Math.round((1 - opt.campaignPrice! / opt.price) * 100)
+            : 0;
 
           return (
             <div
               key={opt.productCode}
-              className={`flex items-center justify-between rounded-xl border px-4 ${
-                isCompact ? "py-3" : "py-3.5"
-              } transition-all ${
-                isDisabled
-                  ? "border-warm-100 bg-warm-50 opacity-60"
-                  : isActive
-                    ? "border-warm-900 bg-white shadow-sm"
-                    : "border-warm-200 bg-white hover:border-warm-400"
-              }`}
+              className={`
+                grid items-center rounded-xl border transition-colors duration-150
+                ${isCompact
+                  ? "grid-cols-[1fr_auto] gap-x-3 px-3.5 py-3"
+                  : "grid-cols-[1fr_5.5rem_auto] gap-x-2 pl-4 pr-3 py-3"
+                }
+                ${isDisabled
+                  ? "border-warm-100 bg-warm-50/60"
+                  : hasCampaign
+                    ? qty > 0
+                      ? "border-red-200 bg-red-50/30"
+                      : "border-red-100/80 bg-red-50/20"
+                    : qty > 0
+                      ? "border-warm-300 bg-white"
+                      : "border-warm-200/70 bg-white"
+                }
+              `}
             >
-              <div className="min-w-0 flex-1">
+              {/* ── Left: volume + price + campaign + stock ── */}
+              <div className="min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className={`font-semibold text-warm-900 ${isCompact ? "text-sm" : "text-sm"}`}>
+                  <span className={`font-semibold tabular-nums ${isDisabled ? "text-warm-300" : "text-warm-900"} ${isCompact ? "text-[14px]" : "text-[15px]"}`}>
                     {opt.displayVolume}
                   </span>
+                  {hasCampaign && <CampaignBadge percent={discountPercent} />}
                 </div>
-                <div className="mt-0.5 flex items-center gap-2">
-                  <span className="text-xs text-warm-400">
-                    {opt.price.toLocaleString("nb-NO")},-
-                    {!isCompact && (
-                      <span className="ml-1 text-warm-300">
-                        ({perLiter} kr/L)
+                <div className="mt-0.5 flex items-baseline gap-1.5">
+                  {hasCampaign ? (
+                    <>
+                      <span className="text-xs font-semibold tabular-nums text-red-600">
+                        {effectivePrice.toLocaleString("nb-NO")},-
                       </span>
-                    )}
-                  </span>
+                      <span className="text-[11px] tabular-nums text-warm-300 line-through">
+                        {opt.price.toLocaleString("nb-NO")},-
+                      </span>
+                    </>
+                  ) : (
+                    <span className={`text-xs tabular-nums ${isDisabled ? "text-warm-200" : "text-warm-400"}`}>
+                      {opt.price.toLocaleString("nb-NO")},-
+                    </span>
+                  )}
                 </div>
                 {stockLabel.show && (
-                  <div className={`mt-1 text-[11px] font-medium ${stockLabel.color}`}>
+                  <p className={`mt-0.5 text-[11px] font-medium leading-tight ${stockLabel.color}`}>
                     {stockLabel.text}
-                  </div>
+                  </p>
                 )}
               </div>
 
-              <div className="flex items-center gap-1.5">
+              {/* ── Center: row subtotal (full variant only) ── */}
+              {!isCompact && (
+                <div className="text-right">
+                  <span className={`text-sm font-semibold tabular-nums ${
+                    qty > 0
+                      ? hasCampaign ? "text-red-600" : "text-warm-900"
+                      : "text-transparent"
+                  }`}>
+                    {qty > 0 ? `${(qty * effectivePrice).toLocaleString("nb-NO")},-` : "0"}
+                  </span>
+                </div>
+              )}
+
+              {/* ── Right: stepper ── */}
+              <div className="flex items-center">
                 <button
                   type="button"
                   onClick={() => adjustQuantity(opt.fillLevel, -1)}
-                  disabled={qty <= 0}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-warm-300 text-sm text-warm-600 transition-colors hover:bg-warm-100 disabled:opacity-25 disabled:cursor-not-allowed"
+                  disabled={qty <= 0 || isDisabled}
                   aria-label={`Reduser ${opt.displayVolume}`}
+                  className={`
+                    flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-medium transition-colors
+                    ${qty > 0
+                      ? "bg-warm-100 text-warm-700 hover:bg-warm-200 active:bg-warm-300"
+                      : "bg-transparent text-warm-200 cursor-default"
+                    }
+                  `}
                 >
-                  &minus;
+                  −
                 </button>
-                <span className="w-7 text-center text-sm font-semibold tabular-nums text-warm-900">
+                <span className={`w-7 shrink-0 text-center text-sm font-semibold tabular-nums ${
+                  isDisabled ? "text-warm-200" : qty > 0 ? "text-warm-900" : "text-warm-300"
+                }`}>
                   {qty}
                 </span>
                 <button
                   type="button"
                   onClick={() => adjustQuantity(opt.fillLevel, 1)}
                   disabled={isDisabled || qty >= 20}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-warm-300 text-sm text-warm-600 transition-colors hover:bg-warm-100 disabled:opacity-25 disabled:cursor-not-allowed"
-                  aria-label={`&Oslash;k ${opt.displayVolume}`}
+                  aria-label={`Øk ${opt.displayVolume}`}
+                  className={`
+                    flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-medium transition-colors
+                    ${isDisabled
+                      ? "bg-transparent text-warm-200 cursor-not-allowed"
+                      : "bg-warm-100 text-warm-700 hover:bg-warm-200 active:bg-warm-300"
+                    }
+                  `}
                 >
                   +
                 </button>
-                {qty > 0 && !isCompact && (
-                  <div className="w-20 text-right text-sm font-semibold text-warm-900">
-                    {(qty * opt.price).toLocaleString("nb-NO")},-
-                  </div>
-                )}
               </div>
             </div>
           );
         })}
       </div>
 
-      {/* Blanding-info (full variant only) */}
+      {/* ── Blanding note ── */}
       {!isCompact && colorName && (
-        <div className="mt-3 flex items-center gap-2 rounded-lg border border-warm-200 bg-warm-50 px-3.5 py-2.5">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="shrink-0 text-warm-400">
+        <div className="mt-3 flex items-start gap-2.5 rounded-lg bg-warm-50 px-3.5 py-2.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="mt-0.5 shrink-0 text-warm-400">
             <circle cx="12" cy="12" r="10" /><path d="M12 16v-4M12 8h.01" />
           </svg>
           <p className="text-[11px] leading-relaxed text-warm-500">
-            <span className="font-medium text-warm-700">{colorName}</span> blandes i butikk med din maling. Hentes p&aring; din n&aelig;rmeste Fargerike-butikk.
+            <span className="font-medium text-warm-700">{colorName}</span> blandes i butikk.
+            Hentes p&aring; din n&aelig;rmeste Fargerike-butikk.
           </p>
         </div>
       )}
 
-      {/* Summary */}
-      {canAdd && (
-        <div className="mt-4 border-t border-warm-200 pt-4">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-warm-500">
-              {totalItems} spann &middot; {summary}
-            </span>
-            <span className="text-2xl font-bold text-warm-900">
-              {totalPrice.toLocaleString("nb-NO")},-
-            </span>
+      {/* ── Footer: summary + CTA ── */}
+      <div className={`border-t border-warm-200/60 ${isCompact ? "mt-3 pt-3" : "mt-4 pt-4"}`}>
+        <div className="flex items-end justify-between gap-4">
+          <div className="min-w-0">
+            {canAdd ? (
+              <>
+                <p className="text-[11px] font-medium text-warm-400">
+                  {totalItems} {totalItems === 1 ? "spann" : "spann"} &middot; {summary}
+                </p>
+                {coverage && totalLiters > 0 && (
+                  <p className="mt-0.5 text-[11px] text-warm-300">
+                    Rekker ca. {Math.round(totalLiters * 8)}&ndash;{Math.round(totalLiters * 10)} m&sup2;
+                  </p>
+                )}
+                {totalSaved > 0 && (
+                  <p className="mt-0.5 text-[11px] font-medium text-red-500">
+                    Du sparer {totalSaved.toLocaleString("nb-NO")},-
+                  </p>
+                )}
+              </>
+            ) : (
+              <p className="text-[11px] text-warm-300">Velg antall for &aring; legge i handlekurv</p>
+            )}
           </div>
-          {coverage && (
-            <p className="mb-3 text-xs text-warm-400">
-              Dekning: {coverage}.{" "}
-              {totalLiters > 0 && (
-                <span>
-                  {totalLiters.toFixed(1).replace(".0", "")} L = ca.{" "}
-                  {Math.round(totalLiters * 8)}&ndash;{Math.round(totalLiters * 10)} m&sup2;
-                </span>
-              )}
-            </p>
-          )}
-          {onAdd && (
-            <button
-              type="button"
-              onClick={() => onAdd(items)}
-              className="w-full rounded-xl bg-warm-900 py-4 text-sm font-semibold text-warm-50 transition-colors hover:bg-warm-800"
-            >
-              Legg i handlekurv
-            </button>
-          )}
+          <p className={`shrink-0 text-right tabular-nums ${isCompact ? "text-xl" : "text-2xl"} font-bold ${
+            canAdd ? "text-warm-900" : "text-warm-200"
+          }`}>
+            {canAdd ? `${totalPrice.toLocaleString("nb-NO")},-` : "0,-"}
+          </p>
         </div>
-      )}
 
-      {!canAdd && (
-        <div className="mt-4 border-t border-warm-200 pt-4">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-warm-500">Ingen valgt</span>
-            <span className="text-2xl font-bold text-warm-300">0,-</span>
-          </div>
-          {onAdd && (
-            <button
-              type="button"
-              disabled
-              className="w-full rounded-xl bg-warm-200 py-4 text-sm font-semibold text-warm-400 cursor-not-allowed"
-            >
-              Legg i handlekurv
-            </button>
-          )}
-        </div>
-      )}
+        {onAdd && (
+          <button
+            type="button"
+            disabled={!canAdd}
+            onClick={() => canAdd && onAdd(items)}
+            className={`
+              mt-3 w-full rounded-xl py-3.5 text-sm font-semibold transition-all duration-150
+              ${canAdd
+                ? "bg-warm-900 text-warm-50 hover:bg-warm-800 active:scale-[0.99]"
+                : "bg-warm-100 text-warm-300 cursor-not-allowed"
+              }
+            `}
+          >
+            Legg i handlekurv
+          </button>
+        )}
+      </div>
     </div>
   );
 }

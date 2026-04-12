@@ -76,7 +76,7 @@ export function useVolumeSelection(options: VolumeOption[]): VolumeSelectionResu
   );
 
   const totalPrice = useMemo(
-    () => items.reduce((sum, i) => sum + i.option.price * i.quantity, 0),
+    () => items.reduce((sum, i) => sum + (i.option.campaignPrice ?? i.option.price) * i.quantity, 0),
     [items],
   );
 

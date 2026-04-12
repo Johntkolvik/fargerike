@@ -1,5 +1,5 @@
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
+import { SiteHeader } from "@/components/nav/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
 import { CartProvider } from "@/context/CartContext";
 
 export default function SiteLayout({
@@ -12,9 +12,9 @@ export default function SiteLayout({
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold">
         Hopp til hovedinnhold
       </a>
-      <Header />
+      <SiteHeader />
       <main id="main-content" className="flex-1">{children}</main>
-      <Footer />
+      <SiteFooter />
     </CartProvider>
   );
 }
