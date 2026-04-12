@@ -5,6 +5,7 @@ import { NavBar } from "./NavBar";
 import { MegaMenu } from "./MegaMenu";
 import { UtilityBar } from "./UtilityBar";
 import { HamburgerButton } from "./HamburgerButton";
+import { MobileNav } from "./MobileNav";
 
 export function SiteHeader() {
   return (
@@ -12,7 +13,6 @@ export function SiteHeader() {
       <NavProvider>
         <Container>
           <div className="flex items-center h-16 gap-8">
-            {/* Logo */}
             <Link href="/" className="shrink-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -22,22 +22,18 @@ export function SiteHeader() {
               />
             </Link>
 
-            {/* Desktop nav */}
             <NavBar />
 
-            {/* Spacer */}
             <div className="flex-1" />
 
-            {/* Utility icons */}
             <UtilityBar />
 
-            {/* Mobile hamburger */}
             <HamburgerButton />
           </div>
         </Container>
 
-        {/* Mega menu — inside a hover-bridge zone so mouse can travel from NavBar to panel */}
         <MegaMenu />
+        <MobileNav />
       </NavProvider>
     </header>
   );
