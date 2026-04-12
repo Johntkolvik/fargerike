@@ -1,22 +1,22 @@
 # Backlog — Fargerike
 
-**Sist oppdatert:** 12. april 2026
+**Sist oppdatert:** 13. april 2026
 
 ---
 
 ## P0 — Kritisk (blokkerer demo/visning)
 
+### Butikkfinner
+- [ ] **Kartvisning (Mapbox)** — Port react-map-gl fra REMA-prototypen. Split-screen: liste + kart.
+- [ ] **Sorter/grupper etter fylke** — flat liste er ubrukelig med 86 butikker. Kollapserbare fylke-seksjoner.
+- [ ] **Geokod butikkadresser** — koordinater er by-niv&aring;. Bruk adresser til presise GPS via geokoding-API.
+
 ### Farge-konsolidering
-- [ ] **Sl&aring; sammen /farge, /farge/velger, /farge/fargekart, /farge/ncs til &eacute;n side**
-  - Utforsk + Fargekart = &eacute;n browse-flate med collection-visning som filter-modus
-  - NCS-s&oslash;k integrert i s&oslash;kefeltet (detekter NCS-kode-m&oslash;nster automatisk)
-  - Produktfamilie-filter i sidebar (erstatter /farge/velger)
-  - ColorSubNav pill-tabs oppdateres eller fjernes
-  - Ruter: /farge (alt), /farge/{id} (detalj), /farge/favoritter (beholdes)
+- [x] ~~Sl&aring; sammen /farge, /farge/velger, /farge/fargekart, /farge/ncs til &eacute;n side~~
 
 ### Mobilmeny
-- [ ] **Mobilmeny viser ingen navigasjonsitems p&aring; noen sider** — MobileAccordion-items rendres men er usynlige p&aring; enkelte sider. Debug z-index/stacking.
-- [ ] **Test mobilmeny p&aring; alle ruter** — verifiser at den fungerer p&aring; /, /farge, /produkt, /artikkel
+- [x] ~~Mobilmeny z-index fikset (MobileNav utenfor header)~~
+- [ ] **Test mobilmeny p&aring; alle ruter** — verifiser at den fungerer konsistent
 
 ### Forsiden
 - [ ] **Forside-hero mangler bilde p&aring; Vercel** — sjekk at Sanity CDN-bilder lastes i produksjon (CORS/domain-config)
@@ -115,4 +115,15 @@
 - [ ] **Sanity-skjema desynk** — deployet via MCP (forenklet) vs. lokale filer (komplett). Må redeployes når Node-kompatibilitet er løst.
 - [x] **Ubrukte komponenter** — Slettet ColorPickerDrawer, QuantitySelector, AddToCartButton. Ingen av dem var importert noe sted.
 - [x] **POPULAR_IDS i MgColorEmbed** — Fikset: brukte prefixed IDer (JOTUN/FR) som ikke matchet colors.json. Nå bruker bare tall-IDer som faktisk finnes i datasettet.
-- [ ] **Object.groupBy cleanup** — erstattet med for-loop, men bør vurdere polyfill når Node 22 er standard på Vercel
+- [ ] **Object.groupBy cleanup** — erstattet med for-loop, men b&oslash;r vurdere polyfill n&aring;r Node 22 er standard p&aring; Vercel
+
+---
+
+## &Aring;pne sp&oslash;rsm&aring;l (krever beslutning)
+
+1. **Komplett GSC-s&oslash;keordanalyse** — venter p&aring; data for &aring; verifisere IA for Tapet, Gulv, Solskjerming, Interi&oslash;rmaling. P&aring;virker navigasjon og landingssider.
+2. **Kampanjepriser** — 30% p&aring; 2.7L er hardkodet demo. Hvor skal kampanjedata komme fra? Sanity? Omnium? Begge?
+3. **S&oslash;kedrawer default-innhold** — kampanjer og anbefalte produkter i &aring;pen-tilstand er hardkodet. B&oslash;r komme fra Sanity homepage-dokument.
+4. **mg-color synk-strategi** — npm-pakke, monorepo, eller fortsatt manuell kopi? Trenger arkitekturbeslutning.
+5. **PDP v1 vs v2** — toggle fungerer, men b&oslash;r vi velge &eacute;n som standard? Eller beholde toggle som permanent feature?
+6. **Sanity-skjema deploy** — lokal CLI krasjer p&aring; Node 22. Trenger .node-version=20 eller CI-pipeline.
