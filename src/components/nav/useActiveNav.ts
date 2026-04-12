@@ -3,29 +3,21 @@ import { NAV_ITEMS } from "@/lib/nav/config";
 /**
  * Returns the index of the NavItem that matches the current pathname, or null.
  *
- * Special cases:
- * - "/" returns null (no nav item highlighted on homepage)
- * - "/farge/*" matches "Farger" (index 0)
- * - "/maling/*" matches "Maling" (index 1)
- * - "/tapet/*" or "/gulv/*" matches "Tapet & Gulv" (index 2)
- * - "/inspirasjon/*" matches "Inspirasjon" (index 3)
- * - "/tips/*" matches "Tips" (index 4)
- * - "/tjenester/*" or "/kundeservice/*" matches "Tjenester" (index 5)
+ * Nav items (7): Farger, Maling, Tapet & Gulv, Solskjerming, Inspirasjon, Tips, Tjenester
  */
 export function useActiveNav(pathname: string): number | null {
   if (pathname === "/") return null;
 
-  // Map of path prefixes to nav item indices.
-  // Some items cover multiple prefixes (e.g. "Tapet & Gulv" covers both /tapet and /gulv).
   const prefixMap: [string, number][] = [
     ["/farge", 0],
     ["/maling", 1],
     ["/tapet", 2],
     ["/gulv", 2],
-    ["/inspirasjon", 3],
-    ["/tips", 4],
-    ["/tjenester", 5],
-    ["/kundeservice", 5],
+    ["/solskjerming", 3],
+    ["/inspirasjon", 4],
+    ["/tips", 5],
+    ["/tjenester", 6],
+    ["/kundeservice", 6],
   ];
 
   for (const [prefix, index] of prefixMap) {

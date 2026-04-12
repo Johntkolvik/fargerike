@@ -36,10 +36,8 @@ export function SiteHeader() {
           </div>
         </Container>
 
-        {/* Mega menu dropdown — positioned relative to header */}
-        <div className="relative">
-          <MegaMenu />
-        </div>
+        {/* Mega menu — inside a hover-bridge zone so mouse can travel from NavBar to panel */}
+        <MegaMenu />
       </NavProvider>
     </header>
   );

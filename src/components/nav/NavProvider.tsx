@@ -6,6 +6,7 @@ import {
   useState,
   useCallback,
   useEffect,
+  useRef,
   type ReactNode,
 } from "react";
 import { usePathname } from "next/navigation";
@@ -15,6 +16,10 @@ interface NavContextType {
   mobileOpen: boolean;
   openMega: (index: number) => void;
   closeMega: () => void;
+  /** Schedule close with delay — cancelled if openMega or cancelClose is called */
+  scheduleClose: () => void;
+  /** Cancel a pending scheduled close */
+  cancelClose: () => void;
   toggleMobile: () => void;
 }
 
@@ -24,14 +29,31 @@ export function NavProvider({ children }: { children: ReactNode }) {
   const [activeMegaMenu, setActiveMegaMenu] = useState<number | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const cancelClose = useCallback(() => {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+      closeTimeout.current = null;
+    }
+  }, []);
 
   const openMega = useCallback((index: number) => {
+    cancelClose();
     setActiveMegaMenu(index);
-  }, []);
+  }, [cancelClose]);
 
   const closeMega = useCallback(() => {
+    cancelClose();
     setActiveMegaMenu(null);
-  }, []);
+  }, [cancelClose]);
+
+  const scheduleClose = useCallback(() => {
+    cancelClose();
+    closeTimeout.current = setTimeout(() => {
+      setActiveMegaMenu(null);
+    }, 200);
+  }, [cancelClose]);
 
   const toggleMobile = useCallback(() => {
     setMobileOpen((prev) => !prev);
@@ -57,7 +79,7 @@ export function NavProvider({ children }: { children: ReactNode }) {
 
   return (
     <NavContext.Provider
-      value={{ activeMegaMenu, mobileOpen, openMega, closeMega, toggleMobile }}
+      value={{ activeMegaMenu, mobileOpen, openMega, closeMega, scheduleClose, cancelClose, toggleMobile }}
     >
       {children}
     </NavContext.Provider>

@@ -108,6 +108,38 @@ export const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
+    label: "Solskjerming",
+    href: "/solskjerming",
+    columns: [
+      {
+        heading: "Innvendig",
+        links: [
+          { label: "Duettegardiner", href: "/solskjerming/duette" },
+          { label: "Plisségardiner", href: "/solskjerming/plisse" },
+          { label: "Liftgardiner", href: "/solskjerming/lift" },
+          { label: "Rullegardiner", href: "/solskjerming/rulle" },
+          { label: "Lamellgardiner", href: "/solskjerming/lamell" },
+          { label: "Persienner", href: "/solskjerming/persienner" },
+        ],
+      },
+      {
+        heading: "Utvendig",
+        links: [
+          { label: "Utvendig solskjerming", href: "/solskjerming/utvendig" },
+          { label: "Screens", href: "/solskjerming/screens" },
+        ],
+      },
+      {
+        heading: "Tjenester",
+        links: [
+          { label: "Gratis oppmåling", href: "/solskjerming/oppmaaling" },
+          { label: "Montering", href: "/solskjerming/montering" },
+          { label: "Bestill hjemmebesøk", href: "/tjenester/hjemmebesok" },
+        ],
+      },
+    ],
+  },
+  {
     label: "Inspirasjon",
     href: "/inspirasjon",
     columns: [
