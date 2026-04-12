@@ -9,6 +9,7 @@ import { playCompletionChime } from "@/lib/visualizer/celebrationSound";
 import PhotoUploader from "./PhotoUploader";
 import VisualizerCanvas from "./VisualizerCanvas";
 import SegmentToolbar from "./SegmentToolbar";
+import { MgColorEmbed } from "@/components/pdp/MgColorEmbed";
 
 interface Props {
   color: Color;
@@ -23,6 +24,8 @@ export default function PhotoVisualizer({ color, matchingColors, isOpen, onClose
   const [compareMode, setCompareMode] = useState<"side" | "toggle">("side");
   const [showOriginal, setShowOriginal] = useState(false);
   const [showSparkles, setShowSparkles] = useState(false);
+  const [colorDrawerOpen, setColorDrawerOpen] = useState(false);
+  const [editingMaskId, setEditingMaskId] = useState<string | null>(null);
   const sparkleTimerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const mainHex = color.hex ?? "#cccccc";
@@ -186,11 +189,21 @@ export default function PhotoVisualizer({ color, matchingColors, isOpen, onClose
     }
   }, [state, color, mainHex, buildRegions, generateCanvasPreview, generateAIGuide]);
 
-  // Handle color change for a mask (simplified — no drawer in this version)
-  const handleOpenColorPicker = useCallback((_maskId: string) => {
-    // In the Fargerike version, we keep it simple: no nested color drawer.
-    // The user paints with the active color. Future: add MgColorEmbed integration.
+  // Open color picker drawer — for a specific mask or general brush color
+  const handleOpenColorPicker = useCallback((maskId?: string) => {
+    setEditingMaskId(maskId ?? null);
+    setColorDrawerOpen(true);
   }, []);
+
+  // Handle color selected from MgColorEmbed drawer
+  const handleDrawerColorSelect = useCallback((selectedColor: { hexValue: string; name: string; colorCode: string }) => {
+    if (editingMaskId) {
+      state.changeMaskColor(editingMaskId, selectedColor.hexValue);
+    } else {
+      setActiveHex(selectedColor.hexValue);
+    }
+    setColorDrawerOpen(false);
+  }, [editingMaskId, state]);
 
   // Download
   const downloadResult = useCallback(() => {
@@ -359,7 +372,7 @@ export default function PhotoVisualizer({ color, matchingColors, isOpen, onClose
                     onClear={state.clearMasks}
                     activeHex={activeHex}
                     activeColorName={colorOptions.find((c) => c.hex === activeHex)?.name ?? color.name}
-                    onOpenColorPicker={() => {}}
+                    onOpenColorPicker={() => handleOpenColorPicker()}
                   />
 
                   <button
@@ -555,6 +568,14 @@ export default function PhotoVisualizer({ color, matchingColors, isOpen, onClose
           )}
         </div>
       </div>
+
+      {/* Color picker drawer — reuses MgColorEmbed */}
+      <MgColorEmbed
+        isOpen={colorDrawerOpen}
+        onOpenChange={setColorDrawerOpen}
+        onSelect={handleDrawerColorSelect}
+        brand="fargerike"
+      />
 
       <style>{`
         @keyframes vis-fadeIn { from { opacity: 0; } to { opacity: 1; } }
