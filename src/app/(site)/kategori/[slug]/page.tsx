@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { Breadcrumb } from "@/components/pdp/Breadcrumb";
 import { SEED_PRODUCT_LIST } from "@/lib/seed/data";
 
 const CATEGORY_NAMES: Record<string, string> = {
@@ -39,11 +40,11 @@ export default async function CategoryPage({ params }: Props) {
       <section className="border-b border-zinc-200 bg-zinc-50">
         <Container>
           <div className="py-10">
-            <nav className="mb-4 flex items-center gap-2 text-sm text-zinc-500">
-              <Link href="/" className="hover:underline">Hjem</Link>
-              <span>/</span>
-              <span className="text-zinc-900">{categoryName}</span>
-            </nav>
+            <Breadcrumb items={[
+              { label: "Hjem", href: "/" },
+              { label: "Produkter", href: "/" },
+              { label: categoryName },
+            ]} />
             <h1 className="text-3xl font-bold">{categoryName}</h1>
             <p className="mt-2 text-zinc-600">
               {products.length} produkter

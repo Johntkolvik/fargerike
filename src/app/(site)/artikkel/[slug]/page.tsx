@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
+import { Breadcrumb } from "@/components/pdp/Breadcrumb";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PortableTextRenderer } from "@/components/ui/PortableTextRenderer";
 import { client } from "@/lib/sanity/client";
@@ -40,7 +41,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const seed = SEED_ARTICLE_MAP[slug];
   if (seed) {
-    return { title: `${seed.title} | Fargerike`, description: seed.excerpt };
+    return {
+      title: `${seed.title} | Fargerike`,
+      description: seed.excerpt,
+      openGraph: seed.coverImage
+        ? { images: [{ url: seed.coverImage }] }
+        : undefined,
+    };
   }
   return { title: `${slug} | Fargerike` };
 }
@@ -65,25 +72,70 @@ export default async function ArticlePage({ params }: Props) {
     const body = article.body as Array<Record<string, unknown>> | undefined;
     const mainImage = article.mainImage as { asset?: { _ref?: string; url?: string }; alt?: string } | undefined;
     const imageUrl = mainImage?.asset?.url || null;
+    const publishedAt = article.publishedAt as string | undefined;
+    const _updatedAt = article._updatedAt as string | undefined;
+    const author = article.author as { name?: string } | undefined;
     const relatedProducts = article.relatedProducts as Array<{
-      _id: string; displayName: string; slug: { current: string }; brand: string;
-      images?: Array<{ url?: string; alt?: string }>;
+      _id: string; name: string; familyCode: string; brand: string;
+      applicationArea?: string; badge?: string; shortName?: string;
+      description?: string; variants?: Array<{ price?: number }>;
     }> | null;
     const relatedColors = article.relatedColors as Array<{
       _id: string; name: string; slug: { current: string }; hexValue: string; ncsCode?: string;
     }> | null;
 
     const isHowTo = articleType === "howto";
+    const breadcrumbLabel = isHowTo ? "Guider" : "Inspirasjon";
+
+    const breadcrumbItems = [
+      { label: "Hjem", href: "/" },
+      { label: breadcrumbLabel },
+      { label: title },
+    ];
 
     return (
       <>
-        {isHowTo && (
+        {/* BreadcrumbList JSON-LD */}
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: breadcrumbItems.map((item, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: item.label,
+              ...(item.href ? { item: `https://fargerike.no${item.href}` } : {}),
+            })),
+          }}
+        />
+
+        {/* Article / HowTo JSON-LD */}
+        {isHowTo ? (
           <JsonLd
             data={{
               "@context": "https://schema.org",
               "@type": "HowTo",
               name: title,
               description: excerpt,
+              ...(imageUrl ? { image: imageUrl } : {}),
+            }}
+          />
+        ) : (
+          <JsonLd
+            data={{
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: title,
+              description: excerpt,
+              ...(author?.name ? { author: { "@type": "Person", name: author.name } } : { author: { "@type": "Organization", name: "Fargerike" } }),
+              ...(publishedAt ? { datePublished: publishedAt } : {}),
+              ...(_updatedAt ? { dateModified: _updatedAt } : {}),
+              ...(imageUrl ? { image: imageUrl } : {}),
+              publisher: {
+                "@type": "Organization",
+                name: "Fargerike",
+                url: "https://fargerike.no",
+              },
             }}
           />
         )}
@@ -106,11 +158,7 @@ export default async function ArticlePage({ params }: Props) {
           <section className={`border-b border-zinc-200 ${!imageUrl ? "bg-zinc-50" : ""}`}>
             <Container>
               <div className="mx-auto max-w-3xl py-12">
-                <nav className="mb-4 flex items-center gap-2 text-sm text-zinc-500">
-                  <Link href="/" className="hover:underline">Hjem</Link>
-                  <span>/</span>
-                  <span>{isHowTo ? "Guider" : "Inspirasjon"}</span>
-                </nav>
+                <Breadcrumb items={breadcrumbItems} />
                 <p className="text-sm font-medium tracking-wide text-zinc-500 uppercase">
                   {isHowTo ? "Steg-for-steg guide" : "Inspirasjon"}
                   {readingTime ? ` · ${readingTime}` : ""}
@@ -145,18 +193,34 @@ export default async function ArticlePage({ params }: Props) {
                 <div className="mx-auto max-w-3xl">
                   <h2 className="text-xl font-bold">Relevante produkter</h2>
                   <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                    {relatedProducts?.map((product) => (
-                      <Link
-                        key={product._id}
-                        href={`/produkt/${product.slug.current}`}
-                        className="group rounded-xl border border-zinc-200 bg-white p-5 transition-shadow hover:shadow-md"
-                      >
-                        <p className="text-xs text-zinc-500">{product.brand}</p>
-                        <h3 className="mt-1 font-semibold group-hover:underline">
-                          {product.displayName}
-                        </h3>
-                      </Link>
-                    ))}
+                    {relatedProducts?.map((product) => {
+                      const lowestPrice = product.variants
+                        ?.map((v) => v.price)
+                        .filter((p): p is number => p != null)
+                        .sort((a, b) => a - b)[0];
+                      return (
+                        <div
+                          key={product._id}
+                          className="rounded-xl border border-zinc-200 bg-white p-5"
+                        >
+                          <p className="text-xs text-zinc-500 uppercase">{product.brand}</p>
+                          <h3 className="mt-1 font-semibold">
+                            {product.name}
+                          </h3>
+                          {product.badge && (
+                            <span className="mt-1 inline-block rounded-full bg-zinc-100 px-2 py-0.5 text-xs font-medium text-zinc-700">
+                              {product.badge}
+                            </span>
+                          )}
+                          {product.shortName && (
+                            <p className="mt-1 text-sm text-zinc-500">{product.shortName}</p>
+                          )}
+                          {lowestPrice != null && (
+                            <p className="mt-2 text-sm font-semibold">Fra {lowestPrice} kr</p>
+                          )}
+                        </div>
+                      );
+                    })}
                     {relatedColors?.map((color) => (
                       <Link
                         key={color._id}
@@ -198,10 +262,31 @@ export default async function ArticlePage({ params }: Props) {
   }
 
   const isHowTo = "steps" in seedArticle && seedArticle.steps;
+  const seedBreadcrumbLabel = seedArticle.articleType === "howto" ? "Guider" : "Inspirasjon";
+  const seedBreadcrumbItems = [
+    { label: "Hjem", href: "/" },
+    { label: seedBreadcrumbLabel },
+    { label: seedArticle.title },
+  ];
 
   return (
     <>
-      {isHowTo && (
+      {/* BreadcrumbList JSON-LD */}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: seedBreadcrumbItems.map((item, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: item.label,
+            ...(item.href ? { item: `https://fargerike.no${item.href}` } : {}),
+          })),
+        }}
+      />
+
+      {/* Article / HowTo JSON-LD */}
+      {isHowTo ? (
         <JsonLd
           data={{
             "@context": "https://schema.org",
@@ -216,6 +301,21 @@ export default async function ArticlePage({ params }: Props) {
             })),
           }}
         />
+      ) : (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: seedArticle.title,
+            description: seedArticle.excerpt,
+            author: { "@type": "Organization", name: "Fargerike" },
+            publisher: {
+              "@type": "Organization",
+              name: "Fargerike",
+              url: "https://fargerike.no",
+            },
+          }}
+        />
       )}
 
       <article>
@@ -223,13 +323,7 @@ export default async function ArticlePage({ params }: Props) {
         <section className="border-b border-zinc-200 bg-zinc-50">
           <Container>
             <div className="mx-auto max-w-3xl py-12">
-              <nav className="mb-4 flex items-center gap-2 text-sm text-zinc-500">
-                <Link href="/" className="hover:underline">Hjem</Link>
-                <span>/</span>
-                <span>
-                  {seedArticle.articleType === "howto" ? "Guider" : "Inspirasjon"}
-                </span>
-              </nav>
+              <Breadcrumb items={seedBreadcrumbItems} />
               <p className="text-sm font-medium tracking-wide text-zinc-500 uppercase">
                 {seedArticle.articleType === "howto" ? "Steg-for-steg guide" : "Inspirasjon"}
                 {"readingTime" in seedArticle && ` · ${(seedArticle as typeof SEED_ARTICLES.howToPaintWall).readingTime}`}

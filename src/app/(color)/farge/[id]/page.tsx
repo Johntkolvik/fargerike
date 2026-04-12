@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import colorsData from "../../../../../data/colors.json";
 import type { Color } from "@/lib/color/types";
+import { Breadcrumb } from "@/components/pdp/Breadcrumb";
 import ColorDetail from "@/components/color/ColorDetail";
 
 const colors = colorsData as Color[];
@@ -27,5 +28,19 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function ColorDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  return <ColorDetail id={id} />;
+  const color = findColor(id);
+  const colorName = color?.name ?? id;
+
+  return (
+    <>
+      <div className="mx-auto max-w-7xl px-5 pt-4 sm:px-8">
+        <Breadcrumb items={[
+          { label: "Hjem", href: "/" },
+          { label: "Farger", href: "/farge" },
+          { label: colorName },
+        ]} />
+      </div>
+      <ColorDetail id={id} />
+    </>
+  );
 }

@@ -9,9 +9,11 @@ interface Props {
 
 export default function ViewToggle({ mode, onChange }: Props) {
   return (
-    <div className="flex rounded-lg border border-warm-300 bg-white overflow-hidden">
+    <div className="flex rounded-lg border border-warm-300 bg-white overflow-hidden" role="group" aria-label="Visningsvalg">
       <button
         onClick={() => onChange("swatch")}
+        aria-label="Vis som fargeprøver"
+        aria-pressed={mode === "swatch"}
         className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium transition-colors ${
           mode === "swatch"
             ? "bg-warm-900 text-warm-50"
@@ -25,6 +27,8 @@ export default function ViewToggle({ mode, onChange }: Props) {
       </button>
       <button
         onClick={() => onChange("photo")}
+        aria-label="Vis som miljøbilder"
+        aria-pressed={mode === "photo"}
         className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium transition-colors ${
           mode === "photo"
             ? "bg-warm-900 text-warm-50"

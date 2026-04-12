@@ -110,9 +110,9 @@
 
 ## Teknisk gjeld
 
-- [ ] **Deprecated middleware** — Next.js varsler: "middleware" convention deprecated, bruk "proxy"
-- [ ] **To CartDrawer-implementasjoner** — src/components/cart/CartDrawer.tsx og src/components/color/CartDrawer.tsx med ulike interfaces
-- [ ] **Sanity-skjema desynk** — deployet via MCP (forenklet) vs. lokale filer (komplett). M&aring; redeployes n&aring;r Node-kompatibilitet er l&oslash;st.
-- [ ] **Ubrukte komponenter** — ColorPickerDrawer (erstattet av MgColorEmbed), QuantitySelector (erstattet av VolumeSelector), AddToCartButton (erstattet av VolumeSelector)
-- [ ] **POPULAR_IDS i MgColorEmbed** — inneholder FR-IDer som kanskje ikke finnes i fargedatasettet
-- [ ] **Object.groupBy cleanup** — erstattet med for-loop, men b&oslash;r vurdere polyfill n&aring;r Node 22 er standard p&aring; Vercel
+- [x] **Deprecated middleware** — Migrert fra middleware.ts til proxy.ts (Next.js 16 convention). Funksjon omdøpt fra `middleware` til `proxy`.
+- [x] **To CartDrawer-implementasjoner** — Slettet ubrukt prop-drevet cart/CartDrawer.tsx. Kanonisk versjon: color/CartDrawer.tsx (bruker CartContext, importert i ColorLayout).
+- [ ] **Sanity-skjema desynk** — deployet via MCP (forenklet) vs. lokale filer (komplett). Må redeployes når Node-kompatibilitet er løst.
+- [x] **Ubrukte komponenter** — Slettet ColorPickerDrawer, QuantitySelector, AddToCartButton. Ingen av dem var importert noe sted.
+- [x] **POPULAR_IDS i MgColorEmbed** — Fikset: brukte prefixed IDer (JOTUN/FR) som ikke matchet colors.json. Nå bruker bare tall-IDer som faktisk finnes i datasettet.
+- [ ] **Object.groupBy cleanup** — erstattet med for-loop, men bør vurdere polyfill når Node 22 er standard på Vercel

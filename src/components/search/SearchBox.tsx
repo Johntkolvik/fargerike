@@ -30,6 +30,9 @@ export function SearchBox() {
         placeholder="Søk etter produkter, farger, guider..."
         aria-label="Søk"
         autoComplete="off"
+        data-1p-ignore="true"
+        data-lpignore="true"
+        data-form-type="other"
         className="w-full rounded-lg border border-zinc-300 px-4 py-2 text-sm"
       />
     </form>

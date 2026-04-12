@@ -94,16 +94,16 @@ const COLOR_LABELS: Record<string, ColorLabel[]> = {
   "9918": ["populær", "trygt_valg"], "1001": ["populær"], "8054": ["populær"],
 };
 
-// Populære farger — blanding av merker
+// Populære farger — IDer fra colors.json (bare tall, ingen prefix)
 const POPULAR_IDS = [
-  "JOTUN 2782",  // Deco Pink (Jotun)
-  "FR1062",      // Vanilje (Fargerike)
-  "JOTUN 1624",  // Skylight (Jotun)
-  "FR1421",      // Lett Greige (Fargerike)
-  "JOTUN 9918",  // Klassisk Hvit (Jotun)
-  "FR2060",      // Fromasj (Fargerike)
-  "JOTUN 1001",  // Eggehvit (Jotun)
-  "FR1128",      // Røkelse (Fargerike)
+  "2782",   // DECO PINK
+  "1519",   // VANILJE
+  "1624",   // LETTHET (Skylight)
+  "1024",   // TIDLØS
+  "9918",   // KLASSISK HVIT
+  "1140",   // SAND
+  "1001",   // EGGHVIT
+  "1453",   // BOMULL
 ];
 
 // ── Helpers ────────────────────────────────────────────
@@ -328,6 +328,11 @@ export function MgColorEmbed({ onSelect, isOpen = false, onOpenChange }: Props) 
               ref={inputRef} type="text" value={query}
               onChange={e => setQuery(e.target.value)}
               placeholder="Fargenavn, NCS-kode eller hex..."
+              aria-label="Sok etter farge"
+              autoComplete="off"
+              data-1p-ignore="true"
+              data-lpignore="true"
+              data-form-type="other"
               className="w-full rounded-xl border-0 bg-zinc-100 py-3 pl-11 pr-4 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900/10 transition-shadow"
             />
             {query && (

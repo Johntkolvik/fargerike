@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useCallback } from "react";
 import { useCart } from "@/context/CartContext";
 
 interface Props {
@@ -10,6 +11,21 @@ interface Props {
 export default function CartDrawer({ open, onClose }: Props) {
   const { items, removeItem, updateQuantity, clear, totalItems, totalPrice } = useCart();
 
+  // Close on Escape key
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    },
+    [onClose],
+  );
+
+  useEffect(() => {
+    if (open) {
+      document.addEventListener("keydown", handleKeyDown);
+      return () => document.removeEventListener("keydown", handleKeyDown);
+    }
+  }, [open, handleKeyDown]);
+
   return (
     <>
       <div
@@ -19,6 +35,9 @@ export default function CartDrawer({ open, onClose }: Props) {
         onClick={onClose}
       />
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Handlekurv"
         className={`fixed inset-y-0 right-0 z-50 w-full max-w-md bg-warm-50 shadow-2xl transition-transform duration-300 ease-out flex flex-col ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
@@ -69,6 +88,7 @@ export default function CartDrawer({ open, onClose }: Props) {
                       onClick={() => removeItem(item.id)}
                       className="shrink-0 text-warm-400 hover:text-red-500 transition-colors"
                       title="Fjern"
+                      aria-label={`Fjern ${item.colorName} fra handlekurv`}
                     >
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -79,13 +99,15 @@ export default function CartDrawer({ open, onClose }: Props) {
                     <div className="flex items-center gap-1.5">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                        aria-label={`Reduser antall ${item.colorName}`}
                         className="flex h-8 w-8 items-center justify-center rounded-lg border border-warm-300 text-sm text-warm-600 hover:bg-warm-100"
                       >
                         -
                       </button>
-                      <span className="w-7 text-center text-sm font-semibold text-warm-900">{item.quantity}</span>
+                      <span className="w-7 text-center text-sm font-semibold text-warm-900" aria-live="polite" aria-label={`Antall: ${item.quantity}`}>{item.quantity}</span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                        aria-label={`Øk antall ${item.colorName}`}
                         className="flex h-8 w-8 items-center justify-center rounded-lg border border-warm-300 text-sm text-warm-600 hover:bg-warm-100"
                       >
                         +
@@ -108,7 +130,7 @@ export default function CartDrawer({ open, onClose }: Props) {
                 {totalPrice.toLocaleString("nb-NO")},-
               </span>
             </div>
-            <button className="w-full rounded-xl bg-warm-900 py-4 text-sm font-semibold text-warm-50 transition-colors hover:bg-warm-800">
+            <button aria-label="Gå til kassen" className="w-full rounded-xl bg-warm-900 py-4 text-sm font-semibold text-warm-50 transition-colors hover:bg-warm-800">
               Gå til kassen
             </button>
             <button

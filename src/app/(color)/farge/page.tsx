@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumb } from "@/components/pdp/Breadcrumb";
 import ColorBrowser from "@/components/color/ColorBrowser";
 
 export const metadata: Metadata = {
@@ -8,5 +9,15 @@ export const metadata: Metadata = {
 };
 
 export default function FargeExplorePage() {
-  return <ColorBrowser />;
+  return (
+    <>
+      <div className="mx-auto max-w-7xl px-5 pt-4 sm:px-8">
+        <Breadcrumb items={[
+          { label: "Hjem", href: "/" },
+          { label: "Farger" },
+        ]} />
+      </div>
+      <ColorBrowser />
+    </>
+  );
 }

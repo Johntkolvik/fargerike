@@ -269,6 +269,11 @@ export default function ColorBrowser() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="S1510-Y70R, Muted Coral, #d4b5a0..."
+          aria-label="Sok etter farge med navn, NCS-kode eller hex"
+          autoComplete="off"
+          data-1p-ignore="true"
+          data-lpignore="true"
+          data-form-type="other"
           className="w-full rounded-2xl border border-warm-300 bg-white py-4 pl-13 pr-5 text-lg text-warm-900 placeholder-warm-400 outline-none focus:border-warm-500 focus:ring-1 focus:ring-warm-500"
         />
         {isNCSMode && (

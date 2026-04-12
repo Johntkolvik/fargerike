@@ -1,6 +1,6 @@
 # TASKS – Fargerike
 
-Sist oppdatert: 2026-04-05
+Sist oppdatert: 2026-04-08
 
 ## Aktive oppgaver
 
@@ -15,9 +15,10 @@ Sist oppdatert: 2026-04-05
 
 ### 🟡 Uke 15 (7.–11. april)
 
+- [ ] **Book Figma-sesjon med Luke Cowley** – DM mottatt over påske. Han ønsker å utforske Figma-prosjektet og planlegge in-person-møter i Oslo. Svar med foreslåtte tidspunkter (tirsdag/onsdag). Også alpha-tilgang Figma AI.
 - [ ] **Book innføringsmøte med Petter Sandholt** – MG-riggen (Omnium, Sanity, PIM, integrasjoner). Petter sa ja 19. mars. Nødvendig for workshop 17. april.
 - [ ] **Forberede workshop 17. april** – As-is analyse av dagens Fargerike-plattform. Tildelt i Monday.com.
-- [ ] **Hent transcripts fra 19. mars-møtene** – Oppstartsmøte Markedsføring + SEO. Fortsatt «pending» i Trale per 3. april (15 dager). Sjekk med support.
+- [ ] **Hent transcripts fra 19. mars-møtene** – Oppstartsmøte Markedsføring + SEO. Trale-søk viser at de nå er tilgjengelige (19 dager). Hent og oppsummer.
 - [ ] **Produktnavn og datamodell** – Monday.com-oppgave. Kartlegge nåværende produktnavnstruktur.
 - [ ] **Tracking og måling (heatmap)** – Monday.com-oppgave. Sette opp Clarity/heatmap?
 - [ ] **Konkurrentanalyse/business review** – Fra oppstartsmøte 11. mars. Deadline 22. april.
@@ -230,3 +231,6 @@ Basert på audit 26. mars. Alle oppgaver gjelder `src/app/(site)/produkt/[sku]/p
 - [x] Daglig oppdatering 3. april (Langfredag) – Alle kanaler stille (påske). Begge møter avlyst. Transkripter 19. mars fortsatt pending i Trale (15 dager). Ingen nye svar nødvendig. (`03-transcripts/20260403 - Daglig oppdatering.md`)
 - [x] Daglig oppdatering 4. april (Påskeaften) – Alle kanaler stille. Ingen nye e-poster, Slack-meldinger eller møter. Transkripter 19. mars fortsatt pending i Trale (16 dager). Første arbeidsdag mandag 7. april – da må oppgavene under 🔴 tas. (`03-transcripts/20260404 - Daglig oppdatering.md`)
 - [x] Daglig oppdatering 5. april (2. påskedag) – Påskestille. 3 Vercel build-feil oppdaget (4. april) – lagt til som 🔴-oppgave. Alle Slack-kanaler stille. Trale-transkripter 17 dager pending. (`03-transcripts/20260405 - Daglig oppdatering.md`)
+- [x] Daglig oppdatering 6. april (søndag) – Påskestille. Ny oppgave: Luke Cowley (Figma) ønsker sesjon uke 15 + Oslo-besøk. Utkast til svar klart. Alle 🔴-oppgaver står til mandag 7. april. Trale-transkripter 18 dager pending. (`03-transcripts/20260406 - Daglig oppdatering.md`)
+- [x] Daglig oppdatering 7. april (mandag, første arbeidsdag) – Ingen nye e-poster som krever svar. Slack stille over påsken. MG PARTY-møte med Stine+Marthy kl. 11. FargePIM kick-off i morgen 9. april. Vercel build-feil og Eline-svar er prioritet. (`03-transcripts/20260407 - Daglig oppdatering.md`)
+- [x] Daglig oppdatering 8. april (tirsdag) – Ingen nye e-poster/Slack som krever svar. Algolia usage report mottatt (informativ). FargePIM Digital Kick-off i morgen 09:00. Utkast til Algolia-supplement i #mg_alle og innføringsmøte Petter Sandholt klart. 🔴-oppgaver (Vercel, Eline-svar, Algolia signering) fortsatt åpne. (`03-transcripts/20260408 - Daglig oppdatering.md`)

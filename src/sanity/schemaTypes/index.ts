@@ -12,6 +12,9 @@ import { ctaBlock } from "./objects/ctaBlock";
 import { calloutBox } from "./objects/calloutBox";
 import { comparisonTable } from "./objects/comparisonTable";
 import { materialsList } from "./objects/materialsList";
+import { productSlider } from "./objects/productSlider";
+import { colorSlider } from "./objects/colorSlider";
+import { articleSlider } from "./objects/articleSlider";
 import { product } from "./documents/product";
 import { color } from "./documents/color";
 import { service } from "./documents/service";
@@ -40,6 +43,9 @@ export const schemaTypes = [
   calloutBox,
   comparisonTable,
   materialsList,
+  productSlider,
+  colorSlider,
+  articleSlider,
   // Documents
   product,
   productFamily,

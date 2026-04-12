@@ -79,5 +79,8 @@ export const articlePortableText = defineType({
     defineArrayMember({ type: "calloutBox" }),
     defineArrayMember({ type: "comparisonTable" }),
     defineArrayMember({ type: "materialsList" }),
+    defineArrayMember({ type: "productSlider" }),
+    defineArrayMember({ type: "colorSlider" }),
+    defineArrayMember({ type: "articleSlider" }),
   ],
 });

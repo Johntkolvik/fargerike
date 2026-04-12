@@ -8,6 +8,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, useScroll, useTransform, AnimatePresence, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { MgColorEmbed } from "@/components/pdp/MgColorEmbed";
 import { SpecGrid, type AttributeMap } from "@/components/pdp/SpecGrid";
@@ -267,8 +268,7 @@ export function ProductV2Hero({ product, colors, articles, productAttributes = {
                 className="group relative mb-6 flex items-center justify-center rounded-2xl bg-warm-50/60 px-8 py-6 cursor-zoom-in"
                 aria-label="Forst&oslash;rr bilde"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={packshot.url} alt={packshot.alt} className="max-h-[180px] lg:max-h-[200px] object-contain drop-shadow-lg transition-transform duration-500 group-hover:scale-105" />
+                <Image src={packshot.url} alt={packshot.alt} width={300} height={200} className="max-h-[180px] lg:max-h-[200px] w-auto object-contain drop-shadow-lg transition-transform duration-500 group-hover:scale-105" />
                 <span className="absolute bottom-3 right-3 rounded-full bg-white/80 p-1.5 text-warm-500 opacity-0 shadow-sm backdrop-blur transition-opacity group-hover:opacity-100">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
                 </span>
@@ -471,8 +471,7 @@ export function ProductV2Hero({ product, colors, articles, productAttributes = {
                         <>
                           <div className="relative aspect-square bg-warm-50 flex items-center justify-center p-3">
                             {item.imageUrl ? (
-                              // eslint-disable-next-line @next/next/no-img-element
-                              <img src={item.imageUrl} alt={item.productName} className="max-h-full max-w-full object-contain" loading="lazy" />
+                              <Image src={item.imageUrl} alt={item.productName} width={160} height={160} className="max-h-full max-w-full object-contain" />
                             ) : (
                               <div className="h-full w-full rounded-lg bg-warm-100" />
                             )}
@@ -548,8 +547,7 @@ export function ProductV2Hero({ product, colors, articles, productAttributes = {
               {articles.map((a) => (
                 <Link key={a.slug.current} href={`/artikkel/${a.slug.current}`} className="group block">
                   {a.coverImage && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={a.coverImage} alt={a.title} className="aspect-[4/3] w-full rounded-xl object-cover transition-transform group-hover:scale-[1.02]" loading="lazy" />
+                    <Image src={a.coverImage} alt={a.title} width={400} height={300} className="aspect-[4/3] w-full rounded-xl object-cover transition-transform group-hover:scale-[1.02]" />
                   )}
                   <p className="mt-3 text-xs tracking-wide text-warm-400 uppercase">{a.articleType === "howto" ? "Guide" : "Inspirasjon"}</p>
                   <h3 className="mt-1 font-medium group-hover:underline">{a.title}</h3>

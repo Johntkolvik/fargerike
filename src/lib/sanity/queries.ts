@@ -46,7 +46,17 @@ export const SERVICE_BY_SLUG_QUERY = defineQuery(`
 export const ARTICLE_BY_SLUG_QUERY = defineQuery(`
   *[_type == "article" && slug.current == $slug][0]{
     ...,
-    relatedProducts[]->{ _id, displayName, slug, brand, images },
+    "body": body[]{
+      ...,
+      _type == "productCard" => { ..., product->{ _id, displayName, slug, brand, images, variants } },
+      _type == "colorPaletteEmbed" => { ..., colors[]->{ _id, name, slug, hexValue } },
+      _type == "comparisonTable" => { ..., products[]->{ _id, displayName, slug, brand, technicalSpecs, variants } },
+      _type == "productSlider" => { ..., products[]->{ _id, name, shortName, badge, brand, description, variants[]{ price }, image } },
+      _type == "colorSlider" => { ..., colors[]->{ _id, name, slug, hexValue, colorCode }, collection->{ name } },
+      _type == "articleSlider" => { ..., articles[]->{ _id, title, slug, excerpt, articleType, "mainImage": mainImage{ alt, "asset": asset->{ _ref, url } } } },
+      _type == "materialsList" => { ..., items[]{ ..., product->{ _id, slug } } }
+    },
+    relatedProducts[]->{ _id, name, familyCode, brand, applicationArea, badge, shortName, description, image, variants[]{ price } },
     relatedColors[]->{ _id, name, slug, hexValue, ncsCode },
     contentCluster->{ _id, title, slug }
   }

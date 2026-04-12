@@ -113,7 +113,7 @@ const ARTICLE_IMAGES = [
 ];
 
 const HOMEPAGE_HERO = {
-  id: "homePage",
+  id: "87a7243c-e6ec-4c3b-adb5-c66a580652e0", // actual Sanity document ID for homePage
   title: "Homepage hero",
   url: "https://www.fargerike.no/contentassets/67f6f33dc2d3475da0a36225f000c9f7/varklar-mobil_lys.jpg",
   filename: "homepage-hero.jpg",

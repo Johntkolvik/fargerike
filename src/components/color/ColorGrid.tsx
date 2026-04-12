@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import type { Color } from "@/lib/color/types";
 import { getContrastColor } from "@/lib/color/colorUtils";
 import FavoriteButton from "./FavoriteButton";
@@ -50,12 +51,12 @@ export default function ColorGrid({ colors, onSelect, linkTo, compact, viewMode 
 
         const content = isPhoto ? (
           <div className="group relative overflow-hidden rounded-2xl bg-warm-200 transition-all hover:shadow-lg">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={firstImage!}
               alt={c.name}
+              width={400}
+              height={300}
               className="aspect-[4/3] w-full object-cover"
-              loading="lazy"
             />
             <div className="absolute inset-x-0 bottom-0 flex items-end">
               <div
@@ -108,14 +109,14 @@ export default function ColorGrid({ colors, onSelect, linkTo, compact, viewMode 
 
         if (linkTo) {
           return (
-            <Link key={c.id} href={linkTo(c)} className="block">
+            <Link key={c.id} href={linkTo(c)} aria-label={`Se farge ${c.name}`} className="block">
               {content}
             </Link>
           );
         }
         if (onSelect) {
           return (
-            <button key={c.id} onClick={() => onSelect(c)} className="block w-full text-left cursor-pointer">
+            <button key={c.id} onClick={() => onSelect(c)} aria-label={`Velg farge ${c.name}`} className="block w-full text-left cursor-pointer">
               {content}
             </button>
           );
