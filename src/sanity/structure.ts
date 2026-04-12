@@ -5,6 +5,12 @@ export const structure: StructureResolver = (S) =>
     .title("Fargerike")
     .items([
       S.listItem()
+        .title("Forside")
+        .child(
+          S.document().schemaType("homePage").documentId("homePage"),
+        ),
+      S.divider(),
+      S.listItem()
         .title("Produkter")
         .child(
           S.list()

@@ -9,8 +9,8 @@ import { MobileNav } from "./MobileNav";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-warm-200 bg-warm-50/95 backdrop-blur-sm">
-      <NavProvider>
+    <NavProvider>
+      <header className="sticky top-0 z-40 border-b border-warm-200 bg-warm-50/95 backdrop-blur-sm">
         <Container>
           <div className="flex items-center h-16 gap-8">
             <Link href="/" className="shrink-0">
@@ -33,8 +33,10 @@ export function SiteHeader() {
         </Container>
 
         <MegaMenu />
-        <MobileNav />
-      </NavProvider>
-    </header>
+      </header>
+
+      {/* MobileNav OUTSIDE header — backdrop-filter on header creates a containing block that traps fixed children */}
+      <MobileNav />
+    </NavProvider>
   );
 }
