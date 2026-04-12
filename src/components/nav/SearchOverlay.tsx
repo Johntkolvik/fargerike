@@ -178,21 +178,21 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
             aria-hidden="true"
           />
 
-          {/* Drawer panel — slides down from top */}
+          {/* Drawer panel — slides from right (consistent with cart/favorites) */}
           <motion.div
             key="search-drawer"
-            initial={{ y: "-100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "-100%" }}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-x-0 top-0 z-50 max-h-[85vh] overflow-hidden bg-white shadow-2xl"
+            className="fixed inset-y-0 right-0 z-50 flex w-full max-w-[480px] flex-col bg-white shadow-2xl"
             role="dialog"
             aria-modal="true"
             aria-label="S&oslash;k"
           >
             {/* Search input */}
             <div className="border-b border-warm-100 px-6 py-5 sm:px-8">
-              <div className="mx-auto flex max-w-4xl items-center gap-3">
+              <div className="flex items-center gap-3">
                 <SearchIcon className="h-5 w-5 shrink-0 text-warm-400" />
                 <input
                   ref={inputRef}
@@ -219,14 +219,14 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
                   </svg>
                 </button>
               </div>
-              <div className="mx-auto mt-1.5 flex max-w-4xl items-center gap-2 text-xs text-warm-300">
+              <div className="mt-1.5 flex items-center gap-2 text-xs text-warm-300">
                 <kbd className="rounded border border-warm-200 bg-warm-50 px-1.5 py-0.5 font-mono text-[10px] text-warm-400">ESC</kbd>
                 <span>for &aring; lukke</span>
               </div>
             </div>
 
             {/* Scrollable content */}
-            <div className="mx-auto max-w-4xl overflow-y-auto overscroll-contain px-6 pb-6 sm:px-8" style={{ maxHeight: "calc(85vh - 100px)" }}>
+            <div className="flex-1 overflow-y-auto overscroll-contain px-6 pb-6 sm:px-8">
 
               {/* ═══ DEFAULT STATE: shown before user types ═══ */}
               {!hasQuery && (
