@@ -15,6 +15,7 @@ interface NavContextType {
   activeMegaMenu: number | null;
   mobileOpen: boolean;
   cartOpen: boolean;
+  searchOpen: boolean;
   openMega: (index: number) => void;
   closeMega: () => void;
   /** Schedule close with delay — cancelled if openMega or cancelClose is called */
@@ -23,6 +24,7 @@ interface NavContextType {
   cancelClose: () => void;
   toggleMobile: () => void;
   toggleCart: () => void;
+  toggleSearch: () => void;
 }
 
 const NavContext = createContext<NavContextType | null>(null);
@@ -31,6 +33,7 @@ export function NavProvider({ children }: { children: ReactNode }) {
   const [activeMegaMenu, setActiveMegaMenu] = useState<number | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -60,14 +63,31 @@ export function NavProvider({ children }: { children: ReactNode }) {
 
   const toggleMobile = useCallback(() => {
     setMobileOpen((prev) => {
-      if (!prev) setCartOpen(false); // Close cart when mobile opens
+      if (!prev) {
+        setCartOpen(false);
+        setSearchOpen(false);
+      }
       return !prev;
     });
   }, []);
 
   const toggleCart = useCallback(() => {
     setCartOpen((prev) => {
-      if (!prev) setMobileOpen(false); // Close mobile when cart opens
+      if (!prev) {
+        setMobileOpen(false);
+        setSearchOpen(false);
+      }
+      return !prev;
+    });
+  }, []);
+
+  const toggleSearch = useCallback(() => {
+    setSearchOpen((prev) => {
+      if (!prev) {
+        setMobileOpen(false);
+        setCartOpen(false);
+        setActiveMegaMenu(null);
+      }
       return !prev;
     });
   }, []);
@@ -77,24 +97,30 @@ export function NavProvider({ children }: { children: ReactNode }) {
     setActiveMegaMenu(null);
     setMobileOpen(false);
     setCartOpen(false);
+    setSearchOpen(false);
   }, [pathname]);
 
-  // Escape key closes everything
+  // Escape key closes everything + Cmd/Ctrl+K opens search
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
         setActiveMegaMenu(null);
         setMobileOpen(false);
         setCartOpen(false);
+        setSearchOpen(false);
+      }
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        toggleSearch();
       }
     }
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [toggleSearch]);
 
   return (
     <NavContext.Provider
-      value={{ activeMegaMenu, mobileOpen, cartOpen, openMega, closeMega, scheduleClose, cancelClose, toggleMobile, toggleCart }}
+      value={{ activeMegaMenu, mobileOpen, cartOpen, searchOpen, openMega, closeMega, scheduleClose, cancelClose, toggleMobile, toggleCart, toggleSearch }}
     >
       {children}
     </NavContext.Provider>

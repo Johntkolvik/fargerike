@@ -7,6 +7,7 @@ import { UtilityBar } from "./UtilityBar";
 import { HamburgerButton } from "./HamburgerButton";
 import { MobileNav } from "./MobileNav";
 import { CartNav } from "./CartNav";
+import { SearchNav } from "./SearchNav";
 
 export function SiteHeader() {
   return (
@@ -36,9 +37,10 @@ export function SiteHeader() {
         <MegaMenu />
       </header>
 
-      {/* MobileNav & CartNav OUTSIDE header — backdrop-filter on header creates a containing block that traps fixed children */}
+      {/* MobileNav, CartNav & SearchNav OUTSIDE header — backdrop-filter on header creates a containing block that traps fixed children */}
       <MobileNav />
       <CartNav />
+      <SearchNav />
     </NavProvider>
   );
 }

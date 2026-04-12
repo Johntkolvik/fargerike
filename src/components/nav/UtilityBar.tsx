@@ -80,7 +80,7 @@ function CartIcon() {
 
 export function UtilityBar() {
   const { totalItems } = useCart();
-  const { toggleCart } = useNav();
+  const { toggleCart, toggleSearch } = useNav();
   const [bumping, setBumping] = useState(false);
   const prevCount = useRef(totalItems);
 
@@ -100,8 +100,9 @@ export function UtilityBar() {
       {/* Search */}
       <button
         type="button"
+        onClick={toggleSearch}
         className="hidden sm:flex items-center justify-center w-10 h-10 rounded-lg text-warm-600 transition-colors hover:text-warm-900 hover:bg-warm-100"
-        aria-label="Sok"
+        aria-label="Søk (⌘K)"
       >
         <SearchIcon />
       </button>
