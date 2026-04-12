@@ -131,6 +131,21 @@ export const ALL_PRODUCT_ATTRIBUTES_QUERY = defineQuery(`
   }
 `);
 
+export const CATEGORY_PAGE_QUERY = defineQuery(`{
+  "category": *[_type == "productCategory" && slug.current == $slug][0]{
+    title, description, "imageUrl": image.asset->url
+  },
+  "contentCluster": *[_type == "contentCluster" && slug.current == $slug][0]{
+    title, description, "imageUrl": image.asset->url
+  },
+  "articles": *[_type == "article" && ($slug in relatedCategories[]->slug.current || $slug in contentCluster->slug.current)] | order(publishedAt desc) [0..5]{
+    _id, title, "slug": slug.current, excerpt, articleType, "imageUrl": mainImage.asset->url
+  },
+  "subcategories": *[_type == "productCategory" && parent->slug.current == $slug]{
+    _id, title, "slug": slug.current, "imageUrl": image.asset->url
+  }
+}`);
+
 export const SITEMAP_QUERY = defineQuery(`{
   "products": *[_type == "product"]{ "slug": slug.current, _updatedAt },
   "colors": *[_type == "color"]{ "slug": slug.current, _updatedAt },

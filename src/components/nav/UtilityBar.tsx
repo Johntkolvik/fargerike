@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
+import { useNav } from "./NavProvider";
 
 function SearchIcon() {
   return (
@@ -78,6 +80,20 @@ function CartIcon() {
 
 export function UtilityBar() {
   const { totalItems } = useCart();
+  const { toggleCart } = useNav();
+  const [bumping, setBumping] = useState(false);
+  const prevCount = useRef(totalItems);
+
+  // Trigger bump animation when totalItems changes (but not on initial render)
+  useEffect(() => {
+    if (totalItems !== prevCount.current && prevCount.current !== undefined) {
+      setBumping(true);
+      const timer = setTimeout(() => setBumping(false), 300);
+      prevCount.current = totalItems;
+      return () => clearTimeout(timer);
+    }
+    prevCount.current = totalItems;
+  }, [totalItems]);
 
   return (
     <div className="flex items-center gap-1">
@@ -111,12 +127,15 @@ export function UtilityBar() {
       {/* Cart — always visible */}
       <button
         type="button"
+        onClick={toggleCart}
         className="relative flex items-center justify-center w-10 h-10 rounded-lg text-warm-600 transition-colors hover:text-warm-900 hover:bg-warm-100"
         aria-label={`Handlekurv${totalItems > 0 ? `, ${totalItems} varer` : ""}`}
       >
         <CartIcon />
         {totalItems > 0 && (
-          <span className="absolute -top-0.5 -right-0.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-warm-900 px-1 text-[10px] font-bold leading-none text-white">
+          <span
+            className={`absolute -top-0.5 -right-0.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-warm-900 px-1 text-[10px] font-bold leading-none text-white ${bumping ? "animate-cart-bump" : ""}`}
+          >
             {totalItems}
           </span>
         )}

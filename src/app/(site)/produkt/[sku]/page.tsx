@@ -4,9 +4,10 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumb } from "@/components/pdp/Breadcrumb";
-import { ProductHeroClient } from "@/components/pdp/ProductHeroClient";
-import { RatingStars } from "@/components/pdp/RatingStars";
-import { SEED_PRODUCTS, SEED_ARTICLES, SEED_COLORS } from "@/lib/seed/data";
+import { ProductHeroSwitcher } from "@/components/pdp/ProductHeroSwitcher";
+import { HeroVariantToggle } from "@/components/pdp/HeroVariantToggle";
+import { Suspense } from "react";
+import { SEED_PRODUCTS, SEED_ARTICLES } from "@/lib/seed/data";
 import { getProductBySlug } from "@/lib/productData";
 import { buildBreadcrumbJsonLd } from "@/lib/seo/structured-data";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
@@ -192,16 +193,18 @@ export default async function ProductPage({ params }: Props) {
         </Container>
       </section>
 
-      {/* Hero */}
-      <section className="border-b border-zinc-100">
-        <Container>
-          <ProductHeroClient
-            product={product}
-            availableColors={product._colorOptions || []}
-            initialColor={null}
-          />
-        </Container>
-      </section>
+      {/* Hero variant toggle (POC) */}
+      <Suspense fallback={null}>
+        <HeroVariantToggle />
+      </Suspense>
+
+      {/* Hero — switches between standard and editorial based on ?variant=editorial */}
+      <ProductHeroSwitcher
+        product={product}
+        availableColors={product._colorOptions || []}
+        articles={articles}
+        productAttributes={productAttributes}
+      />
 
       {/* AEO-1: Produktbeskrivelse i prosa */}
       {product.longDescription && (

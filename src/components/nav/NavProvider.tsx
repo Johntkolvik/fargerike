@@ -14,6 +14,7 @@ import { usePathname } from "next/navigation";
 interface NavContextType {
   activeMegaMenu: number | null;
   mobileOpen: boolean;
+  cartOpen: boolean;
   openMega: (index: number) => void;
   closeMega: () => void;
   /** Schedule close with delay — cancelled if openMega or cancelClose is called */
@@ -21,6 +22,7 @@ interface NavContextType {
   /** Cancel a pending scheduled close */
   cancelClose: () => void;
   toggleMobile: () => void;
+  toggleCart: () => void;
 }
 
 const NavContext = createContext<NavContextType | null>(null);
@@ -28,6 +30,7 @@ const NavContext = createContext<NavContextType | null>(null);
 export function NavProvider({ children }: { children: ReactNode }) {
   const [activeMegaMenu, setActiveMegaMenu] = useState<number | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
   const pathname = usePathname();
   const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -56,13 +59,24 @@ export function NavProvider({ children }: { children: ReactNode }) {
   }, [cancelClose]);
 
   const toggleMobile = useCallback(() => {
-    setMobileOpen((prev) => !prev);
+    setMobileOpen((prev) => {
+      if (!prev) setCartOpen(false); // Close cart when mobile opens
+      return !prev;
+    });
+  }, []);
+
+  const toggleCart = useCallback(() => {
+    setCartOpen((prev) => {
+      if (!prev) setMobileOpen(false); // Close mobile when cart opens
+      return !prev;
+    });
   }, []);
 
   // Auto-close on route change
   useEffect(() => {
     setActiveMegaMenu(null);
     setMobileOpen(false);
+    setCartOpen(false);
   }, [pathname]);
 
   // Escape key closes everything
@@ -71,6 +85,7 @@ export function NavProvider({ children }: { children: ReactNode }) {
       if (e.key === "Escape") {
         setActiveMegaMenu(null);
         setMobileOpen(false);
+        setCartOpen(false);
       }
     }
     document.addEventListener("keydown", handleKeyDown);
@@ -79,7 +94,7 @@ export function NavProvider({ children }: { children: ReactNode }) {
 
   return (
     <NavContext.Provider
-      value={{ activeMegaMenu, mobileOpen, openMega, closeMega, scheduleClose, cancelClose, toggleMobile }}
+      value={{ activeMegaMenu, mobileOpen, cartOpen, openMega, closeMega, scheduleClose, cancelClose, toggleMobile, toggleCart }}
     >
       {children}
     </NavContext.Provider>

@@ -1,15 +1,63 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
-import { useCart } from "@/context/CartContext";
+import { useEffect, useCallback, useMemo } from "react";
+import { useCart, type CartItem } from "@/context/CartContext";
 
 interface Props {
   open: boolean;
   onClose: () => void;
 }
 
+/** Group structure: family -> color -> volume rows */
+interface ColorGroup {
+  colorId: string;
+  colorName: string;
+  colorHex: string;
+  items: CartItem[];
+}
+
+interface FamilyGroup {
+  familyName: string;
+  colors: ColorGroup[];
+}
+
+function groupItems(items: CartItem[]): FamilyGroup[] {
+  const familyMap = new Map<string, Map<string, CartItem[]>>();
+
+  for (const item of items) {
+    if (!familyMap.has(item.familyName)) {
+      familyMap.set(item.familyName, new Map());
+    }
+    const colorMap = familyMap.get(item.familyName)!;
+    const colorKey = `${item.colorId}-${item.colorHex}`;
+    if (!colorMap.has(colorKey)) {
+      colorMap.set(colorKey, []);
+    }
+    colorMap.get(colorKey)!.push(item);
+  }
+
+  const groups: FamilyGroup[] = [];
+  for (const [familyName, colorMap] of familyMap) {
+    const colors: ColorGroup[] = [];
+    for (const [, colorItems] of colorMap) {
+      const first = colorItems[0];
+      colors.push({
+        colorId: first.colorId,
+        colorName: first.colorName,
+        colorHex: first.colorHex,
+        items: colorItems,
+      });
+    }
+    groups.push({ familyName, colors });
+  }
+
+  return groups;
+}
+
 export default function CartDrawer({ open, onClose }: Props) {
   const { items, removeItem, updateQuantity, clear, totalItems, totalPrice } = useCart();
+
+  const groups = useMemo(() => groupItems(items), [items]);
 
   // Close on Escape key
   const handleKeyDown = useCallback(
@@ -42,6 +90,7 @@ export default function CartDrawer({ open, onClose }: Props) {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        {/* Header */}
         <div className="flex items-center justify-between border-b border-warm-200 px-6 py-4">
           <h2 className="text-lg font-bold text-warm-900">
             Handlekurv
@@ -61,6 +110,8 @@ export default function CartDrawer({ open, onClose }: Props) {
             </svg>
           </button>
         </div>
+
+        {/* Items */}
         <div className="flex-1 overflow-y-auto px-6 py-4">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center py-20">
@@ -71,57 +122,98 @@ export default function CartDrawer({ open, onClose }: Props) {
               <div className="mt-1 text-xs text-warm-400">Legg til maling fra en kulørside</div>
             </div>
           ) : (
-            <div className="space-y-4">
-              {items.map((item) => (
-                <div key={item.id} className="rounded-xl border border-warm-200 bg-white p-4">
-                  <div className="flex gap-3">
-                    <div
-                      className="h-14 w-14 shrink-0 rounded-lg"
-                      style={{ backgroundColor: item.colorHex }}
-                    />
-                    <div className="flex-1 min-w-0">
-                      <div className="text-sm font-semibold text-warm-900 truncate">{item.colorName}</div>
-                      <div className="text-xs text-warm-500">{item.familyName} &middot; {item.finishName}</div>
-                      <div className="text-xs text-warm-400">{item.fillLevel}L</div>
-                    </div>
-                    <button
-                      onClick={() => removeItem(item.id)}
-                      className="shrink-0 text-warm-400 hover:text-red-500 transition-colors"
-                      title="Fjern"
-                      aria-label={`Fjern ${item.colorName} fra handlekurv`}
-                    >
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="mt-3 flex items-center justify-between">
-                    <div className="flex items-center gap-1.5">
-                      <button
-                        onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        aria-label={`Reduser antall ${item.colorName}`}
-                        className="flex h-8 w-8 items-center justify-center rounded-lg border border-warm-300 text-sm text-warm-600 hover:bg-warm-100"
+            <div className="space-y-6">
+              {groups.map((family) => (
+                <div key={family.familyName}>
+                  {/* Family heading */}
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-warm-500 mb-3">
+                    {family.familyName}
+                  </h3>
+
+                  <div className="space-y-3">
+                    {family.colors.map((color) => (
+                      <div
+                        key={`${family.familyName}-${color.colorId}`}
+                        className="rounded-xl border border-warm-200 bg-white p-4"
                       >
-                        -
-                      </button>
-                      <span className="w-7 text-center text-sm font-semibold text-warm-900" aria-live="polite" aria-label={`Antall: ${item.quantity}`}>{item.quantity}</span>
-                      <button
-                        onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        aria-label={`Øk antall ${item.colorName}`}
-                        className="flex h-8 w-8 items-center justify-center rounded-lg border border-warm-300 text-sm text-warm-600 hover:bg-warm-100"
-                      >
-                        +
-                      </button>
-                    </div>
-                    <div className="text-sm font-semibold text-warm-900">
-                      {(item.quantity * item.priceNOK).toLocaleString("nb-NO")},-
-                    </div>
+                        {/* Color header row */}
+                        <div className="flex items-center gap-3 mb-3">
+                          <div
+                            className="h-10 w-10 shrink-0 rounded-lg ring-1 ring-warm-200"
+                            style={{ backgroundColor: color.colorHex }}
+                          />
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-semibold text-warm-900 truncate">
+                              {color.colorName}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Volume rows */}
+                        <div className="space-y-2 border-t border-warm-100 pt-3">
+                          {color.items.map((item) => (
+                            <div key={item.id} className="flex items-center gap-2">
+                              {/* Volume label */}
+                              <span className="text-xs text-warm-500 w-14 shrink-0">
+                                {item.fillLevel} L
+                              </span>
+
+                              {/* Quantity controls */}
+                              <div className="flex items-center gap-1">
+                                <button
+                                  onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                                  aria-label={`Reduser antall ${item.colorName} ${item.fillLevel}L`}
+                                  className="flex h-7 w-7 items-center justify-center rounded-md border border-warm-200 text-xs text-warm-600 hover:bg-warm-100 transition-colors"
+                                >
+                                  -
+                                </button>
+                                <span
+                                  className="w-6 text-center text-xs font-semibold text-warm-900"
+                                  aria-live="polite"
+                                  aria-label={`Antall: ${item.quantity}`}
+                                >
+                                  {item.quantity}
+                                </span>
+                                <button
+                                  onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                                  aria-label={`Ok antall ${item.colorName} ${item.fillLevel}L`}
+                                  className="flex h-7 w-7 items-center justify-center rounded-md border border-warm-200 text-xs text-warm-600 hover:bg-warm-100 transition-colors"
+                                >
+                                  +
+                                </button>
+                              </div>
+
+                              <div className="flex-1" />
+
+                              {/* Line total */}
+                              <span className="text-sm font-semibold text-warm-900 tabular-nums">
+                                {(item.quantity * item.priceNOK).toLocaleString("nb-NO")},-
+                              </span>
+
+                              {/* Remove */}
+                              <button
+                                onClick={() => removeItem(item.id)}
+                                className="shrink-0 ml-1 text-warm-300 hover:text-red-500 transition-colors"
+                                title="Fjern"
+                                aria-label={`Fjern ${item.colorName} ${item.fillLevel}L fra handlekurv`}
+                              >
+                                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
             </div>
           )}
         </div>
+
+        {/* Footer */}
         {items.length > 0 && (
           <div className="border-t border-warm-200 px-6 py-4 space-y-3">
             <div className="flex items-center justify-between">
@@ -130,14 +222,14 @@ export default function CartDrawer({ open, onClose }: Props) {
                 {totalPrice.toLocaleString("nb-NO")},-
               </span>
             </div>
-            <button aria-label="Gå til kassen" className="w-full rounded-xl bg-warm-900 py-4 text-sm font-semibold text-warm-50 transition-colors hover:bg-warm-800">
-              Gå til kassen
+            <button aria-label="Ga til kassen" className="w-full rounded-xl bg-warm-900 py-4 text-sm font-semibold text-warm-50 transition-colors hover:bg-warm-800">
+              Ga til kassen
             </button>
             <button
               onClick={clear}
               className="w-full text-center text-xs text-warm-400 hover:text-warm-600 transition-colors"
             >
-              Tøm handlekurv
+              Tom handlekurv
             </button>
           </div>
         )}
