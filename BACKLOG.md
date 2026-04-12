@@ -24,6 +24,13 @@
 
 ---
 
+### mg-color synk
+- [ ] **Hent PhotoVisualizer fra mg-color-prototype** — AI fargevisualisering (Gemini) med rom-bilde upload, flood-fill markering, realistisk resultat. Finnes i mg-color men ikke i Fargerike.
+- [ ] **Synk-strategi mellom mg-color og Fargerike** — delte data/komponenter (colors.json, ColorGrid, resolve.ts) kopieres manuelt i dag. Vurder npm-pakke eller monorepo.
+- [ ] **Skriv tilbake farge-konsolidering til mg-color** — TASKS-FROM-FARGERIKE.md opprettet i mg-color-prototype
+
+---
+
 ## P1 — H&oslash;y prioritet (n&oslash;dvendig for realistisk prototype)
 
 ### Nye content blocks

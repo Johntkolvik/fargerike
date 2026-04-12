@@ -5,10 +5,7 @@ import { usePathname } from "next/navigation";
 import { useFavorites } from "@/context/FavoritesContext";
 
 const links = [
-  { href: "/farge", label: "Utforsk" },
-  { href: "/farge/velger", label: "Velger" },
-  { href: "/farge/fargekart", label: "Fargekart" },
-  { href: "/farge/ncs", label: "NCS" },
+  { href: "/farge", label: "Farger" },
   { href: "/farge/favoritter", label: "Favoritter" },
 ];
 

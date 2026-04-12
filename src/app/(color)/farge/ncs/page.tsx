@@ -1,11 +1,5 @@
-import type { Metadata } from "next";
-import NCSSearch from "@/components/color/NCSSearch";
-
-export const metadata: Metadata = {
-  title: "NCS-oppslag – Fargerike",
-  description: "Søk etter farger med NCS-kode.",
-};
+import { permanentRedirect } from "next/navigation";
 
 export default function NCSPage() {
-  return <NCSSearch />;
+  permanentRedirect("/farge");
 }
