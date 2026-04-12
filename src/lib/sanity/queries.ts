@@ -71,7 +71,7 @@ export const STORE_BY_SLUG_QUERY = defineQuery(`
 
 export const STORES_ALL_QUERY = defineQuery(`
   *[_type == "store"] | order(name asc) {
-    _id, name, slug, address, coordinates, phone, openingHours
+    _id, name, slug, address, coordinates, county, phone, email, openingHours
   }
 `);
 

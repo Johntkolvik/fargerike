@@ -178,28 +178,41 @@ export default async function StoreProfilePage({ params }: Props) {
                   )}
                 </div>
                 {coordinates && (
-                  <a
-                    href={directionsUrl(coordinates.lat, coordinates.lng)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-2 rounded-lg bg-warm-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-warm-800"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
+                  <>
+                    <a
+                      href={directionsUrl(coordinates.lat, coordinates.lng)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-2 rounded-lg bg-warm-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-warm-800"
                     >
-                      <path
-                        d="M8 1L14 8l-6 7M14 8H2"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M8 1L14 8l-6 7M14 8H2"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      Fa veibeskrivelse
+                    </a>
+                    {/* Static map embed */}
+                    <div className="mt-4 overflow-hidden rounded-xl border border-warm-200">
+                      <iframe
+                        src={`https://www.openstreetmap.org/export/embed.html?bbox=${coordinates.lng - 0.01},${coordinates.lat - 0.006},${coordinates.lng + 0.01},${coordinates.lat + 0.006}&layer=mapnik&marker=${coordinates.lat},${coordinates.lng}`}
+                        width="100%"
+                        height="200"
+                        className="border-0"
+                        title={`Kart over ${name}`}
+                        loading="lazy"
                       />
-                    </svg>
-                    Få veibeskrivelse
-                  </a>
+                    </div>
+                  </>
                 )}
               </section>
 
