@@ -9,6 +9,8 @@
 
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { colors as _localColors, collections as _localCollections } from "@/lib/color/colorData";
+import type { Color as VisualizerColor } from "@/lib/color/types";
+import PhotoVisualizer from "@/components/color/PhotoVisualizer";
 
 // ── Types ──────────────────────────────────────────────
 
@@ -156,6 +158,27 @@ function toColorOption(c: MgColor): ColorOption {
   return { name: displayName(c.name), colorCode: code, hexValue: c.hex || "#ccc", ncsCode: c.ncs || undefined, slug: `${brand}-${code}-${c.name.toLowerCase().replace(/[^a-z0-9]/g, "-")}` };
 }
 
+/** Convert MgColor to the Color type expected by PhotoVisualizer */
+function toVisualizerColor(c: MgColor): VisualizerColor {
+  return {
+    id: c.id,
+    name: displayName(c.name),
+    nameSE: "",
+    nameDK: "",
+    ncs: c.ncs || "",
+    hex: c.hex,
+    rgb: { r: null, g: null, b: null },
+    luminance: c.luminance,
+    description: c.description || c.descriptionEN || "",
+    descriptionEN: c.descriptionEN || "",
+    application: (c.application as "interior" | "exterior" | "both") || "interior",
+    matchingColors: c.matchingColors || [],
+    imagesInterior: [],
+    imagesExterior: [],
+    tags: c.tags || [],
+  };
+}
+
 // ── Subcomponents ──────────────────────────────────────
 
 function Badge({ label }: { label: ColorLabel }) {
@@ -214,6 +237,7 @@ export function MgColorEmbed({ onSelect, isOpen = false, onOpenChange }: Props) 
   const [showFilterPanel, setShowFilterPanel] = useState(false);
   const [activeBrand, setActiveBrand] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(60);
+  const [visualizerOpen, setVisualizerOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
 
@@ -289,6 +313,21 @@ export function MgColorEmbed({ onSelect, isOpen = false, onOpenChange }: Props) 
                 </div>
               </div>
             )}
+
+            {/* Visualizer trigger */}
+            {previewColor.hex && (
+              <div className="px-6 pb-6">
+                <button
+                  onClick={() => setVisualizerOpen(true)}
+                  className="flex w-full items-center justify-center gap-2 rounded-xl border border-zinc-200 bg-zinc-50 py-3 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-100 hover:border-zinc-300"
+                >
+                  <svg className="h-4 w-4 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+                  </svg>
+                  Prøv fargen i ditt rom
+                </button>
+              </div>
+            )}
           </div>
 
           <div className="p-5 bg-white border-t border-zinc-100">
@@ -296,6 +335,16 @@ export function MgColorEmbed({ onSelect, isOpen = false, onOpenChange }: Props) 
               Velg {displayName(previewColor.name)}
             </button>
           </div>
+
+          {/* PhotoVisualizer modal */}
+          {visualizerOpen && previewColor.hex && (
+            <PhotoVisualizer
+              color={toVisualizerColor(previewColor)}
+              matchingColors={matches.filter((mc) => mc.hex).map((mc) => ({ hex: mc.hex!, name: displayName(mc.name) }))}
+              isOpen={visualizerOpen}
+              onClose={() => setVisualizerOpen(false)}
+            />
+          )}
         </div>
       </div>
     );

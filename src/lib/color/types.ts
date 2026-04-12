@@ -61,3 +61,27 @@ export interface Product {
 export type ApplicationFilter = "all" | "interior" | "exterior";
 export type TempFilter = "all" | "varm" | "kald" | "nøytral";
 export type LightFilter = "all" | "lys" | "mørk";
+
+// === Photo Visualizer types ===
+
+export type VisualizerStep = "upload" | "edit" | "result";
+
+export interface MaskRegion {
+  id: string;
+  mask: Uint8Array;
+  clickPoint: { x: number; y: number };
+  hex: string;
+  label?: string;
+}
+
+export interface VisualizerConfig {
+  tolerance: number;
+  blendMode: "overlay" | "multiply" | "soft-light";
+  opacity: number;
+}
+
+export interface VisualizerResult {
+  canvasPreview: string;
+  aiGenerated?: string;
+  timestamp: number;
+}

@@ -14,6 +14,7 @@ import MatchingColors from "./MatchingColors";
 import PaintCalculator from "./PaintCalculator";
 import SpecsGrid from "./SpecsGrid";
 import FavoriteButton from "./FavoriteButton";
+import PhotoVisualizer from "./PhotoVisualizer";
 
 export default function ColorDetail({ id }: { id: string }) {
   const color = useColor(id);
@@ -24,6 +25,7 @@ export default function ColorDetail({ id }: { id: string }) {
   const families = useFamilies(color?.application);
   const images = color ? getAllImages(color) : [];
   const [selectedFamily, setSelectedFamily] = useState<string | null>(null);
+  const [visualizerOpen, setVisualizerOpen] = useState(false);
   const { addItem } = useCart();
 
   if (!color) {
@@ -117,6 +119,17 @@ export default function ColorDetail({ id }: { id: string }) {
                 )}
               </div>
             </div>
+
+            {/* Visualizer button */}
+            <button
+              onClick={() => setVisualizerOpen(true)}
+              className="mt-4 flex w-full items-center justify-center gap-2.5 rounded-xl border-2 border-warm-200 bg-white py-3.5 text-sm font-semibold text-warm-900 transition-all hover:border-warm-400 hover:bg-warm-50 hover:shadow-sm"
+            >
+              <svg className="h-5 w-5 text-warm-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+              </svg>
+              Prøv fargen i ditt rom
+            </button>
 
             {images.length > 0 && (
               <div className="mt-6">
@@ -224,6 +237,13 @@ export default function ColorDetail({ id }: { id: string }) {
           </div>
         )}
       </div>
+
+      <PhotoVisualizer
+        color={color}
+        matchingColors={matching.filter((c) => c.hex).map((c) => ({ hex: c.hex!, name: c.name }))}
+        isOpen={visualizerOpen}
+        onClose={() => setVisualizerOpen(false)}
+      />
     </div>
   );
 }
