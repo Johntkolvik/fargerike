@@ -29,8 +29,8 @@ export const materialsList = defineType({
               name: "product",
               type: "reference",
               title: "Produkt",
-              to: [{ type: "product" }],
-              description: "Valgfri kobling til produkt",
+              to: [{ type: "productFamily" }, { type: "productCategory" }, { type: "product" }],
+              description: "Koble til produktfamilie, kategori, eller spesifikt produkt",
             },
             {
               name: "quantity",

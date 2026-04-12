@@ -12,9 +12,10 @@ export const comparisonTable = defineType({
     }),
     defineField({
       name: "products",
-      title: "Produkter",
+      title: "Produktfamilier",
+      description: "Sammenlign produktfamilier (Lady Wonderwall vs Sens vs Lady Balance) — ikke SKU-er.",
       type: "array",
-      of: [{ type: "reference", to: [{ type: "product" }] }],
+      of: [{ type: "reference", to: [{ type: "productFamily" }, { type: "product" }] }],
       validation: (rule) => rule.min(2).max(5),
     }),
     defineField({

@@ -7,9 +7,10 @@ export const productCard = defineType({
   fields: [
     defineField({
       name: "product",
-      title: "Produkt",
+      title: "Produktfamilie",
+      description: "Velg produktfamilie (Lady Wonderwall, Sens, etc.) — ikke spesifikk SKU.",
       type: "reference",
-      to: [{ type: "product" }],
+      to: [{ type: "productFamily" }, { type: "product" }],
       validation: (rule) => rule.required(),
     }),
     defineField({

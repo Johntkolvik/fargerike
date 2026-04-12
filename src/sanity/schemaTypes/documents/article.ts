@@ -156,10 +156,23 @@ export const article = defineType({
     // --- Relations group ---
     defineField({
       name: "relatedProducts",
-      title: "Relaterte produkter",
+      title: "Relaterte produktfamilier",
+      description: "Pek til produktfamilier (Lady Wonderwall, Drygolin, etc.) — ikke spesifikke SKU-er. Slik holder relasjonene seg over tid.",
       type: "array",
       group: "relations",
-      of: [{ type: "reference", to: [{ type: "product" }] }],
+      of: [
+        { type: "reference", to: [{ type: "productFamily" }] },
+      ],
+    }),
+    defineField({
+      name: "relatedCategories",
+      title: "Relaterte produktkategorier",
+      description: "Pek til kategorier (Terrassebeis, Innendørs veggmaling, etc.) for bredere relasjoner som tåler sortimentsendringer.",
+      type: "array",
+      group: "relations",
+      of: [
+        { type: "reference", to: [{ type: "productCategory" }] },
+      ],
     }),
     defineField({
       name: "relatedColors",
