@@ -76,11 +76,36 @@ export const CATEGORY_BY_SLUG_QUERY = defineQuery(`
 `);
 
 export const HOMEPAGE_QUERY = defineQuery(`{
-  "articles": *[_type == "article" && articleType == "inspirasjon"] | order(publishedAt desc) [0..5] {
-    _id, title, slug, excerpt, mainImage, articleType
+  "homePage": *[_type == "homePage"][0]{
+    hero {
+      heading,
+      tagline,
+      "imageUrl": image.asset->url,
+      primaryCta,
+      secondaryCta,
+      backgroundColor
+    },
+    categoryEntries[] {
+      title,
+      description,
+      "imageUrl": image.asset->url,
+      link
+    },
+    inspirationSection {
+      heading,
+      articles[]-> {
+        _id, title, "slug": slug.current, excerpt, articleType,
+        "imageUrl": mainImage.asset->url
+      }
+    }
   },
-  "categories": *[_type == "productCategory" && !defined(parent)] | order(title asc) {
-    _id, title, slug, image
+  "latestGuides": *[_type == "article" && articleType == "howto"] | order(publishedAt desc) [0..2] {
+    _id, title, "slug": slug.current, excerpt, readingTime, articleType,
+    "imageUrl": mainImage.asset->url
+  },
+  "latestInspiration": *[_type == "article" && articleType == "inspirasjon"] | order(publishedAt desc) [0..4] {
+    _id, title, "slug": slug.current, excerpt, articleType, room,
+    "imageUrl": mainImage.asset->url
   }
 }`);
 
